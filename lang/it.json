@@ -1,0 +1,104 @@
+{
+  "app_title": "App di Apprendimento Tag HTML",
+  "app_subtitle": "Padroneggia i fondamenti dei tag HTML passo dopo passo",
+  "previous": "Precedente",
+  "next": "Successivo",
+  "try_again": "Riprova",
+  "quiz_complete": "Quiz completato!",
+  "excellent_message": "Eccellente! Hai padroneggiato i tag HTML!",
+  "great_message": "Ottimo lavoro! Hai una solida comprensione dei tag HTML.",
+  "good_message": "Buon tentativo! Rivedi i concetti e riprova per migliorare.",
+  "keep_learning_message": "Continua ad imparare! Rivedi le schede dei concetti e riprova il quiz.",
+  "correct": "Corretto",
+  "incorrect": "Scorretto",
+  
+  "concept_what_is_tag_title": "Cos'è un tag HTML?",
+  "concept_what_is_tag_content": "Un tag HTML è una parola chiave racchiusa tra parentesi angolari che dice al browser come strutturare e visualizzare il contenuto.|I tag sono i mattoni dei documenti HTML e definiscono la struttura e il significato del contenuto web.",
+  
+  "concept_opening_tags_title": "Tag di apertura",
+  "concept_opening_tags_content": "Un tag di apertura segna l'inizio di un elemento HTML. Consiste nel nome del tag racchiuso tra parentesi angolari.|I tag di apertura dicono al browser dove inizia un elemento.",
+  
+  "concept_closing_tags_title": "Tag di chiusura",
+  "concept_closing_tags_content": "Un tag di chiusura segna la fine di un elemento HTML. È identico al tag di apertura ma include una barra obliqua.|I tag di chiusura dicono al browser dove finisce un elemento.",
+  
+  "concept_paired_tags_title": "Tag accoppiati",
+  "concept_paired_tags_content": "La maggior parte dei tag HTML viene in coppie - un tag di apertura e un tag di chiusura che lavorano insieme per avvolgere il contenuto.|Il contenuto tra tag accoppiati è ciò che viene formattato o strutturato dall'elemento.",
+  
+  "concept_void_tags_title": "Tag vuoti (Auto-chiudenti)",
+  "concept_void_tags_content": "Alcuni tag HTML non hanno bisogno di tag di chiusura perché non contengono contenuto. Questi sono chiamati tag vuoti o auto-chiudenti.|I tag vuoti rappresentano elementi che sono completi da soli.",
+  
+  "concept_simple_tags_title": "Tag semplici (Senza attributi)",
+  "concept_simple_tags_content": "I tag semplici contengono solo il nome del tag senza informazioni aggiuntive o attributi.|Questi tag usano il loro comportamento e stile predefinito.",
+  
+  "concept_tags_with_attributes_title": "Tag con attributi",
+  "concept_tags_with_attributes_content": "I tag possono includere attributi che forniscono informazioni aggiuntive o modificano il comportamento dell'elemento.|Gli attributi sono scritti come coppie nome=\"valore\" all'interno del tag di apertura.",
+  
+  "concept_tags_vs_elements_title": "Tag vs Elementi",
+  "concept_tags_vs_elements_content": "Un tag è il codice che scrivi. Un elemento è ciò che il browser crea da quel tag a runtime.|Pensa ai tag come istruzioni e agli elementi come al risultato.",
+  
+  "concept_tag_nesting_title": "Annidamento dei tag",
+  "concept_tag_nesting_content": "I tag HTML possono essere annidati all'interno di altri tag per creare strutture complesse e gerarchie.|I tag annidati creano una relazione genitore-figlio nella struttura del documento.",
+  
+  "concept_proper_nesting_title": "Regole di annidamento corretto",
+  "concept_proper_nesting_content": "I tag devono essere correttamente annidati - non possono sovrapporsi. L'ultimo tag aperto deve essere il primo ad essere chiuso.|Pensalo come parentesi bilanciate in matematica.",
+  
+  "quiz_html_tags_correct_question": "Quale affermazione sui tag HTML è corretta?",
+  "quiz_html_tags_correct_correct": "I tag HTML sono parole chiave racchiuse tra parentesi angolari che strutturano il contenuto.",
+  "quiz_html_tags_correct_incorrect": "I tag HTML sono usati solo per lo stile e non hanno scopo strutturale.",
+  
+  "quiz_closing_tag_question": "Cosa rende diverso un tag di chiusura da un tag di apertura?",
+  "quiz_closing_tag_correct": "Un tag di chiusura include una barra obliqua (/) prima del nome del tag.",
+  "quiz_closing_tag_incorrect": "Un tag di chiusura usa parentesi quadre invece di parentesi angolari.",
+  
+  "quiz_void_tag_question": "Quale di questi è un tag vuoto (auto-chiudente)?",
+  "quiz_void_tag_correct": "- non ha bisogno di un tag di chiusura perché non contiene contenuto.",
+  "quiz_void_tag_incorrect": "- ha sempre bisogno di un tag di chiusura per avvolgere il contenuto testuale.",
+  
+  "quiz_tags_vs_elements_question": "Qual è la differenza tra tag ed elementi?",
+  "quiz_tags_vs_elements_correct": "I tag sono il codice che scrivi; gli elementi sono ciò che il browser crea a runtime.",
+  "quiz_tags_vs_elements_incorrect": "Tag ed elementi sono esattamente la stessa cosa con nomi diversi.",
+  
+  "quiz_nesting_question": "Quale esempio di annidamento è corretto?",
+  "quiz_nesting_correct": "- correttamente annidato senza sovrapposizione.",
+  "quiz_nesting_incorrect": "- i tag si sovrappongono scorrettamente.",
+  
+  "quiz_angle_brackets_question": "Cosa indicano le parentesi angolari in HTML?",
+  "quiz_angle_brackets_correct": "segnano l'inizio e la fine dei tag HTML.",
+  "quiz_angle_brackets_incorrect": "Le parentesi angolari sono usate per creare commenti nel codice HTML.",
+  
+  "quiz_paired_tags_question": "Quale affermazione sui tag accoppiati è vera?",
+  "quiz_paired_tags_correct": "I tag accoppiati lavorano insieme per avvolgere e formattare il contenuto tra di loro.",
+  "quiz_paired_tags_incorrect": "I tag accoppiati devono sempre essere identici senza alcuna differenza.",
+  
+  "quiz_missing_closing_question": "Cosa succede se dimentichi un tag di chiusura?",
+  "quiz_missing_closing_correct": "Il browser potrebbe non visualizzare il contenuto correttamente o potrebbe auto-chiudere il tag.",
+  "quiz_missing_closing_incorrect": "Non succede nulla - i tag di chiusura sono opzionali nell'HTML moderno.",
+  
+  "quiz_attribute_syntax_question": "Quale è un esempio di sintassi corretta degli attributi?",
+  "quiz_attribute_syntax_correct": "- gli attributi usano il formato nome=\"valore\".",
+  "quiz_attribute_syntax_incorrect": "- gli attributi usano il formato con parentesi.",
+  
+  "quiz_void_tags_special_question": "Cosa rende speciali i tag vuoti?",
+  "quiz_void_tags_special_correct": "I tag vuoti sono completi da soli e non contengono altro contenuto.",
+  "quiz_void_tags_special_incorrect": "I tag vuoti sono deprecati e non dovrebbero essere usati nell'HTML moderno.",
+  
+  "quiz_tag_structure_question": "Quale struttura di tag HTML è valida?",
+  "quiz_tag_structure_correct": "- apertura e chiusura corrette con attributo.",
+  "quiz_tag_structure_incorrect": "- manca la barra obliqua nel tag di chiusura.",
+  
+  "quiz_doctype_question": "Qual è lo scopo della dichiarazione DOCTYPE?",
+  "quiz_doctype_correct": "dice al browser quale versione di HTML usare.",
+  "quiz_doctype_incorrect": "è usata per aggiungere commenti ai documenti HTML.",
+  
+  "quiz_comments_question": "Quale affermazione sui commenti HTML è corretta?",
+  "quiz_comments_correct": "- i commenti non sono visualizzati sulla pagina web.",
+  "quiz_comments_incorrect": "- i commenti usano la sintassi regolare dei tag.",
+  
+  "quiz_multiple_attributes_question": "Cosa succede con più attributi in un tag?",
+  "quiz_multiple_attributes_correct": "- gli attributi sono separati da spazi.",
+  "quiz_multiple_attributes_incorrect": "- gli attributi sono separati da virgole.",
+  
+  "quiz_line_break_question": "Quale tag crea correttamente un'interruzione di riga?",
+  "quiz_line_break_correct": "- un tag vuoto che crea un'interruzione di riga senza contenuto.",
+  "quiz_line_break_incorrect": "- le interruzioni di riga richiedono tag di apertura e chiusura."
+}

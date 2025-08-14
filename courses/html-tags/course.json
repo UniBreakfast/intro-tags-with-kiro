@@ -61,6 +61,18 @@
       "titleKey": "concept_proper_nesting_title",
       "contentKey": "concept_proper_nesting_content",
       "codeExample": "✅ Correct: &lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;<br>❌ Wrong: &lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;"
+    },
+    {
+      "id": "tags_inside_tags",
+      "titleKey": "concept_tags_inside_tags_title",
+      "contentKey": "concept_tags_inside_tags_content",
+      "codeExample": "✅ Correct: &lt;p&gt;Text &lt;strong&gt;bold&lt;/strong&gt; more text&lt;/p&gt;<br>❌ Wrong: &lt;p&lt;strong&gt;&gt;Text&lt;/p&gt;"
+    },
+    {
+      "id": "closing_tag_attributes",
+      "titleKey": "concept_closing_tag_attributes_title",
+      "contentKey": "concept_closing_tag_attributes_content",
+      "codeExample": "✅ Correct: &lt;div class=\"box\"&gt;Content&lt;/div&gt;<br>❌ Wrong: &lt;div class=\"box\"&gt;Content&lt;/div class=\"box\"&gt;"
     }
   ],
   "quiz": [
@@ -170,6 +182,22 @@
       "incorrectKey": "quiz_line_break_incorrect",
       "correctCode": "&lt;br&gt;",
       "incorrectCodeBlock": "&lt;break&gt;<br>&lt;/break&gt;"
+    },
+    {
+      "id": "tags_inside_tags",
+      "questionKey": "quiz_tags_inside_tags_question",
+      "correctKey": "quiz_tags_inside_tags_correct",
+      "incorrectKey": "quiz_tags_inside_tags_incorrect",
+      "correctCodeBlock": "&lt;p&gt;Text<br>&nbsp;&nbsp;&lt;strong&gt;bold&lt;/strong&gt;<br>&nbsp;&nbsp;text<br>&lt;/p&gt;",
+      "incorrectCodeBlock": "&lt;p&lt;strong&gt;&gt;Text&lt;/p&gt;"
+    },
+    {
+      "id": "closing_tag_attributes",
+      "questionKey": "quiz_closing_tag_attributes_question",
+      "correctKey": "quiz_closing_tag_attributes_correct",
+      "incorrectKey": "quiz_closing_tag_attributes_incorrect",
+      "correctCodeBlock": "&lt;div class=\"box\"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div&gt;",
+      "incorrectCodeBlock": "&lt;div class=\"box\"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div class=\"box\"&gt;"
     }
   ]
 }

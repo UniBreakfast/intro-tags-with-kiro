@@ -1,5 +1,5 @@
 {
-  "course_title": "HTML标签学习",
+  "course_title": "HTML标签入门",
   "course_subtitle": "逐步掌握HTML标签的基础知识",
   
   "concept_what_is_tag_title": "什么是HTML标签？",
@@ -90,5 +90,19 @@
   
   "quiz_line_break_question": "哪个标签正确创建换行？",
   "quiz_line_break_correct": "- 一个空标签，创建没有内容的换行。",
-  "quiz_line_break_incorrect": "- 换行需要开始和结束标签。"
+  "quiz_line_break_incorrect": "- 换行需要开始和结束标签。",
+  
+  "concept_tags_inside_tags_title": "标签不能在其他标签内部",
+  "concept_tags_inside_tags_content": "HTML标签不能放置在其他标签内部。标签只能嵌套在其他标签之间，不能在标签的尖括号内部。|这是一个基本规则：标签内容位于开始和结束标签之间，绝不在标签括号内部。",
+  
+  "concept_closing_tag_attributes_title": "结束标签不能有属性",
+  "concept_closing_tag_attributes_content": "结束标签必须只包含带有斜杠的标签名。它们不能有属性或任何额外信息。|属性只允许在开始标签中，绝不在结束标签中。",
+  
+  "quiz_tags_inside_tags_question": "哪个示例显示了正确的标签放置？",
+  "quiz_tags_inside_tags_correct": "- 标签正确地嵌套在彼此之间，不在标签括号内部。",
+  "quiz_tags_inside_tags_incorrect": "- 试图将标签放置在另一个标签的括号内部。",
+  
+  "quiz_closing_tag_attributes_question": "哪个结束标签语法是正确的？",
+  "quiz_closing_tag_attributes_correct": "- 结束标签只包含带斜杠的标签名。",
+  "quiz_closing_tag_attributes_incorrect": "- 错误地试图向结束标签添加属性。"
 }

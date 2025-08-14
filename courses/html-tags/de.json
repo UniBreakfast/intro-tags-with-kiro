@@ -1,5 +1,5 @@
 {
-  "course_title": "HTML-Tags Lernen",
+  "course_title": "Einführung in HTML-Tags",
   "course_subtitle": "Meistern Sie die Grundlagen von HTML-Tags Schritt für Schritt",
   
   "concept_what_is_tag_title": "Was ist ein HTML-Tag?",
@@ -90,5 +90,19 @@
   
   "quiz_line_break_question": "Welches Tag erstellt korrekt einen Zeilenumbruch?",
   "quiz_line_break_correct": "- ein leeres Tag, das einen Zeilenumbruch ohne Inhalt erstellt.",
-  "quiz_line_break_incorrect": "- Zeilenumbrüche erfordern öffnende und schließende Tags."
+  "quiz_line_break_incorrect": "- Zeilenumbrüche erfordern öffnende und schließende Tags.",
+  
+  "concept_tags_inside_tags_title": "Tags können nicht innerhalb anderer Tags stehen",
+  "concept_tags_inside_tags_content": "HTML-Tags können nicht innerhalb anderer Tags platziert werden. Tags können nur zwischen anderen Tags verschachtelt werden, nicht innerhalb der Tag-Klammern.|Dies ist eine grundlegende Regel: Tag-Inhalt gehört zwischen öffnende und schließende Tags, niemals innerhalb der Tag-Klammern.",
+  
+  "concept_closing_tag_attributes_title": "Schließende Tags können keine Attribute haben",
+  "concept_closing_tag_attributes_content": "Schließende Tags dürfen nur den Tag-Namen mit einem Schrägstrich enthalten. Sie können keine Attribute oder zusätzliche Informationen haben.|Attribute sind nur in öffnenden Tags erlaubt, niemals in schließenden Tags.",
+  
+  "quiz_tags_inside_tags_question": "Welches Beispiel zeigt die korrekte Tag-Platzierung?",
+  "quiz_tags_inside_tags_correct": "- Tags sind ordnungsgemäß ineinander verschachtelt, nicht innerhalb von Tag-Klammern.",
+  "quiz_tags_inside_tags_incorrect": "- Versuch, ein Tag innerhalb der Klammern eines anderen Tags zu platzieren.",
+  
+  "quiz_closing_tag_attributes_question": "Welche schließende Tag-Syntax ist korrekt?",
+  "quiz_closing_tag_attributes_correct": "- schließendes Tag enthält nur den Tag-Namen mit Schrägstrich.",
+  "quiz_closing_tag_attributes_incorrect": "- fälschlicherweise versucht, Attribute zu einem schließenden Tag hinzuzufügen."
 }

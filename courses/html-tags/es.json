@@ -1,5 +1,5 @@
 {
-  "course_title": "Aprendizaje de Etiquetas HTML",
+  "course_title": "Introducción a las Etiquetas HTML",
   "course_subtitle": "Domina los fundamentos de las etiquetas HTML paso a paso",
   
   "concept_what_is_tag_title": "¿Qué es una etiqueta HTML?",
@@ -90,5 +90,19 @@
   
   "quiz_line_break_question": "¿Cuál etiqueta crea correctamente un salto de línea?",
   "quiz_line_break_correct": "- una etiqueta vacía que crea un salto de línea sin contenido.",
-  "quiz_line_break_incorrect": "- los saltos de línea requieren etiquetas de apertura y cierre."
+  "quiz_line_break_incorrect": "- los saltos de línea requieren etiquetas de apertura y cierre.",
+  
+  "concept_tags_inside_tags_title": "Las etiquetas no pueden estar dentro de otras etiquetas",
+  "concept_tags_inside_tags_content": "Las etiquetas HTML no pueden colocarse dentro de otras etiquetas. Las etiquetas solo pueden anidarse entre otras etiquetas, no dentro de los corchetes angulares de la etiqueta.|Esta es una regla fundamental: el contenido de la etiqueta va entre las etiquetas de apertura y cierre, nunca dentro de los corchetes de la etiqueta.",
+  
+  "concept_closing_tag_attributes_title": "Las etiquetas de cierre no pueden tener atributos",
+  "concept_closing_tag_attributes_content": "Las etiquetas de cierre deben contener solo el nombre de la etiqueta con una barra diagonal. No pueden tener atributos o información adicional.|Los atributos solo están permitidos en etiquetas de apertura, nunca en etiquetas de cierre.",
+  
+  "quiz_tags_inside_tags_question": "¿Cuál ejemplo muestra la colocación correcta de etiquetas?",
+  "quiz_tags_inside_tags_correct": "- las etiquetas están correctamente anidadas entre sí, no dentro de los corchetes de la etiqueta.",
+  "quiz_tags_inside_tags_incorrect": "- intentando colocar una etiqueta dentro de los corchetes de otra etiqueta.",
+  
+  "quiz_closing_tag_attributes_question": "¿Cuál sintaxis de etiqueta de cierre es correcta?",
+  "quiz_closing_tag_attributes_correct": "- la etiqueta de cierre contiene solo el nombre de la etiqueta con barra diagonal.",
+  "quiz_closing_tag_attributes_incorrect": "- incorrectamente intentando agregar atributos a una etiqueta de cierre."
 }

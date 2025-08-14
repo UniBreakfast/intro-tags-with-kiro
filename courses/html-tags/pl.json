@@ -1,5 +1,5 @@
 {
-  "course_title": "Nauka Tagów HTML",
+  "course_title": "Wprowadzenie do Tagów HTML",
   "course_subtitle": "Opanuj podstawy tagów HTML krok po kroku",
   
   "concept_what_is_tag_title": "Czym jest tag HTML?",
@@ -90,5 +90,19 @@
   
   "quiz_line_break_question": "Który tag poprawnie tworzy łamanie linii?",
   "quiz_line_break_correct": "- pusty tag, który tworzy łamanie linii bez treści.",
-  "quiz_line_break_incorrect": "- łamania linii wymagają tagów otwierających i zamykających."
+  "quiz_line_break_incorrect": "- łamania linii wymagają tagów otwierających i zamykających.",
+  
+  "concept_tags_inside_tags_title": "Tagi nie mogą być wewnątrz innych tagów",
+  "concept_tags_inside_tags_content": "Tagi HTML nie mogą być umieszczane wewnątrz innych tagów. Tagi mogą być zagnieżdżane tylko między innymi tagami, nie wewnątrz nawiasów kątowych tagu.|To jest podstawowa zasada: zawartość tagu znajduje się między tagami otwierającymi i zamykającymi, nigdy wewnątrz nawiasów tagu.",
+  
+  "concept_closing_tag_attributes_title": "Tagi zamykające nie mogą mieć atrybutów",
+  "concept_closing_tag_attributes_content": "Tagi zamykające muszą zawierać tylko nazwę tagu z ukośnikiem. Nie mogą mieć atrybutów ani żadnych dodatkowych informacji.|Atrybuty są dozwolone tylko w tagach otwierających, nigdy w tagach zamykających.",
+  
+  "quiz_tags_inside_tags_question": "Który przykład pokazuje prawidłowe umieszczenie tagów?",
+  "quiz_tags_inside_tags_correct": "- tagi są prawidłowo zagnieżdżone między sobą, nie wewnątrz nawiasów tagu.",
+  "quiz_tags_inside_tags_incorrect": "- próba umieszczenia tagu wewnątrz nawiasów innego tagu.",
+  
+  "quiz_closing_tag_attributes_question": "Która składnia tagu zamykającego jest poprawna?",
+  "quiz_closing_tag_attributes_correct": "- tag zamykający zawiera tylko nazwę tagu z ukośnikiem.",
+  "quiz_closing_tag_attributes_incorrect": "- nieprawidłowa próba dodania atrybutów do tagu zamykającego."
 }

@@ -1,5 +1,5 @@
 {
-  "course_title": "Apprendimento Tag HTML",
+  "course_title": "Introduzione ai Tag HTML",
   "course_subtitle": "Padroneggia i fondamenti dei tag HTML passo dopo passo",
   
   "concept_what_is_tag_title": "Cos'è un tag HTML?",
@@ -90,5 +90,19 @@
   
   "quiz_line_break_question": "Quale tag crea correttamente un'interruzione di riga?",
   "quiz_line_break_correct": "- un tag vuoto che crea un'interruzione di riga senza contenuto.",
-  "quiz_line_break_incorrect": "- le interruzioni di riga richiedono tag di apertura e chiusura."
+  "quiz_line_break_incorrect": "- le interruzioni di riga richiedono tag di apertura e chiusura.",
+  
+  "concept_tags_inside_tags_title": "I tag non possono essere all'interno di altri tag",
+  "concept_tags_inside_tags_content": "I tag HTML non possono essere posizionati all'interno di altri tag. I tag possono essere annidati solo tra altri tag, non all'interno delle parentesi angolari del tag.|Questa è una regola fondamentale: il contenuto del tag va tra i tag di apertura e chiusura, mai all'interno delle parentesi del tag.",
+  
+  "concept_closing_tag_attributes_title": "I tag di chiusura non possono avere attributi",
+  "concept_closing_tag_attributes_content": "I tag di chiusura devono contenere solo il nome del tag con una barra obliqua. Non possono avere attributi o informazioni aggiuntive.|Gli attributi sono consentiti solo nei tag di apertura, mai nei tag di chiusura.",
+  
+  "quiz_tags_inside_tags_question": "Quale esempio mostra il posizionamento corretto dei tag?",
+  "quiz_tags_inside_tags_correct": "- i tag sono correttamente annidati tra loro, non all'interno delle parentesi del tag.",
+  "quiz_tags_inside_tags_incorrect": "- tentativo di posizionare un tag all'interno delle parentesi di un altro tag.",
+  
+  "quiz_closing_tag_attributes_question": "Quale sintassi del tag di chiusura è corretta?",
+  "quiz_closing_tag_attributes_correct": "- il tag di chiusura contiene solo il nome del tag con barra obliqua.",
+  "quiz_closing_tag_attributes_incorrect": "- tentativo scorretto di aggiungere attributi a un tag di chiusura."
 }

@@ -18,7 +18,7 @@
       "id": "attribute_values",
       "titleKey": "concept_attribute_values_title",
       "contentKey": "concept_attribute_values_content",
-      "codeExample": "&lt;input type=\"text\" required disabled&gt;"
+      "codeExample": "&lt;input type=\"text\" placeholder=\"John Snow\"&gt;"
     },
     {
       "id": "quotes_in_attributes",
@@ -79,6 +79,12 @@
       "titleKey": "concept_custom_attributes_title",
       "contentKey": "concept_custom_attributes_content",
       "codeExample": "✅ Recommended: &lt;div data-user-id=\"123\"&gt;<br>⚠️ Discouraged: &lt;div custom-attr=\"value\"&gt;"
+    },
+    {
+      "id": "naming_conventions",
+      "titleKey": "concept_naming_conventions_title",
+      "contentKey": "concept_naming_conventions_content",
+      "codeExample": "✅ Preferred: &lt;div class=\"main-header\"&gt;<br>✅ Works: &lt;div class=\"mainHeader\"&gt;<br>✅ Works: &lt;div class=\"main_header\"&gt;"
     }
   ],
   "quiz": [
@@ -187,6 +193,14 @@
       "questionKey": "quiz_custom_attributes_question",
       "correctKey": "quiz_custom_attributes_correct",
       "incorrectKey": "quiz_custom_attributes_incorrect"
+    },
+    {
+      "id": "naming_conventions",
+      "questionKey": "quiz_naming_conventions_question",
+      "correctKey": "quiz_naming_conventions_correct",
+      "incorrectKey": "quiz_naming_conventions_incorrect",
+      "correctCode": "class=\"user-profile\"",
+      "incorrectCode": "class=\"userProfile\""
     }
   ]
 }

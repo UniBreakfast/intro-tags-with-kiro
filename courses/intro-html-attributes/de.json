@@ -1,0 +1,114 @@
+{
+  "course_title": "Einführung in HTML-Attribute",
+  "course_subtitle": "Meistern Sie die Grundlagen von HTML-Attributen Schritt für Schritt",
+  
+  "concept_what_are_attributes_title": "Was sind HTML-Attribute?",
+  "concept_what_are_attributes_content": "HTML-Attribute liefern zusätzliche Informationen über HTML-Elemente. Sie werden innerhalb von öffnenden Tags oder leeren Tags geschrieben und ändern das Verhalten oder Aussehen des Elements.|Attribute bestehen aus einem Namen und einem Wert und helfen dabei, HTML-Elemente spezifischer und funktionaler zu machen.",
+  
+  "concept_attribute_syntax_title": "Attribut-Syntax",
+  "concept_attribute_syntax_content": "Attribute folgen einer bestimmten Syntax: name=\"wert\". Zuerst kommt der Attributname, gefolgt von einem Gleichheitszeichen, dann der Wert in Anführungszeichen.|Diese konsistente Syntax macht HTML vorhersagbar und leicht lesbar für Browser und Entwickler.",
+  
+  "concept_attribute_values_title": "Attributwerte",
+  "concept_attribute_values_content": "Attributwerte können Text, Zahlen, URLs oder spezielle Schlüsselwörter sein. Einige Attribute erfordern bestimmte Werte, andere akzeptieren jeden Text.|Das Verständnis, welche Werte ein Attribut erwartet, ist entscheidend für das Schreiben von gültigem HTML.",
+  
+  "concept_quotes_in_attributes_title": "Anführungszeichen in Attributwerten",
+  "concept_quotes_in_attributes_content": "Attributwerte sollten in Anführungszeichen eingeschlossen werden. Sie können sowohl doppelte (\") als auch einfache (') Anführungszeichen verwenden, aber seien Sie konsistent.|Anführungszeichen sind besonders wichtig, wenn Werte Leerzeichen oder Sonderzeichen enthalten.",
+  
+  "concept_multiple_attributes_title": "Mehrere Attribute",
+  "concept_multiple_attributes_content": "Elemente können mehrere Attribute haben, die durch Leerzeichen getrennt sind. Jedes Attribut ist unabhängig und fügt seine eigene Funktionalität zum Element hinzu.|Die Reihenfolge der Attribute spielt normalerweise keine Rolle, aber gute Organisation verbessert die Code-Lesbarkeit.",
+  
+  "concept_boolean_attributes_title": "Boolesche Attribute",
+  "concept_boolean_attributes_content": "Einige Attribute sind boolesch - sie sind entweder vorhanden oder nicht. Wenn vorhanden, sind sie \"wahr\"; wenn nicht vorhanden, sind sie \"falsch\".|Boolesche Attribute benötigen keine Werte - es reicht, den Attributnamen zu schreiben, um sie zu aktivieren.",
+  
+  "concept_global_attributes_title": "Globale Attribute",
+  "concept_global_attributes_content": "Globale Attribute können bei jedem HTML-Element verwendet werden. Häufige Beispiele sind id, class und title.|Diese Attribute bieten universelle Funktionalität, die bei allen HTML-Elementen funktioniert.",
+  
+  "concept_attribute_order_title": "Attribut-Reihenfolge",
+  "concept_attribute_order_content": "Die Reihenfolge der Attribute in einem Tag beeinflusst nicht die Funktionalität, aber das Befolgen von Konventionen verbessert die Code-Lesbarkeit.|Viele Entwickler bevorzugen es, die wichtigsten Attribute zuerst zu setzen, wie id und class.",
+  
+  "concept_case_sensitivity_title": "Groß-/Kleinschreibung",
+  "concept_case_sensitivity_content": "HTML-Attributnamen sind nicht case-sensitiv, aber die beste Praxis ist, Kleinbuchstaben für Konsistenz zu verwenden.|Attributwerte können je nach spezifischem Attribut und seinem Zweck case-sensitiv sein.",
+  
+  "concept_whitespace_in_attributes_title": "Leerzeichen in Attributen",
+  "concept_whitespace_in_attributes_content": "Vermeiden Sie zusätzliche Leerzeichen um das Gleichheitszeichen in Attributen. Halten Sie die Syntax sauber: attribut=\"wert\".|Ordentliche Abstände machen Ihr HTML lesbarer und folgen Standard-Formatierungskonventionen.",
+  
+  "concept_attributes_outside_tags_title": "Attribute müssen innerhalb von Tags stehen",
+  "concept_attributes_outside_tags_content": "Attribute müssen innerhalb der Klammern von öffnenden Tags oder leeren Tags geschrieben werden. Jeder attributähnliche Text außerhalb von Tags wird als regulärer Textinhalt behandelt.|Das Platzieren von Attributen außerhalb von Tags funktioniert nicht - sie werden einfach als Text auf der Webseite angezeigt.",
+  
+  "concept_attributes_in_closing_tags_title": "Keine Attribute in schließenden Tags",
+  "concept_attributes_in_closing_tags_content": "Attribute können nur in öffnenden Tags oder leeren Tags platziert werden, niemals in schließenden Tags. Schließende Tags sollten nur den Tag-Namen mit einem Schrägstrich enthalten.|Der Versuch, Attribute zu schließenden Tags hinzuzufügen, führt zu ungültigem HTML.",
+  
+  "concept_custom_attributes_title": "Benutzerdefinierte Attribute und Data-Attribute",
+  "concept_custom_attributes_content": "Obwohl benutzerdefinierte Attribute technisch gültig in HTML sind, wird ihre Verwendung nicht empfohlen, es sei denn, sie haben das Präfix 'data-'. Data-Attribute sind der Standardweg, benutzerdefinierte Informationen zu speichern.|Die Verwendung von data- Attributen stellt sicher, dass Ihr HTML gültig bleibt und Web-Standards folgt.",
+  
+  "concept_naming_conventions_title": "Namenskonventionen für Attributwerte",
+  "concept_naming_conventions_content": "Für Attributwerte wie Klassennamen und IDs ist kebab-case (Wörter getrennt durch Bindestriche) die bevorzugte Konvention in HTML. Obwohl camelCase und snake_case auch funktionieren, ist kebab-case am häufigsten.|Die Verwendung konsistenter Namenskonventionen macht Ihr HTML lesbarer und folgt etablierten Webentwicklungspraktiken.",
+  
+  "quiz_what_are_attributes_question": "Was ist der Hauptzweck von HTML-Attributen?",
+  "quiz_what_are_attributes_correct": "Zusätzliche Informationen bereitzustellen und Elementverhalten zu ändern.",
+  "quiz_what_are_attributes_incorrect": "Die Notwendigkeit für HTML-Tags vollständig zu ersetzen.",
+  
+  "quiz_attribute_syntax_question": "Welches zeigt die korrekte Attribut-Syntax?",
+  "quiz_attribute_syntax_correct": "- verwendet das korrekte name=\"wert\" Format mit Anführungszeichen.",
+  "quiz_attribute_syntax_incorrect": "- verwendet falsche Klammern statt Anführungszeichen.",
+  
+  "quiz_attribute_placement_question": "Wo sollten Attribute platziert werden?",
+  "quiz_attribute_placement_correct": "- Attribute gehören nur in öffnende Tags oder leere Tags.",
+  "quiz_attribute_placement_incorrect": "- Attribute können nicht in schließende Tags.",
+  
+  "quiz_quotes_required_question": "Wann sind Anführungszeichen um Attributwerte erforderlich?",
+  "quiz_quotes_required_correct": "Anführungszeichen werden immer für Konsistenz und Sicherheit empfohlen.",
+  "quiz_quotes_required_incorrect": "Anführungszeichen werden niemals in HTML-Attributen benötigt.",
+  
+  "quiz_boolean_attributes_question": "Wie schreibt man ein boolesches Attribut?",
+  "quiz_boolean_attributes_correct": "- nur der Attributname ohne Wert.",
+  "quiz_boolean_attributes_incorrect": "- boolesche Attribute benötigen keine expliziten true/false Werte.",
+  
+  "quiz_multiple_attributes_syntax_question": "Wie werden mehrere Attribute getrennt?",
+  "quiz_multiple_attributes_syntax_correct": "- Attribute werden durch Leerzeichen getrennt.",
+  "quiz_multiple_attributes_syntax_incorrect": "- Kommas werden nicht verwendet, um Attribute zu trennen.",
+  
+  "quiz_attribute_values_question": "Welche Arten von Werten können Attribute haben?",
+  "quiz_attribute_values_correct": "Text, Zahlen, URLs, Schlüsselwörter - je nach Attribut.",
+  "quiz_attribute_values_incorrect": "Nur Zahlen und mathematische Ausdrücke.",
+  
+  "quiz_global_attributes_question": "Was macht ein Attribut \"global\"?",
+  "quiz_global_attributes_correct": "Es kann bei jedem HTML-Element verwendet werden.",
+  "quiz_global_attributes_incorrect": "Es funktioniert nur bei bestimmten, vordefinierten Elementen.",
+  
+  "quiz_attribute_order_question": "Spielt die Reihenfolge der Attribute eine Rolle?",
+  "quiz_attribute_order_correct": "Nein, die Attribut-Reihenfolge beeinflusst nicht die Funktionalität.",
+  "quiz_attribute_order_incorrect": "Ja, Attribute müssen in alphabetischer Reihenfolge stehen.",
+  
+  "quiz_case_sensitivity_question": "Sind HTML-Attributnamen case-sensitiv?",
+  "quiz_case_sensitivity_correct": "Nein, aber Kleinbuchstaben sind die empfohlene Konvention.",
+  "quiz_case_sensitivity_incorrect": "Ja, sie müssen genau übereinstimmen oder funktionieren nicht.",
+  
+  "quiz_whitespace_rules_question": "Was ist der korrekte Abstand für Attribute?",
+  "quiz_whitespace_rules_correct": "- keine zusätzlichen Leerzeichen um das Gleichheitszeichen.",
+  "quiz_whitespace_rules_incorrect": "- zusätzliche Leerzeichen machen HTML ungültig.",
+  
+  "quiz_empty_attributes_question": "Kann ein Attribut einen leeren Wert haben?",
+  "quiz_empty_attributes_correct": "Ja, leere Werte sind gültig: attribut=\"\".",
+  "quiz_empty_attributes_incorrect": "Nein, alle Attribute müssen sinnvollen Inhalt haben.",
+  
+  "quiz_attribute_inheritance_question": "Erben Kindelemente Attribute von Eltern?",
+  "quiz_attribute_inheritance_correct": "Nein, jedes Element hat seine eigenen unabhängigen Attribute.",
+  "quiz_attribute_inheritance_incorrect": "Ja, alle Attribute werden automatisch vererbt.",
+  
+  "quiz_attributes_outside_tags_question": "Was passiert mit Attributen, die außerhalb von Tags geschrieben werden?",
+  "quiz_attributes_outside_tags_correct": "Sie werden als regulärer Textinhalt behandelt, nicht als Attribute.",
+  "quiz_attributes_outside_tags_incorrect": "Sie funktionieren immer noch als Attribute, auch außerhalb von Tags.",
+  
+  "quiz_attributes_in_closing_tags_question": "Können Attribute in schließenden Tags platziert werden?",
+  "quiz_attributes_in_closing_tags_correct": "Nein, Attribute können nur in öffnende Tags oder leere Tags.",
+  "quiz_attributes_in_closing_tags_incorrect": "Ja, Attribute funktionieren gleich in öffnenden und schließenden Tags.",
+  
+  "quiz_custom_attributes_question": "Was ist der empfohlene Weg, benutzerdefinierte Attribute zu erstellen?",
+  "quiz_custom_attributes_correct": "Verwenden Sie das data- Präfix für benutzerdefinierte Attribute (data-custom=\"wert\").",
+  "quiz_custom_attributes_incorrect": "Jeder benutzerdefinierte Attributname ist gleichermaßen gültig und empfohlen.",
+  
+  "quiz_naming_conventions_question": "Welche Namenskonvention wird für HTML-Attributwerte bevorzugt?",
+  "quiz_naming_conventions_correct": "- kebab-case ist die bevorzugte Konvention für HTML.",
+  "quiz_naming_conventions_incorrect": "- obwohl camelCase funktioniert, wird kebab-case in HTML bevorzugt."
+}

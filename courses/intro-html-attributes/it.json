@@ -1,0 +1,114 @@
+{
+  "course_title": "Introduzione agli Attributi HTML",
+  "course_subtitle": "Padroneggia i fondamenti degli attributi HTML passo dopo passo",
+  
+  "concept_what_are_attributes_title": "Cosa sono gli Attributi HTML?",
+  "concept_what_are_attributes_content": "Gli attributi HTML forniscono informazioni aggiuntive sugli elementi HTML. Sono scritti all'interno di tag di apertura o tag vuoti e modificano il comportamento o l'aspetto dell'elemento.|Gli attributi consistono in un nome e un valore, e aiutano a rendere gli elementi HTML più specifici e funzionali.",
+  
+  "concept_attribute_syntax_title": "Sintassi degli Attributi",
+  "concept_attribute_syntax_content": "Gli attributi seguono una sintassi specifica: nome=\"valore\". Prima viene il nome dell'attributo, seguito da un segno di uguale, poi il valore tra virgolette.|Questa sintassi coerente rende HTML prevedibile e facile da leggere sia per i browser che per gli sviluppatori.",
+  
+  "concept_attribute_values_title": "Valori degli Attributi",
+  "concept_attribute_values_content": "I valori degli attributi possono essere testo, numeri, URL o parole chiave speciali. Alcuni attributi richiedono valori specifici, mentre altri accettano qualsiasi testo.|Capire quali valori aspetta un attributo è cruciale per scrivere HTML valido.",
+  
+  "concept_quotes_in_attributes_title": "Virgolette nei Valori degli Attributi",
+  "concept_quotes_in_attributes_content": "I valori degli attributi dovrebbero essere racchiusi tra virgolette. Puoi usare sia virgolette doppie (\") che singole ('), ma sii coerente.|Le virgolette sono particolarmente importanti quando i valori contengono spazi o caratteri speciali.",
+  
+  "concept_multiple_attributes_title": "Attributi Multipli",
+  "concept_multiple_attributes_content": "Gli elementi possono avere più attributi separati da spazi. Ogni attributo è indipendente e aggiunge la propria funzionalità all'elemento.|L'ordine degli attributi di solito non importa, ma una buona organizzazione migliora la leggibilità del codice.",
+  
+  "concept_boolean_attributes_title": "Attributi Booleani",
+  "concept_boolean_attributes_content": "Alcuni attributi sono booleani - sono presenti o assenti. Quando presenti, sono \"veri\"; quando assenti, sono \"falsi\".|Gli attributi booleani non hanno bisogno di valori - basta scrivere il nome dell'attributo per attivarli.",
+  
+  "concept_global_attributes_title": "Attributi Globali",
+  "concept_global_attributes_content": "Gli attributi globali possono essere usati su qualsiasi elemento HTML. Esempi comuni includono id, class e title.|Questi attributi forniscono funzionalità universale che funziona su tutti gli elementi HTML.",
+  
+  "concept_attribute_order_title": "Ordine degli Attributi",
+  "concept_attribute_order_content": "L'ordine degli attributi in un tag non influisce sulla funzionalità, ma seguire le convenzioni migliora la leggibilità del codice.|Molti sviluppatori preferiscono mettere gli attributi più importanti per primi, come id e class.",
+  
+  "concept_case_sensitivity_title": "Sensibilità alle Maiuscole",
+  "concept_case_sensitivity_content": "I nomi degli attributi HTML non sono sensibili alle maiuscole, ma la migliore pratica è usare minuscole per coerenza.|I valori degli attributi possono essere sensibili alle maiuscole a seconda dell'attributo specifico e del suo scopo.",
+  
+  "concept_whitespace_in_attributes_title": "Spazi negli Attributi",
+  "concept_whitespace_in_attributes_content": "Evita spazi extra intorno al segno di uguale negli attributi. Mantieni la sintassi pulita: attributo=\"valore\".|La spaziatura corretta rende il tuo HTML più leggibile e segue le convenzioni di formattazione standard.",
+  
+  "concept_attributes_outside_tags_title": "Gli Attributi Devono Essere Dentro i Tag",
+  "concept_attributes_outside_tags_content": "Gli attributi devono essere scritti all'interno delle parentesi angolari dei tag di apertura o tag vuoti. Qualsiasi testo simile ad attributo fuori dai tag viene trattato come contenuto testuale normale.|Posizionare attributi fuori dai tag non funzionerà - verranno semplicemente mostrati come testo sulla pagina web.",
+  
+  "concept_attributes_in_closing_tags_title": "Nessun Attributo nei Tag di Chiusura",
+  "concept_attributes_in_closing_tags_content": "Gli attributi possono essere posizionati solo nei tag di apertura o tag vuoti, mai nei tag di chiusura. I tag di chiusura dovrebbero contenere solo il nome del tag con una barra.|Tentare di aggiungere attributi ai tag di chiusura risulterà in HTML non valido.",
+  
+  "concept_custom_attributes_title": "Attributi Personalizzati e Attributi Data",
+  "concept_custom_attributes_content": "Anche se gli attributi personalizzati sono tecnicamente validi in HTML, il loro uso è sconsigliato a meno che non abbiano il prefisso 'data-'. Gli attributi data sono il modo standard per memorizzare informazioni personalizzate.|Usare attributi data- assicura che il tuo HTML rimanga valido e segua gli standard web.",
+  
+  "concept_naming_conventions_title": "Convenzioni di Denominazione per Valori degli Attributi",
+  "concept_naming_conventions_content": "Per i valori degli attributi come nomi di classe e ID, kebab-case (parole separate da trattini) è la convenzione preferita in HTML. Anche se camelCase e snake_case funzionano, kebab-case è più comune.|Usare convenzioni di denominazione coerenti rende il tuo HTML più leggibile e segue le pratiche stabilite di sviluppo web.",
+  
+  "quiz_what_are_attributes_question": "Qual è lo scopo principale degli attributi HTML?",
+  "quiz_what_are_attributes_correct": "Fornire informazioni aggiuntive e modificare il comportamento degli elementi.",
+  "quiz_what_are_attributes_incorrect": "Sostituire completamente la necessità dei tag HTML.",
+  
+  "quiz_attribute_syntax_question": "Quale mostra la sintassi corretta dell'attributo?",
+  "quiz_attribute_syntax_correct": "- usa il formato corretto nome=\"valore\" con virgolette.",
+  "quiz_attribute_syntax_incorrect": "- usa parentesi incorrette invece delle virgolette.",
+  
+  "quiz_attribute_placement_question": "Dove dovrebbero essere posizionati gli attributi?",
+  "quiz_attribute_placement_correct": "- gli attributi vanno solo nei tag di apertura o tag vuoti.",
+  "quiz_attribute_placement_incorrect": "- gli attributi non possono andare nei tag di chiusura.",
+  
+  "quiz_quotes_required_question": "Quando sono richieste le virgolette intorno ai valori degli attributi?",
+  "quiz_quotes_required_correct": "Le virgolette sono sempre raccomandate per coerenza e sicurezza.",
+  "quiz_quotes_required_incorrect": "Le virgolette non sono mai necessarie negli attributi HTML.",
+  
+  "quiz_boolean_attributes_question": "Come scrivere un attributo booleano?",
+  "quiz_boolean_attributes_correct": "- solo il nome dell'attributo senza valore.",
+  "quiz_boolean_attributes_incorrect": "- gli attributi booleani non hanno bisogno di valori espliciti true/false.",
+  
+  "quiz_multiple_attributes_syntax_question": "Come sono separati gli attributi multipli?",
+  "quiz_multiple_attributes_syntax_correct": "- gli attributi sono separati da spazi.",
+  "quiz_multiple_attributes_syntax_incorrect": "- le virgole non sono usate per separare gli attributi.",
+  
+  "quiz_attribute_values_question": "Che tipi di valori possono avere gli attributi?",
+  "quiz_attribute_values_correct": "Testo, numeri, URL, parole chiave - a seconda dell'attributo.",
+  "quiz_attribute_values_incorrect": "Solo numeri ed espressioni matematiche.",
+  
+  "quiz_global_attributes_question": "Cosa rende un attributo \"globale\"?",
+  "quiz_global_attributes_correct": "Può essere usato su qualsiasi elemento HTML.",
+  "quiz_global_attributes_incorrect": "Funziona solo su elementi specifici predefiniti.",
+  
+  "quiz_attribute_order_question": "L'ordine degli attributi è importante?",
+  "quiz_attribute_order_correct": "No, l'ordine degli attributi non influisce sulla funzionalità.",
+  "quiz_attribute_order_incorrect": "Sì, gli attributi devono essere in ordine alfabetico.",
+  
+  "quiz_case_sensitivity_question": "I nomi degli attributi HTML sono sensibili alle maiuscole?",
+  "quiz_case_sensitivity_correct": "No, ma le minuscole sono la convenzione raccomandata.",
+  "quiz_case_sensitivity_incorrect": "Sì, devono corrispondere esattamente o non funzioneranno.",
+  
+  "quiz_whitespace_rules_question": "Qual è la spaziatura corretta per gli attributi?",
+  "quiz_whitespace_rules_correct": "- nessuno spazio extra intorno al segno di uguale.",
+  "quiz_whitespace_rules_incorrect": "- gli spazi extra rendono l'HTML non valido.",
+  
+  "quiz_empty_attributes_question": "Un attributo può avere un valore vuoto?",
+  "quiz_empty_attributes_correct": "Sì, i valori vuoti sono validi: attributo=\"\".",
+  "quiz_empty_attributes_incorrect": "No, tutti gli attributi devono avere contenuto significativo.",
+  
+  "quiz_attribute_inheritance_question": "Gli elementi figli ereditano gli attributi dei genitori?",
+  "quiz_attribute_inheritance_correct": "No, ogni elemento ha i propri attributi indipendenti.",
+  "quiz_attribute_inheritance_incorrect": "Sì, tutti gli attributi sono automaticamente ereditati.",
+  
+  "quiz_attributes_outside_tags_question": "Cosa succede agli attributi scritti fuori dai tag?",
+  "quiz_attributes_outside_tags_correct": "Sono trattati come contenuto testuale normale, non come attributi.",
+  "quiz_attributes_outside_tags_incorrect": "Funzionano ancora come attributi anche fuori dai tag.",
+  
+  "quiz_attributes_in_closing_tags_question": "Gli attributi possono essere posizionati nei tag di chiusura?",
+  "quiz_attributes_in_closing_tags_correct": "No, gli attributi possono andare solo nei tag di apertura o tag vuoti.",
+  "quiz_attributes_in_closing_tags_incorrect": "Sì, gli attributi funzionano allo stesso modo nei tag di apertura e chiusura.",
+  
+  "quiz_custom_attributes_question": "Qual è il modo raccomandato per creare attributi personalizzati?",
+  "quiz_custom_attributes_correct": "Usa il prefisso data- per attributi personalizzati (data-custom=\"valore\").",
+  "quiz_custom_attributes_incorrect": "Qualsiasi nome di attributo personalizzato è ugualmente valido e raccomandato.",
+  
+  "quiz_naming_conventions_question": "Quale convenzione di denominazione è preferita per i valori degli attributi HTML?",
+  "quiz_naming_conventions_correct": "- kebab-case è la convenzione preferita per HTML.",
+  "quiz_naming_conventions_incorrect": "- anche se camelCase funziona, kebab-case è preferito in HTML."
+}

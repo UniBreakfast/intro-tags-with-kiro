@@ -103,5 +103,12 @@
   
   "quiz_custom_attributes_question": "What's the recommended way to create custom attributes?",
   "quiz_custom_attributes_correct": "Use the data- prefix for custom attributes (data-custom=\"value\").",
-  "quiz_custom_attributes_incorrect": "Any custom attribute name is equally valid and recommended."
+  "quiz_custom_attributes_incorrect": "Any custom attribute name is equally valid and recommended.",
+  
+  "concept_naming_conventions_title": "Attribute Value Naming Conventions",
+  "concept_naming_conventions_content": "For attribute values like class names and IDs, kebab-case (words separated by hyphens) is the preferred convention in HTML. While camelCase and snake_case also work, kebab-case is most common.|Using consistent naming conventions makes your HTML more readable and follows established web development practices.",
+  
+  "quiz_naming_conventions_question": "Which naming convention is preferred for HTML attribute values?",
+  "quiz_naming_conventions_correct": "- kebab-case is the preferred convention for HTML.",
+  "quiz_naming_conventions_incorrect": "- while camelCase works, kebab-case is preferred in HTML."
 }

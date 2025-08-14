@@ -1,0 +1,114 @@
+{
+  "course_title": "Introducción a los Atributos HTML",
+  "course_subtitle": "Domina los fundamentos de los atributos HTML paso a paso",
+  
+  "concept_what_are_attributes_title": "¿Qué son los Atributos HTML?",
+  "concept_what_are_attributes_content": "Los atributos HTML proporcionan información adicional sobre los elementos HTML. Se escriben dentro de etiquetas de apertura o etiquetas vacías y modifican el comportamiento o apariencia del elemento.|Los atributos consisten en un nombre y un valor, y ayudan a hacer los elementos HTML más específicos y funcionales.",
+  
+  "concept_attribute_syntax_title": "Sintaxis de Atributos",
+  "concept_attribute_syntax_content": "Los atributos siguen una sintaxis específica: nombre=\"valor\". Primero va el nombre del atributo, seguido de un signo igual, luego el valor entre comillas.|Esta sintaxis consistente hace que HTML sea predecible y fácil de leer tanto para navegadores como para desarrolladores.",
+  
+  "concept_attribute_values_title": "Valores de Atributos",
+  "concept_attribute_values_content": "Los valores de atributos pueden ser texto, números, URLs o palabras clave especiales. Algunos atributos requieren valores específicos, mientras que otros aceptan cualquier texto.|Entender qué valores espera un atributo es crucial para escribir HTML válido.",
+  
+  "concept_quotes_in_attributes_title": "Comillas en Valores de Atributos",
+  "concept_quotes_in_attributes_content": "Los valores de atributos deben estar encerrados entre comillas. Puedes usar comillas dobles (\") o simples ('), pero sé consistente.|Las comillas son especialmente importantes cuando los valores contienen espacios o caracteres especiales.",
+  
+  "concept_multiple_attributes_title": "Múltiples Atributos",
+  "concept_multiple_attributes_content": "Los elementos pueden tener múltiples atributos separados por espacios. Cada atributo es independiente y añade su propia funcionalidad al elemento.|El orden de los atributos usualmente no importa, pero una buena organización mejora la legibilidad del código.",
+  
+  "concept_boolean_attributes_title": "Atributos Booleanos",
+  "concept_boolean_attributes_content": "Algunos atributos son booleanos - están presentes o ausentes. Cuando están presentes, son \"verdaderos\"; cuando están ausentes, son \"falsos\".|Los atributos booleanos no necesitan valores - solo escribir el nombre del atributo es suficiente para activarlos.",
+  
+  "concept_global_attributes_title": "Atributos Globales",
+  "concept_global_attributes_content": "Los atributos globales pueden usarse en cualquier elemento HTML. Ejemplos comunes incluyen id, class y title.|Estos atributos proporcionan funcionalidad universal que funciona en todos los elementos HTML.",
+  
+  "concept_attribute_order_title": "Orden de Atributos",
+  "concept_attribute_order_content": "El orden de los atributos en una etiqueta no afecta la funcionalidad, pero seguir convenciones mejora la legibilidad del código.|Muchos desarrolladores prefieren poner los atributos más importantes primero, como id y class.",
+  
+  "concept_case_sensitivity_title": "Sensibilidad a Mayúsculas",
+  "concept_case_sensitivity_content": "Los nombres de atributos HTML no distinguen entre mayúsculas y minúsculas, pero la mejor práctica es usar minúsculas para consistencia.|Los valores de atributos pueden ser sensibles a mayúsculas dependiendo del atributo específico y su propósito.",
+  
+  "concept_whitespace_in_attributes_title": "Espacios en Blanco en Atributos",
+  "concept_whitespace_in_attributes_content": "Evita espacios extra alrededor del signo igual en atributos. Mantén la sintaxis limpia: atributo=\"valor\".|El espaciado adecuado hace tu HTML más legible y sigue convenciones estándar de formato.",
+  
+  "concept_attributes_outside_tags_title": "Los Atributos Deben Estar Dentro de Etiquetas",
+  "concept_attributes_outside_tags_content": "Los atributos deben escribirse dentro de los corchetes de etiquetas de apertura o etiquetas vacías. Cualquier texto similar a atributo fuera de etiquetas se trata como contenido de texto regular.|Colocar atributos fuera de etiquetas no funcionará - simplemente se mostrarán como texto en la página web.",
+  
+  "concept_attributes_in_closing_tags_title": "Sin Atributos en Etiquetas de Cierre",
+  "concept_attributes_in_closing_tags_content": "Los atributos solo pueden colocarse en etiquetas de apertura o etiquetas vacías, nunca en etiquetas de cierre. Las etiquetas de cierre solo deben contener el nombre de la etiqueta con una barra diagonal.|Intentar agregar atributos a etiquetas de cierre resultará en HTML inválido.",
+  
+  "concept_custom_attributes_title": "Atributos Personalizados y Atributos Data",
+  "concept_custom_attributes_content": "Aunque los atributos personalizados son técnicamente válidos en HTML, se desaconseja su uso a menos que tengan el prefijo 'data-'. Los atributos data son la forma estándar de almacenar información personalizada.|Usar atributos data- asegura que tu HTML permanezca válido y siga los estándares web.",
+  
+  "concept_naming_conventions_title": "Convenciones de Nomenclatura para Valores de Atributos",
+  "concept_naming_conventions_content": "Para valores de atributos como nombres de clase e IDs, kebab-case (palabras separadas por guiones) es la convención preferida en HTML. Aunque camelCase y snake_case también funcionan, kebab-case es más común.|Usar convenciones de nomenclatura consistentes hace tu HTML más legible y sigue prácticas establecidas de desarrollo web.",
+  
+  "quiz_what_are_attributes_question": "¿Cuál es el propósito principal de los atributos HTML?",
+  "quiz_what_are_attributes_correct": "Proporcionar información adicional y modificar el comportamiento de elementos.",
+  "quiz_what_are_attributes_incorrect": "Reemplazar completamente la necesidad de etiquetas HTML.",
+  
+  "quiz_attribute_syntax_question": "¿Cuál muestra la sintaxis correcta de atributo?",
+  "quiz_attribute_syntax_correct": "- usa el formato correcto nombre=\"valor\" con comillas.",
+  "quiz_attribute_syntax_incorrect": "- usa paréntesis incorrectos en lugar de comillas.",
+  
+  "quiz_attribute_placement_question": "¿Dónde deben colocarse los atributos?",
+  "quiz_attribute_placement_correct": "- los atributos van solo en etiquetas de apertura o etiquetas vacías.",
+  "quiz_attribute_placement_incorrect": "- los atributos no pueden ir en etiquetas de cierre.",
+  
+  "quiz_quotes_required_question": "¿Cuándo se requieren comillas alrededor de valores de atributos?",
+  "quiz_quotes_required_correct": "Las comillas siempre se recomiendan para consistencia y seguridad.",
+  "quiz_quotes_required_incorrect": "Las comillas nunca se necesitan en atributos HTML.",
+  
+  "quiz_boolean_attributes_question": "¿Cómo escribir un atributo booleano?",
+  "quiz_boolean_attributes_correct": "- solo el nombre del atributo sin valor.",
+  "quiz_boolean_attributes_incorrect": "- los atributos booleanos no necesitan valores explícitos true/false.",
+  
+  "quiz_multiple_attributes_syntax_question": "¿Cómo se separan múltiples atributos?",
+  "quiz_multiple_attributes_syntax_correct": "- los atributos se separan con espacios.",
+  "quiz_multiple_attributes_syntax_incorrect": "- las comas no se usan para separar atributos.",
+  
+  "quiz_attribute_values_question": "¿Qué tipos de valores pueden tener los atributos?",
+  "quiz_attribute_values_correct": "Texto, números, URLs, palabras clave - dependiendo del atributo.",
+  "quiz_attribute_values_incorrect": "Solo números y expresiones matemáticas.",
+  
+  "quiz_global_attributes_question": "¿Qué hace que un atributo sea \"global\"?",
+  "quiz_global_attributes_correct": "Puede usarse en cualquier elemento HTML.",
+  "quiz_global_attributes_incorrect": "Solo funciona en elementos específicos predefinidos.",
+  
+  "quiz_attribute_order_question": "¿Importa el orden de los atributos?",
+  "quiz_attribute_order_correct": "No, el orden de atributos no afecta la funcionalidad.",
+  "quiz_attribute_order_incorrect": "Sí, los atributos deben estar en orden alfabético.",
+  
+  "quiz_case_sensitivity_question": "¿Son sensibles a mayúsculas los nombres de atributos HTML?",
+  "quiz_case_sensitivity_correct": "No, pero las minúsculas son la convención recomendada.",
+  "quiz_case_sensitivity_incorrect": "Sí, deben coincidir exactamente o no funcionarán.",
+  
+  "quiz_whitespace_rules_question": "¿Cuál es el espaciado correcto para atributos?",
+  "quiz_whitespace_rules_correct": "- sin espacios extra alrededor del signo igual.",
+  "quiz_whitespace_rules_incorrect": "- los espacios extra hacen el HTML inválido.",
+  
+  "quiz_empty_attributes_question": "¿Puede un atributo tener un valor vacío?",
+  "quiz_empty_attributes_correct": "Sí, los valores vacíos son válidos: atributo=\"\".",
+  "quiz_empty_attributes_incorrect": "No, todos los atributos deben tener contenido significativo.",
+  
+  "quiz_attribute_inheritance_question": "¿Los elementos hijos heredan atributos de los padres?",
+  "quiz_attribute_inheritance_correct": "No, cada elemento tiene sus propios atributos independientes.",
+  "quiz_attribute_inheritance_incorrect": "Sí, todos los atributos se heredan automáticamente.",
+  
+  "quiz_attributes_outside_tags_question": "¿Qué pasa con los atributos escritos fuera de etiquetas?",
+  "quiz_attributes_outside_tags_correct": "Se tratan como contenido de texto regular, no como atributos.",
+  "quiz_attributes_outside_tags_incorrect": "Aún funcionan como atributos incluso fuera de etiquetas.",
+  
+  "quiz_attributes_in_closing_tags_question": "¿Pueden colocarse atributos en etiquetas de cierre?",
+  "quiz_attributes_in_closing_tags_correct": "No, los atributos solo pueden ir en etiquetas de apertura o etiquetas vacías.",
+  "quiz_attributes_in_closing_tags_incorrect": "Sí, los atributos funcionan igual en etiquetas de apertura y cierre.",
+  
+  "quiz_custom_attributes_question": "¿Cuál es la forma recomendada de crear atributos personalizados?",
+  "quiz_custom_attributes_correct": "Usar el prefijo data- para atributos personalizados (data-custom=\"valor\").",
+  "quiz_custom_attributes_incorrect": "Cualquier nombre de atributo personalizado es igualmente válido y recomendado.",
+  
+  "quiz_naming_conventions_question": "¿Qué convención de nomenclatura se prefiere para valores de atributos HTML?",
+  "quiz_naming_conventions_correct": "- kebab-case es la convención preferida para HTML.",
+  "quiz_naming_conventions_incorrect": "- aunque camelCase funciona, kebab-case se prefiere en HTML."
+}

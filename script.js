@@ -2,6 +2,8 @@ class HTMLTagsApp {
   constructor() {
     this.currentCardIndex = 0;
     this.cards = [];
+    this.conceptCards = [];
+    this.quizQuestions = [];
     this.quizScore = 0;
     this.totalQuizQuestions = 0;
     this.autoAdvanceTimeout = null;
@@ -17,7 +19,18 @@ class HTMLTagsApp {
       this.translations = await response.json();
       this.currentLanguage = lang;
       this.updateAllTexts();
-      this.regenerateCards();
+
+      // If we have cards already, just update their content
+      if (this.cards.length > 0) {
+        this.updateCardContent();
+      } else {
+        // First time loading, generate cards normally
+        this.conceptCards = this.generateConceptCards();
+        this.quizQuestions = this.generateQuizQuestions();
+        this.generateCards();
+        this.showCard(0);
+        this.updateUI();
+      }
     } catch (error) {
       console.error('Failed to load language:', error);
     }
@@ -35,17 +48,75 @@ class HTMLTagsApp {
     });
   }
 
+  updateCardContent() {
+    // Update existing cards with new language content
+    const newConceptCards = this.generateConceptCards();
+    const rawQuizData = this.generateQuizQuestions();
+
+    this.cards.forEach((card, index) => {
+      if (card.type === 'concept') {
+        // Update concept card content
+        if (index < newConceptCards.length) {
+          card.title = newConceptCards[index].title;
+          card.content = newConceptCards[index].content;
+        }
+      } else if (card.type === 'quiz') {
+        // Update quiz card content using the stored original question data
+        if (card.originalQuestionData) {
+          // Find the same question in the raw data by matching the question key
+          const originalQuestionKey = card.originalQuestionData.questionKey;
+          const rawQuestion = rawQuizData.find(q => q.questionKey === originalQuestionKey);
+
+          if (rawQuestion) {
+            // Process the raw question data into final format
+            let correct = this.getText(rawQuestion.correctKey);
+            let incorrect = this.getText(rawQuestion.incorrectKey);
+
+            // Add code elements where needed (same logic as in generateQuizQuestions)
+            if (rawQuestion.correctCode) {
+              correct = `<span class="inline-code">${rawQuestion.correctCode}</span> ${correct}`;
+            }
+            if (rawQuestion.incorrectCode) {
+              incorrect = `<span class="inline-code">${rawQuestion.incorrectCode}</span> ${incorrect}`;
+            }
+            if (rawQuestion.correctCodeBlock) {
+              correct = `<div class="code-example">${rawQuestion.correctCodeBlock}</div>${correct}`;
+            }
+            if (rawQuestion.incorrectCodeBlock) {
+              incorrect = `<div class="code-example">${rawQuestion.incorrectCodeBlock}</div>${incorrect}`;
+            }
+
+            // Update the card
+            card.question = this.getText(rawQuestion.questionKey);
+
+            // Update options while preserving the order
+            card.options.forEach(option => {
+              if (option.correct) {
+                option.text = correct;
+              } else {
+                option.text = incorrect;
+              }
+            });
+          }
+        }
+      }
+    });
+
+    // Refresh the current card display
+    this.showCard(this.currentCardIndex);
+  }
+
   regenerateCards() {
     const wasAtEnd = this.currentCardIndex >= this.cards.length - 1;
     this.conceptCards = this.generateConceptCards();
     this.quizQuestions = this.generateQuizQuestions();
     this.generateCards();
-    
+
     // Maintain position or go to start if we were at the end
     if (wasAtEnd || this.currentCardIndex >= this.cards.length) {
       this.currentCardIndex = 0;
     }
-    
+
     this.showCard(this.currentCardIndex);
     this.updateUI();
   }
@@ -111,7 +182,7 @@ class HTMLTagsApp {
         <div class="code-example">${concept.codeExample}</div>
         <p>${contentParts[1] ? contentParts[1].replace(/where an element starts|where an element ends|complete by themselves|default behavior and styling|name="value"|instructions|result|parent-child relationship|balanced parentheses/, '<span class="highlight">$&</span>') : ''}</p>
       `;
-      
+
       return {
         type: 'concept',
         title: this.getText(concept.titleKey),
@@ -216,30 +287,7 @@ class HTMLTagsApp {
       }
     ];
 
-    return quizData.map(quiz => {
-      let correct = this.getText(quiz.correctKey);
-      let incorrect = this.getText(quiz.incorrectKey);
-
-      // Add code elements where needed
-      if (quiz.correctCode) {
-        correct = `<span class="inline-code">${quiz.correctCode}</span> ${correct}`;
-      }
-      if (quiz.incorrectCode) {
-        incorrect = `<span class="inline-code">${quiz.incorrectCode}</span> ${incorrect}`;
-      }
-      if (quiz.correctCodeBlock) {
-        correct = `<div class="code-example">${quiz.correctCodeBlock}</div>${correct}`;
-      }
-      if (quiz.incorrectCodeBlock) {
-        incorrect = `<div class="code-example">${quiz.incorrectCodeBlock}</div>${incorrect}`;
-      }
-
-      return {
-        question: this.getText(quiz.questionKey),
-        correct: correct,
-        incorrect: incorrect
-      };
-    });
+    return quizData;
   }
 
   shuffleArray(array) {
@@ -255,23 +303,44 @@ class HTMLTagsApp {
     // Start with concept cards
     this.cards = [...this.conceptCards];
 
-    // Add shuffled quiz cards
-    const shuffledQuestions = this.shuffleArray(this.quizQuestions);
-    this.totalQuizQuestions = shuffledQuestions.length;
+    // Get raw quiz data and shuffle it
+    const rawQuizData = this.generateQuizQuestions();
+    const shuffledRawData = this.shuffleArray(rawQuizData);
+    this.totalQuizQuestions = shuffledRawData.length;
 
-    shuffledQuestions.forEach((question, index) => {
+    // Process each raw question into final format
+    shuffledRawData.forEach((rawQuestion, index) => {
+      // Process the raw question data into final format
+      let correct = this.getText(rawQuestion.correctKey);
+      let incorrect = this.getText(rawQuestion.incorrectKey);
+
+      // Add code elements where needed
+      if (rawQuestion.correctCode) {
+        correct = `<span class="inline-code">${rawQuestion.correctCode}</span> ${correct}`;
+      }
+      if (rawQuestion.incorrectCode) {
+        incorrect = `<span class="inline-code">${rawQuestion.incorrectCode}</span> ${incorrect}`;
+      }
+      if (rawQuestion.correctCodeBlock) {
+        correct = `<div class="code-example">${rawQuestion.correctCodeBlock}</div>${correct}`;
+      }
+      if (rawQuestion.incorrectCodeBlock) {
+        incorrect = `<div class="code-example">${rawQuestion.incorrectCodeBlock}</div>${incorrect}`;
+      }
+
       // Randomly decide if correct option comes first or second
       const correctFirst = Math.random() < 0.5;
       this.cards.push({
         type: 'quiz',
         questionId: `quiz_${index}`,
-        question: question.question,
+        originalQuestionData: rawQuestion, // Store the raw question data
+        question: this.getText(rawQuestion.questionKey),
         options: correctFirst ? [
-          { text: question.correct, correct: true },
-          { text: question.incorrect, correct: false }
+          { text: correct, correct: true },
+          { text: incorrect, correct: false }
         ] : [
-          { text: question.incorrect, correct: false },
-          { text: question.correct, correct: true }
+          { text: incorrect, correct: false },
+          { text: correct, correct: true }
         ]
       });
     });
@@ -431,13 +500,13 @@ class HTMLTagsApp {
     }
 
     const currentCard = this.cards[this.currentCardIndex];
-    
+
     // If current card is an unanswered quiz question, move it to the end
     if (currentCard.type === 'quiz' && currentCard.questionId && !this.answeredQuestions.has(currentCard.questionId)) {
       // Remove current card and add it to the end
       const skippedCard = this.cards.splice(this.currentCardIndex, 1)[0];
       this.cards.push(skippedCard);
-      
+
       // Don't increment currentCardIndex since we removed the current card
       // Show the card that's now at the current index
       if (this.currentCardIndex < this.cards.length) {

@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "Was zeigen spitze Klammern in HTML an?",
   "quiz_angle_brackets_correct": "markieren den Anfang und das Ende von HTML-Tags.",
-  "quiz_angle_brackets_incorrect": "Spitze Klammern werden verwendet, um Kommentare im HTML-Code zu erstellen.",
+  "quiz_angle_brackets_incorrect": "Spitze Klammern werden nur verwendet, um Kommentare im HTML-Code zu erstellen.",
   
   "quiz_paired_tags_question": "Welche Aussage über gepaarte Tags ist wahr?",
   "quiz_paired_tags_correct": "Gepaarte Tags arbeiten zusammen, um Inhalte zwischen ihnen zu umschließen und zu formatieren.",

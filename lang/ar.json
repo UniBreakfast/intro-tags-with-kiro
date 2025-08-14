@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "ماذا تشير الأقواس الزاوية في HTML؟",
   "quiz_angle_brackets_correct": "تحدد بداية ونهاية علامات HTML.",
-  "quiz_angle_brackets_incorrect": "الأقواس الزاوية تُستخدم لإنشاء تعليقات في كود HTML.",
+  "quiz_angle_brackets_incorrect": "الأقواس الزاوية تُستخدم فقط لإنشاء تعليقات في كود HTML.",
   
   "quiz_paired_tags_question": "أي عبارة حول العلامات المزدوجة صحيحة؟",
   "quiz_paired_tags_correct": "العلامات المزدوجة تعمل معاً لتغليف وتنسيق المحتوى بينها.",

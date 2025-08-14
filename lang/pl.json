@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "Co oznaczają nawiasy kątowe w HTML?",
   "quiz_angle_brackets_correct": "oznaczają początek i koniec tagów HTML.",
-  "quiz_angle_brackets_incorrect": "Nawiasy kątowe są używane do tworzenia komentarzy w kodzie HTML.",
+  "quiz_angle_brackets_incorrect": "Nawiasy kątowe są używane tylko do tworzenia komentarzy w kodzie HTML.",
   
   "quiz_paired_tags_question": "Które stwierdzenie o sparowanych tagach jest prawdziwe?",
   "quiz_paired_tags_correct": "Sparowane tagi współpracują, aby otoczyć i sformatować treść między nimi.",

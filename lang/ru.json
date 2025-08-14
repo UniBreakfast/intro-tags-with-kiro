@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "Что обозначают угловые скобки в HTML?",
   "quiz_angle_brackets_correct": "отмечают начало и конец HTML тегов.",
-  "quiz_angle_brackets_incorrect": "Угловые скобки используются для создания комментариев в HTML коде.",
+  "quiz_angle_brackets_incorrect": "Угловые скобки используются только для создания комментариев в HTML коде.",
   
   "quiz_paired_tags_question": "Какое утверждение о парных тегах верно?",
   "quiz_paired_tags_correct": "Парные теги работают вместе, чтобы обернуть и отформатировать контент между ними.",

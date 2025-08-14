@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "¿Qué indican los corchetes angulares en HTML?",
   "quiz_angle_brackets_correct": "marcan el comienzo y el final de las etiquetas HTML.",
-  "quiz_angle_brackets_incorrect": "Los corchetes angulares se usan para crear comentarios en el código HTML.",
+  "quiz_angle_brackets_incorrect": "Los corchetes angulares se usan solo para crear comentarios en el código HTML.",
   
   "quiz_paired_tags_question": "¿Cuál afirmación sobre las etiquetas emparejadas es verdadera?",
   "quiz_paired_tags_correct": "Las etiquetas emparejadas trabajan juntas para envolver y formatear el contenido entre ellas.",

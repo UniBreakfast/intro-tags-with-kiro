@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "HTML中的尖括号表示什么？",
   "quiz_angle_brackets_correct": "标记HTML标签的开始和结束。",
-  "quiz_angle_brackets_incorrect": "尖括号用于在HTML代码中创建注释。",
+  "quiz_angle_brackets_incorrect": "尖括号仅用于在HTML代码中创建注释。",
   
   "quiz_paired_tags_question": "关于配对标签的哪个陈述是正确的？",
   "quiz_paired_tags_correct": "配对标签一起工作，包装和格式化它们之间的内容。",

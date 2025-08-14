@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "Cosa indicano le parentesi angolari in HTML?",
   "quiz_angle_brackets_correct": "segnano l'inizio e la fine dei tag HTML.",
-  "quiz_angle_brackets_incorrect": "Le parentesi angolari sono usate per creare commenti nel codice HTML.",
+  "quiz_angle_brackets_incorrect": "Le parentesi angolari sono usate solo per creare commenti nel codice HTML.",
   
   "quiz_paired_tags_question": "Quale affermazione sui tag accoppiati è vera?",
   "quiz_paired_tags_correct": "I tag accoppiati lavorano insieme per avvolgere e formattare il contenuto tra di loro.",

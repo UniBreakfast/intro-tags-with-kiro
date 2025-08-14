@@ -64,7 +64,7 @@
   
   "quiz_angle_brackets_question": "Що позначають кутові дужки в HTML?",
   "quiz_angle_brackets_correct": "позначають початок і кінець HTML тегів.",
-  "quiz_angle_brackets_incorrect": "Кутові дужки використовуються для створення коментарів у HTML коді.",
+  "quiz_angle_brackets_incorrect": "Кутові дужки використовуються лише для створення коментарів у HTML коді.",
   
   "quiz_paired_tags_question": "Яке твердження про парні теги вірне?",
   "quiz_paired_tags_correct": "Парні теги працюють разом, щоб обернути та відформатувати контент між ними.",

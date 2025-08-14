@@ -23,6 +23,38 @@ header {
   color: white;
 }
 
+.language-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-selector select {
+  background: white;
+  color: #333;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 130px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.language-selector select:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.language-selector select option {
+  background: white;
+  color: #333;
+}
+
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -285,5 +317,16 @@ code,
   .navigation {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .language-selector {
+    top: 15px;
+    right: 15px;
+  }
+
+  .language-selector select {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    min-width: 110px;
   }
 }

@@ -1,0 +1,104 @@
+{
+  "app_title": "HTML Tags Learning App",
+  "app_subtitle": "Master the fundamentals of HTML tags step by step",
+  "previous": "Previous",
+  "next": "Next",
+  "try_again": "Try Again",
+  "quiz_complete": "Quiz Complete!",
+  "excellent_message": "Excellent! You have mastered HTML tags!",
+  "great_message": "Great job! You have a solid understanding of HTML tags.",
+  "good_message": "Good effort! Review the concepts and try again to improve.",
+  "keep_learning_message": "Keep learning! Review the concept cards and try the quiz again.",
+  "correct": "Correct",
+  "incorrect": "Incorrect",
+  
+  "concept_what_is_tag_title": "What is an HTML Tag?",
+  "concept_what_is_tag_content": "An HTML tag is a keyword enclosed in angle brackets that tells the browser how to structure and display content.|Tags are the building blocks of HTML documents and define the structure and meaning of web content.",
+  
+  "concept_opening_tags_title": "Opening Tags",
+  "concept_opening_tags_content": "An opening tag marks the beginning of an HTML element. It consists of the tag name enclosed in angle brackets.|Opening tags tell the browser where an element starts.",
+  
+  "concept_closing_tags_title": "Closing Tags", 
+  "concept_closing_tags_content": "A closing tag marks the end of an HTML element. It's identical to the opening tag but includes a forward slash.|Closing tags tell the browser where an element ends.",
+  
+  "concept_paired_tags_title": "Paired Tags",
+  "concept_paired_tags_content": "Most HTML tags come in pairs - an opening tag and a closing tag that work together to wrap content.|The content between paired tags is what gets formatted or structured by the element.",
+  
+  "concept_void_tags_title": "Void Tags (Self-Closing)",
+  "concept_void_tags_content": "Some HTML tags don't need closing tags because they don't contain content. These are called void or self-closing tags.|Void tags represent elements that are complete by themselves.",
+  
+  "concept_simple_tags_title": "Simple Tags (No Attributes)",
+  "concept_simple_tags_content": "Simple tags contain only the tag name without any additional information or attributes.|These tags use their default behavior and styling.",
+  
+  "concept_tags_with_attributes_title": "Tags with Attributes",
+  "concept_tags_with_attributes_content": "Tags can include attributes that provide additional information or modify the element's behavior.|Attributes are written as name=\"value\" pairs inside the opening tag.",
+  
+  "concept_tags_vs_elements_title": "Tags vs Elements",
+  "concept_tags_vs_elements_content": "A tag is the code you write. An element is what the browser creates from that tag at runtime.|Think of tags as instructions and elements as the result.",
+  
+  "concept_tag_nesting_title": "Tag Nesting",
+  "concept_tag_nesting_content": "HTML tags can be nested inside other tags to create complex structures and hierarchies.|Nested tags create a parent-child relationship in the document structure.",
+  
+  "concept_proper_nesting_title": "Proper Nesting Rules",
+  "concept_proper_nesting_content": "Tags must be properly nested - they cannot overlap. The last opened tag must be the first one closed.|Think of it like balanced parentheses in mathematics.",
+  
+  "quiz_html_tags_correct_question": "Which statement about HTML tags is correct?",
+  "quiz_html_tags_correct_correct": "HTML tags are keywords enclosed in angle brackets that structure content.",
+  "quiz_html_tags_correct_incorrect": "HTML tags are only used for styling and have no structural purpose.",
+  
+  "quiz_closing_tag_question": "What makes a closing tag different from an opening tag?",
+  "quiz_closing_tag_correct": "A closing tag includes a forward slash (/) before the tag name.",
+  "quiz_closing_tag_incorrect": "A closing tag uses square brackets instead of angle brackets.",
+  
+  "quiz_void_tag_question": "Which of these is a void (self-closing) tag?",
+  "quiz_void_tag_correct": "- it doesn't need a closing tag because it doesn't contain content.",
+  "quiz_void_tag_incorrect": "- it always needs a closing tag to wrap text content.",
+  
+  "quiz_tags_vs_elements_question": "What's the difference between tags and elements?",
+  "quiz_tags_vs_elements_correct": "Tags are the code you write; elements are what the browser creates at runtime.",
+  "quiz_tags_vs_elements_incorrect": "Tags and elements are exactly the same thing with different names.",
+  
+  "quiz_nesting_question": "Which nesting example is correct?",
+  "quiz_nesting_correct": "- properly nested without overlap.",
+  "quiz_nesting_incorrect": "- tags overlap incorrectly.",
+  
+  "quiz_angle_brackets_question": "What do angle brackets indicate in HTML?",
+  "quiz_angle_brackets_correct": "mark the beginning and end of HTML tags.",
+  "quiz_angle_brackets_incorrect": "Angle brackets are used to create comments in HTML code.",
+  
+  "quiz_paired_tags_question": "Which statement about paired tags is true?",
+  "quiz_paired_tags_correct": "Paired tags work together to wrap and format content between them.",
+  "quiz_paired_tags_incorrect": "Paired tags must always be identical without any differences.",
+  
+  "quiz_missing_closing_question": "What happens if you forget a closing tag?",
+  "quiz_missing_closing_correct": "The browser may not display content correctly or may auto-close the tag.",
+  "quiz_missing_closing_incorrect": "Nothing happens - closing tags are optional in modern HTML.",
+  
+  "quiz_attribute_syntax_question": "Which is an example of proper attribute syntax?",
+  "quiz_attribute_syntax_correct": "- attributes use name=\"value\" format.",
+  "quiz_attribute_syntax_incorrect": "- attributes use parentheses format.",
+  
+  "quiz_void_tags_special_question": "What makes void tags special?",
+  "quiz_void_tags_special_correct": "Void tags are complete by themselves and don't contain other content.",
+  "quiz_void_tags_special_incorrect": "Void tags are deprecated and should not be used in modern HTML.",
+  
+  "quiz_tag_structure_question": "Which HTML tag structure is valid?",
+  "quiz_tag_structure_correct": "- proper opening and closing with attribute.",
+  "quiz_tag_structure_incorrect": "- missing forward slash in closing tag.",
+  
+  "quiz_doctype_question": "What is the purpose of the DOCTYPE declaration?",
+  "quiz_doctype_correct": "tells the browser which version of HTML to use.",
+  "quiz_doctype_incorrect": "is used to add comments to HTML documents.",
+  
+  "quiz_comments_question": "Which statement about HTML comments is correct?",
+  "quiz_comments_correct": "- comments are not displayed on the webpage.",
+  "quiz_comments_incorrect": "- comments use regular tag syntax.",
+  
+  "quiz_multiple_attributes_question": "What happens with multiple attributes in a tag?",
+  "quiz_multiple_attributes_correct": "- attributes are separated by spaces.",
+  "quiz_multiple_attributes_incorrect": "- attributes are separated by commas.",
+  
+  "quiz_line_break_question": "Which tag correctly creates a line break?",
+  "quiz_line_break_correct": "- a void tag that creates a line break without content.",
+  "quiz_line_break_incorrect": "- line breaks require opening and closing tags."
+}

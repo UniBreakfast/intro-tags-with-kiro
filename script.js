@@ -1,189 +1,245 @@
 class HTMLTagsApp {
   constructor() {
     this.currentCardIndex = 0;
-    this.conceptCards = this.generateConceptCards();
-    this.quizQuestions = this.generateQuizQuestions();
     this.cards = [];
     this.quizScore = 0;
     this.totalQuizQuestions = 0;
     this.autoAdvanceTimeout = null;
     this.answeredQuestions = new Set();
+    this.currentLanguage = 'en';
+    this.translations = {};
     this.init();
   }
 
+  async loadLanguage(lang) {
+    try {
+      const response = await fetch(`lang/${lang}.json`);
+      this.translations = await response.json();
+      this.currentLanguage = lang;
+      this.updateAllTexts();
+      this.regenerateCards();
+    } catch (error) {
+      console.error('Failed to load language:', error);
+    }
+  }
+
+  getText(key) {
+    return this.translations[key] || key;
+  }
+
+  updateAllTexts() {
+    // Update all elements with data-text attributes
+    document.querySelectorAll('[data-text]').forEach(element => {
+      const key = element.getAttribute('data-text');
+      element.textContent = this.getText(key);
+    });
+  }
+
+  regenerateCards() {
+    const wasAtEnd = this.currentCardIndex >= this.cards.length - 1;
+    this.conceptCards = this.generateConceptCards();
+    this.quizQuestions = this.generateQuizQuestions();
+    this.generateCards();
+    
+    // Maintain position or go to start if we were at the end
+    if (wasAtEnd || this.currentCardIndex >= this.cards.length) {
+      this.currentCardIndex = 0;
+    }
+    
+    this.showCard(this.currentCardIndex);
+    this.updateUI();
+  }
+
   generateConceptCards() {
-    return [
+    const conceptData = [
       {
-        type: 'concept',
-        title: 'What is an HTML Tag?',
-        content: `
-                    <p>An HTML tag is a keyword enclosed in angle brackets that tells the browser how to structure and display content.</p>
-                    <div class="code-example">&lt;p&gt;This is a paragraph&lt;/p&gt;</div>
-                    <p>Tags are the building blocks of HTML documents and define the structure and meaning of web content.</p>
-                `
+        titleKey: 'concept_what_is_tag_title',
+        contentKey: 'concept_what_is_tag_content',
+        codeExample: '&lt;p&gt;This is a paragraph&lt;/p&gt;'
       },
       {
-        type: 'concept',
-        title: 'Opening Tags',
-        content: `
-                    <p>An opening tag marks the beginning of an HTML element. It consists of the tag name enclosed in angle brackets.</p>
-                    <div class="code-example">&lt;h1&gt; &lt;p&gt; &lt;div&gt; &lt;span&gt;</div>
-                    <p>Opening tags tell the browser <span class="highlight">where an element starts</span>.</p>
-                `
+        titleKey: 'concept_opening_tags_title',
+        contentKey: 'concept_opening_tags_content',
+        codeExample: '&lt;h1&gt; &lt;p&gt; &lt;div&gt; &lt;span&gt;'
       },
       {
-        type: 'concept',
-        title: 'Closing Tags',
-        content: `
-                    <p>A closing tag marks the end of an HTML element. It's identical to the opening tag but includes a forward slash.</p>
-                    <div class="code-example">&lt;/h1&gt; &lt;/p&gt; &lt;/div&gt; &lt;/span&gt;</div>
-                    <p>Closing tags tell the browser <span class="highlight">where an element ends</span>.</p>
-                `
+        titleKey: 'concept_closing_tags_title',
+        contentKey: 'concept_closing_tags_content',
+        codeExample: '&lt;/h1&gt; &lt;/p&gt; &lt;/div&gt; &lt;/span&gt;'
       },
       {
-        type: 'concept',
-        title: 'Paired Tags',
-        content: `
-                    <p>Most HTML tags come in pairs - an opening tag and a closing tag that work together to wrap content.</p>
-                    <div class="code-example">&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</div>
-                    <p>The content between paired tags is what gets formatted or structured by the element.</p>
-                `
+        titleKey: 'concept_paired_tags_title',
+        contentKey: 'concept_paired_tags_content',
+        codeExample: '&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;'
       },
       {
-        type: 'concept',
-        title: 'Void Tags (Self-Closing)',
-        content: `
-                    <p>Some HTML tags don't need closing tags because they don't contain content. These are called void or self-closing tags.</p>
-                    <div class="code-example">&lt;br&gt; &lt;img&gt; &lt;input&gt; &lt;hr&gt; &lt;meta&gt;</div>
-                    <p>Void tags represent elements that are <span class="highlight">complete by themselves</span>.</p>
-                `
+        titleKey: 'concept_void_tags_title',
+        contentKey: 'concept_void_tags_content',
+        codeExample: '&lt;br&gt; &lt;img&gt; &lt;input&gt; &lt;hr&gt; &lt;meta&gt;'
       },
       {
-        type: 'concept',
-        title: 'Simple Tags (No Attributes)',
-        content: `
-                    <p>Simple tags contain only the tag name without any additional information or attributes.</p>
-                    <div class="code-example">&lt;h1&gt;Main Heading&lt;/h1&gt;<br>&lt;p&gt;Simple paragraph&lt;/p&gt;<br>&lt;br&gt;</div>
-                    <p>These tags use their <span class="highlight">default behavior and styling</span>.</p>
-                `
+        titleKey: 'concept_simple_tags_title',
+        contentKey: 'concept_simple_tags_content',
+        codeExample: '&lt;h1&gt;Main Heading&lt;/h1&gt;<br>&lt;p&gt;Simple paragraph&lt;/p&gt;<br>&lt;br&gt;'
       },
       {
-        type: 'concept',
-        title: 'Tags with Attributes',
-        content: `
-                    <p>Tags can include attributes that provide additional information or modify the element's behavior.</p>
-                    <div class="code-example">&lt;img src="photo.jpg" alt="A beautiful sunset"&gt;<br>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</div>
-                    <p>Attributes are written as <span class="highlight">name="value"</span> pairs inside the opening tag.</p>
-                `
+        titleKey: 'concept_tags_with_attributes_title',
+        contentKey: 'concept_tags_with_attributes_content',
+        codeExample: '&lt;img src="photo.jpg" alt="A beautiful sunset"&gt;<br>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;'
       },
       {
-        type: 'concept',
-        title: 'Tags vs Elements',
-        content: `
-                    <p>A <strong>tag</strong> is the code you write. An <strong>element</strong> is what the browser creates from that tag at runtime.</p>
-                    <div class="code-example">Tag: &lt;p&gt;Hello World&lt;/p&gt;<br>Element: The actual paragraph displayed on the page</div>
-                    <p>Think of tags as <span class="highlight">instructions</span> and elements as the <span class="highlight">result</span>.</p>
-                `
+        titleKey: 'concept_tags_vs_elements_title',
+        contentKey: 'concept_tags_vs_elements_content',
+        codeExample: 'Tag: &lt;p&gt;Hello World&lt;/p&gt;<br>Element: The actual paragraph displayed on the page'
       },
       {
-        type: 'concept',
-        title: 'Tag Nesting',
-        content: `
-                    <p>HTML tags can be nested inside other tags to create complex structures and hierarchies.</p>
-                    <div class="code-example">&lt;div&gt;<br>&nbsp;&nbsp;&lt;h2&gt;Section Title&lt;/h2&gt;<br>&nbsp;&nbsp;&lt;p&gt;Some &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;<br>&lt;/div&gt;</div>
-                    <p>Nested tags create a <span class="highlight">parent-child relationship</span> in the document structure.</p>
-                `
+        titleKey: 'concept_tag_nesting_title',
+        contentKey: 'concept_tag_nesting_content',
+        codeExample: '&lt;div&gt;<br>&nbsp;&nbsp;&lt;h2&gt;Section Title&lt;/h2&gt;<br>&nbsp;&nbsp;&lt;p&gt;Some &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;<br>&lt;/div&gt;'
       },
       {
-        type: 'concept',
-        title: 'Proper Nesting Rules',
-        content: `
-                    <p>Tags must be properly nested - they cannot overlap. The last opened tag must be the first one closed.</p>
-                    <div class="code-example">✅ Correct: &lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;<br>❌ Wrong: &lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;</div>
-                    <p>Think of it like <span class="highlight">balanced parentheses</span> in mathematics.</p>
-                `
+        titleKey: 'concept_proper_nesting_title',
+        contentKey: 'concept_proper_nesting_content',
+        codeExample: '✅ Correct: &lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;<br>❌ Wrong: &lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;'
       }
     ];
+
+    return conceptData.map(concept => {
+      const contentParts = this.getText(concept.contentKey).split('|');
+      const content = `
+        <p>${contentParts[0]}</p>
+        <div class="code-example">${concept.codeExample}</div>
+        <p>${contentParts[1] ? contentParts[1].replace(/where an element starts|where an element ends|complete by themselves|default behavior and styling|name="value"|instructions|result|parent-child relationship|balanced parentheses/, '<span class="highlight">$&</span>') : ''}</p>
+      `;
+      
+      return {
+        type: 'concept',
+        title: this.getText(concept.titleKey),
+        content: content
+      };
+    });
   }
 
   generateQuizQuestions() {
-    return [
+    const quizData = [
       {
-        question: 'Which statement about HTML tags is correct?',
-        correct: 'HTML tags are keywords enclosed in angle brackets that structure content.',
-        incorrect: 'HTML tags are only used for styling and have no structural purpose.'
+        questionKey: 'quiz_html_tags_correct_question',
+        correctKey: 'quiz_html_tags_correct_correct',
+        incorrectKey: 'quiz_html_tags_correct_incorrect'
       },
       {
-        question: 'What makes a closing tag different from an opening tag?',
-        correct: 'A closing tag includes a forward slash (/) before the tag name.',
-        incorrect: 'A closing tag uses square brackets instead of angle brackets.'
+        questionKey: 'quiz_closing_tag_question',
+        correctKey: 'quiz_closing_tag_correct',
+        incorrectKey: 'quiz_closing_tag_incorrect'
       },
       {
-        question: 'Which of these is a void (self-closing) tag?',
-        correct: '<span class="inline-code">&lt;img&gt;</span> - it doesn\'t need a closing tag because it doesn\'t contain content.',
-        incorrect: '<span class="inline-code">&lt;p&gt;</span> - it always needs a closing tag to wrap text content.'
+        questionKey: 'quiz_void_tag_question',
+        correctKey: 'quiz_void_tag_correct',
+        incorrectKey: 'quiz_void_tag_incorrect',
+        correctCode: '&lt;img&gt;',
+        incorrectCode: '&lt;p&gt;'
       },
       {
-        question: 'What\'s the difference between tags and elements?',
-        correct: 'Tags are the code you write; elements are what the browser creates at runtime.',
-        incorrect: 'Tags and elements are exactly the same thing with different names.'
+        questionKey: 'quiz_tags_vs_elements_question',
+        correctKey: 'quiz_tags_vs_elements_correct',
+        incorrectKey: 'quiz_tags_vs_elements_incorrect'
       },
       {
-        question: 'Which nesting example is correct?',
-        correct: '<div class="code-example">&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/strong&gt;<br>&lt;/p&gt;</div>- properly nested without overlap.',
-        incorrect: '<div class="code-example">&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/p&gt;<br>&lt;/strong&gt;</div>- tags overlap incorrectly.'
+        questionKey: 'quiz_nesting_question',
+        correctKey: 'quiz_nesting_correct',
+        incorrectKey: 'quiz_nesting_incorrect',
+        correctCodeBlock: '&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/strong&gt;<br>&lt;/p&gt;',
+        incorrectCodeBlock: '&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/p&gt;<br>&lt;/strong&gt;'
       },
       {
-        question: 'What do angle brackets indicate in HTML?',
-        correct: 'Angle brackets <span class="inline-code">&lt; &gt;</span> mark the beginning and end of HTML tags.',
-        incorrect: 'Angle brackets are used to create comments in HTML code.'
+        questionKey: 'quiz_angle_brackets_question',
+        correctKey: 'quiz_angle_brackets_correct',
+        incorrectKey: 'quiz_angle_brackets_incorrect',
+        correctCode: '&lt; &gt;'
       },
       {
-        question: 'Which statement about paired tags is true?',
-        correct: 'Paired tags work together to wrap and format content between them.',
-        incorrect: 'Paired tags must always be identical without any differences.'
+        questionKey: 'quiz_paired_tags_question',
+        correctKey: 'quiz_paired_tags_correct',
+        incorrectKey: 'quiz_paired_tags_incorrect'
       },
       {
-        question: 'What happens if you forget a closing tag?',
-        correct: 'The browser may not display content correctly or may auto-close the tag.',
-        incorrect: 'Nothing happens - closing tags are optional in modern HTML.'
+        questionKey: 'quiz_missing_closing_question',
+        correctKey: 'quiz_missing_closing_correct',
+        incorrectKey: 'quiz_missing_closing_incorrect'
       },
       {
-        question: 'Which is an example of proper attribute syntax?',
-        correct: '<div class="code-example">&lt;img src="photo.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="description"&gt;</div>- attributes use name="value" format.',
-        incorrect: '<div class="code-example">&lt;img (src=photo.jpg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(alt=description)&gt;</div>- attributes use parentheses format.'
+        questionKey: 'quiz_attribute_syntax_question',
+        correctKey: 'quiz_attribute_syntax_correct',
+        incorrectKey: 'quiz_attribute_syntax_incorrect',
+        correctCodeBlock: '&lt;img src="photo.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="description"&gt;',
+        incorrectCodeBlock: '&lt;img (src=photo.jpg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(alt=description)&gt;'
       },
       {
-        question: 'What makes void tags special?',
-        correct: 'Void tags are complete by themselves and don\'t contain other content.',
-        incorrect: 'Void tags are deprecated and should not be used in modern HTML.'
+        questionKey: 'quiz_void_tags_special_question',
+        correctKey: 'quiz_void_tags_special_correct',
+        incorrectKey: 'quiz_void_tags_special_incorrect'
       },
       {
-        question: 'Which HTML tag structure is valid?',
-        correct: '<div class="code-example">&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div&gt;</div>- proper opening and closing with attribute.',
-        incorrect: '<div class="code-example">&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;div&gt;</div>- missing forward slash in closing tag.'
+        questionKey: 'quiz_tag_structure_question',
+        correctKey: 'quiz_tag_structure_correct',
+        incorrectKey: 'quiz_tag_structure_incorrect',
+        correctCodeBlock: '&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div&gt;',
+        incorrectCodeBlock: '&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;div&gt;'
       },
       {
-        question: 'What is the purpose of the DOCTYPE declaration?',
-        correct: '<span class="inline-code">&lt;!DOCTYPE html&gt;</span> tells the browser which version of HTML to use.',
-        incorrect: '<span class="inline-code">&lt;!DOCTYPE html&gt;</span> is used to add comments to HTML documents.'
+        questionKey: 'quiz_doctype_question',
+        correctKey: 'quiz_doctype_correct',
+        incorrectKey: 'quiz_doctype_incorrect',
+        correctCode: '&lt;!DOCTYPE html&gt;',
+        incorrectCode: '&lt;!DOCTYPE html&gt;'
       },
       {
-        question: 'Which statement about HTML comments is correct?',
-        correct: '<div class="code-example">&lt;!-- This is a comment --&gt;</div>- comments are not displayed on the webpage.',
-        incorrect: '<div class="code-example">&lt;comment&gt;<br>&nbsp;&nbsp;This is a comment<br>&lt;/comment&gt;</div>- comments use regular tag syntax.'
+        questionKey: 'quiz_comments_question',
+        correctKey: 'quiz_comments_correct',
+        incorrectKey: 'quiz_comments_incorrect',
+        correctCodeBlock: '&lt;!-- This is a comment --&gt;',
+        incorrectCodeBlock: '&lt;comment&gt;<br>&nbsp;&nbsp;This is a comment<br>&lt;/comment&gt;'
       },
       {
-        question: 'What happens with multiple attributes in a tag?',
-        correct: '<div class="code-example">&lt;input type="text"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;</div>- attributes are separated by spaces.',
-        incorrect: '<div class="code-example">&lt;input type="text",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;</div>- attributes are separated by commas.'
+        questionKey: 'quiz_multiple_attributes_question',
+        correctKey: 'quiz_multiple_attributes_correct',
+        incorrectKey: 'quiz_multiple_attributes_incorrect',
+        correctCodeBlock: '&lt;input type="text"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;',
+        incorrectCodeBlock: '&lt;input type="text",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;'
       },
       {
-        question: 'Which tag correctly creates a line break?',
-        correct: '<span class="inline-code">&lt;br&gt;</span> - a void tag that creates a line break without content.',
-        incorrect: '<div class="code-example">&lt;break&gt;<br>&lt;/break&gt;</div>- line breaks require opening and closing tags.'
+        questionKey: 'quiz_line_break_question',
+        correctKey: 'quiz_line_break_correct',
+        incorrectKey: 'quiz_line_break_incorrect',
+        correctCode: '&lt;br&gt;',
+        incorrectCodeBlock: '&lt;break&gt;<br>&lt;/break&gt;'
       }
     ];
+
+    return quizData.map(quiz => {
+      let correct = this.getText(quiz.correctKey);
+      let incorrect = this.getText(quiz.incorrectKey);
+
+      // Add code elements where needed
+      if (quiz.correctCode) {
+        correct = `<span class="inline-code">${quiz.correctCode}</span> ${correct}`;
+      }
+      if (quiz.incorrectCode) {
+        incorrect = `<span class="inline-code">${quiz.incorrectCode}</span> ${incorrect}`;
+      }
+      if (quiz.correctCodeBlock) {
+        correct = `<div class="code-example">${quiz.correctCodeBlock}</div>${correct}`;
+      }
+      if (quiz.incorrectCodeBlock) {
+        incorrect = `<div class="code-example">${quiz.incorrectCodeBlock}</div>${incorrect}`;
+      }
+
+      return {
+        question: this.getText(quiz.questionKey),
+        correct: correct,
+        incorrect: incorrect
+      };
+    });
   }
 
   shuffleArray(array) {
@@ -221,19 +277,20 @@ class HTMLTagsApp {
     });
   }
 
-  init() {
+  async init() {
     this.cardContainer = document.getElementById('cardContainer');
     this.prevBtn = document.getElementById('prevBtn');
     this.nextBtn = document.getElementById('nextBtn');
     this.cardCounter = document.getElementById('cardCounter');
     this.progressFill = document.getElementById('progressFill');
+    this.languageSelect = document.getElementById('languageSelect');
 
     this.prevBtn.addEventListener('click', () => this.previousCard());
     this.nextBtn.addEventListener('click', () => this.nextCard());
+    this.languageSelect.addEventListener('change', (e) => this.loadLanguage(e.target.value));
 
-    this.generateCards();
-    this.showCard(0);
-    this.updateUI();
+    // Load default language
+    await this.loadLanguage('en');
   }
 
   showCard(index) {
@@ -263,7 +320,7 @@ class HTMLTagsApp {
 
     const optionsHTML = card.options.map((option, index) => `
             <div class="quiz-option" data-correct="${option.correct}" onclick="app.selectQuizOption(this)">
-                <h3>${option.correct ? 'Correct' : 'Incorrect'}</h3>
+                <h3>${option.correct ? this.getText('correct') : this.getText('incorrect')}</h3>
                 <p>${option.text}</p>
             </div>
         `).join('');
@@ -322,25 +379,25 @@ class HTMLTagsApp {
 
   showFinishDialog() {
     const percentage = Math.round((this.quizScore / this.totalQuizQuestions) * 100);
-    let message = '';
+    let messageKey = '';
 
     if (percentage >= 90) {
-      message = 'Excellent! You have mastered HTML tags!';
+      messageKey = 'excellent_message';
     } else if (percentage >= 70) {
-      message = 'Great job! You have a solid understanding of HTML tags.';
+      messageKey = 'great_message';
     } else if (percentage >= 50) {
-      message = 'Good effort! Review the concepts and try again to improve.';
+      messageKey = 'good_message';
     } else {
-      message = 'Keep learning! Review the concept cards and try the quiz again.';
+      messageKey = 'keep_learning_message';
     }
 
     const finishDialog = document.createElement('div');
     finishDialog.className = 'card finish-dialog';
     finishDialog.innerHTML = `
-            <h2>Quiz Complete!</h2>
+            <h2>${this.getText('quiz_complete')}</h2>
             <div class="score">${this.quizScore}/${this.totalQuizQuestions}</div>
-            <div class="message">${message}</div>
-            <button class="restart-btn" onclick="app.restart()">Try Again</button>
+            <div class="message">${this.getText(messageKey)}</div>
+            <button class="restart-btn" onclick="app.restart()">${this.getText('try_again')}</button>
         `;
 
     this.cardContainer.innerHTML = '';

@@ -11,8 +11,15 @@
 <body>
   <div class="container">
     <header>
-      <h1>HTML Tags Learning App</h1>
-      <p>Master the fundamentals of HTML tags step by step</p>
+      <div class="language-selector">
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="uk">Українська</option>
+        </select>
+      </div>
+      <h1 data-text="app_title">HTML Tags Learning App</h1>
+      <p data-text="app_subtitle">Master the fundamentals of HTML tags step by step</p>
     </header>
 
     <main>
@@ -25,9 +32,9 @@
       </div>
 
       <div class="navigation">
-        <button id="prevBtn" class="nav-btn" disabled>Previous</button>
+        <button id="prevBtn" class="nav-btn" disabled data-text="previous">Previous</button>
         <span class="card-counter" id="cardCounter">1 / 1</span>
-        <button id="nextBtn" class="nav-btn">Next</button>
+        <button id="nextBtn" class="nav-btn" data-text="next">Next</button>
       </div>
     </main>
   </div>

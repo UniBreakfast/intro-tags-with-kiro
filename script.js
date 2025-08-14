@@ -1,5 +1,5 @@
 class ConceptQuizApp {
-  constructor(courseId = 'html-tags') {
+  constructor(courseId = null) {
     this.courseId = courseId;
     this.currentCardIndex = 0;
     this.cards = [];
@@ -78,12 +78,14 @@ class ConceptQuizApp {
 
   async loadAvailableCourses() {
     try {
-      // For now, we'll hardcode the available courses
-      // In the future, this could scan the courses directory
-      this.availableCourses = ['html-tags'];
+      const response = await fetch('courses/index.json');
+      this.availableCourses = await response.json();
       await this.populateCourseSelector();
     } catch (error) {
       console.error('Failed to load available courses:', error);
+      // Fallback to hardcoded list if index.json fails to load
+      this.availableCourses = ['html-tags'];
+      await this.populateCourseSelector();
     }
   }
 
@@ -117,6 +119,11 @@ class ConceptQuizApp {
     this.cards = [];
     this.quizScore = 0;
     this.answeredQuestions.clear();
+
+    // Show navigation buttons and counter (in case they were hidden from finish dialog)
+    this.prevBtn.style.display = 'block';
+    this.nextBtn.style.display = 'block';
+    this.cardCounter.style.display = 'block';
 
     // Reload the course with current language
     await this.loadLanguage(this.currentLanguage);
@@ -329,8 +336,16 @@ class ConceptQuizApp {
     this.languageSelect.addEventListener('change', (e) => this.loadLanguage(e.target.value));
     this.courseSelect.addEventListener('change', (e) => this.loadCourse(e.target.value));
 
-    // Load available courses and default language
+    // Load available courses first
     await this.loadAvailableCourses();
+    
+    // If no courseId was provided, select a random one
+    if (!this.courseId && this.availableCourses.length > 0) {
+      const randomIndex = Math.floor(Math.random() * this.availableCourses.length);
+      this.courseId = this.availableCourses[randomIndex];
+    }
+    
+    // Load default language
     await this.loadLanguage('en');
   }
 
@@ -381,14 +396,16 @@ class ConceptQuizApp {
     const allOptions = optionElement.parentElement.querySelectorAll('.quiz-option');
     const currentCard = this.cards[this.currentCardIndex];
 
+    // Track score only if this question hasn't been answered before
+    if (currentCard.questionId && !this.answeredQuestions.has(currentCard.questionId)) {
+      if (isCorrect) {
+        this.quizScore++;
+      }
+    }
+
     // Mark this question as answered
     if (currentCard.questionId) {
       this.answeredQuestions.add(currentCard.questionId);
-    }
-
-    // Track score
-    if (isCorrect) {
-      this.quizScore++;
     }
 
     // Reveal the correct/incorrect labels and apply styling
@@ -521,4 +538,4 @@ class ConceptQuizApp {
 }
 
 // Initialize the app when the page loads
-const app = new ConceptQuizApp('html-tags');
+const app = new ConceptQuizApp();

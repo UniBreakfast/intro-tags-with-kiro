@@ -73,6 +73,24 @@
       "titleKey": "concept_closing_tag_attributes_title",
       "contentKey": "concept_closing_tag_attributes_content",
       "codeExample": "✅ Correct: &lt;div class=\"box\"&gt;Content&lt;/div&gt;<br>❌ Wrong: &lt;div class=\"box\"&gt;Content&lt;/div class=\"box\"&gt;"
+    },
+    {
+      "id": "html_comments",
+      "titleKey": "concept_html_comments_title",
+      "contentKey": "concept_html_comments_content",
+      "codeExample": "&lt;!-- This is a comment --&gt;<br>&lt;!-- Comments can span<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiple lines --&gt;"
+    },
+    {
+      "id": "tag_case_insensitivity",
+      "titleKey": "concept_tag_case_insensitivity_title",
+      "contentKey": "concept_tag_case_insensitivity_content",
+      "codeExample": "✅ Recommended: &lt;div&gt;Content&lt;/div&gt;<br>⚠️ Valid but not recommended: &lt;DIV&gt;Content&lt;/DIV&gt;"
+    },
+    {
+      "id": "custom_tags",
+      "titleKey": "concept_custom_tags_title",
+      "contentKey": "concept_custom_tags_content",
+      "codeExample": "✅ Valid custom tag: &lt;my-component&gt;Content&lt;/my-component&gt;<br>❌ Invalid custom tag: &lt;mycomponent&gt;Content&lt;/mycomponent&gt;"
     }
   ],
   "quiz": [
@@ -175,14 +193,7 @@
       "correctCodeBlock": "&lt;input type=\"text\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=\"username\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;",
       "incorrectCodeBlock": "&lt;input type=\"text\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=\"username\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;"
     },
-    {
-      "id": "line_break",
-      "questionKey": "quiz_line_break_question",
-      "correctKey": "quiz_line_break_correct",
-      "incorrectKey": "quiz_line_break_incorrect",
-      "correctCode": "&lt;br&gt;",
-      "incorrectCodeBlock": "&lt;break&gt;<br>&lt;/break&gt;"
-    },
+
     {
       "id": "tags_inside_tags",
       "questionKey": "quiz_tags_inside_tags_question",
@@ -198,6 +209,20 @@
       "incorrectKey": "quiz_closing_tag_attributes_incorrect",
       "correctCodeBlock": "&lt;div class=\"box\"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div&gt;",
       "incorrectCodeBlock": "&lt;div class=\"box\"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div class=\"box\"&gt;"
+    },
+    {
+      "id": "tag_case_insensitivity",
+      "questionKey": "quiz_tag_case_insensitivity_question",
+      "correctKey": "quiz_tag_case_insensitivity_correct",
+      "incorrectKey": "quiz_tag_case_insensitivity_incorrect"
+    },
+    {
+      "id": "custom_tags",
+      "questionKey": "quiz_custom_tags_question",
+      "correctKey": "quiz_custom_tags_correct",
+      "incorrectKey": "quiz_custom_tags_incorrect",
+      "correctCode": "&lt;my-widget&gt;",
+      "incorrectCode": "&lt;mywidget&gt;"
     }
   ]
 }

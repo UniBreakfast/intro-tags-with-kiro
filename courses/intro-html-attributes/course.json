@@ -1,0 +1,192 @@
+{
+  "title": "course_title",
+  "subtitle": "course_subtitle",
+  "concepts": [
+    {
+      "id": "what_are_attributes",
+      "titleKey": "concept_what_are_attributes_title",
+      "contentKey": "concept_what_are_attributes_content",
+      "codeExample": "&lt;img src=\"photo.jpg\" alt=\"A sunset\"&gt;"
+    },
+    {
+      "id": "attribute_syntax",
+      "titleKey": "concept_attribute_syntax_title",
+      "contentKey": "concept_attribute_syntax_content",
+      "codeExample": "&lt;tag attribute=\"value\"&gt;Content&lt;/tag&gt;"
+    },
+    {
+      "id": "attribute_values",
+      "titleKey": "concept_attribute_values_title",
+      "contentKey": "concept_attribute_values_content",
+      "codeExample": "&lt;input type=\"text\" required disabled&gt;"
+    },
+    {
+      "id": "quotes_in_attributes",
+      "titleKey": "concept_quotes_in_attributes_title",
+      "contentKey": "concept_quotes_in_attributes_content",
+      "codeExample": "&lt;div class=\"main-content\"&gt;<br>&lt;p title='This is a tooltip'&gt;Text&lt;/p&gt;<br>&lt;/div&gt;"
+    },
+    {
+      "id": "multiple_attributes",
+      "titleKey": "concept_multiple_attributes_title",
+      "contentKey": "concept_multiple_attributes_content",
+      "codeExample": "&lt;img src=\"image.jpg\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt=\"Description\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width=\"300\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height=\"200\"&gt;"
+    },
+    {
+      "id": "boolean_attributes",
+      "titleKey": "concept_boolean_attributes_title",
+      "contentKey": "concept_boolean_attributes_content",
+      "codeExample": "&lt;input type=\"checkbox\" checked&gt;<br>&lt;button disabled&gt;Click me&lt;/button&gt;"
+    },
+    {
+      "id": "global_attributes",
+      "titleKey": "concept_global_attributes_title",
+      "contentKey": "concept_global_attributes_content",
+      "codeExample": "&lt;div id=\"header\" class=\"main\"&gt;<br>&nbsp;&nbsp;&lt;p title=\"Tooltip text\"&gt;Content&lt;/p&gt;<br>&lt;/div&gt;"
+    },
+    {
+      "id": "attribute_order",
+      "titleKey": "concept_attribute_order_title",
+      "contentKey": "concept_attribute_order_content",
+      "codeExample": "&lt;img src=\"photo.jpg\" alt=\"Photo\" width=\"100\"&gt;<br>&lt;img width=\"100\" alt=\"Photo\" src=\"photo.jpg\"&gt;"
+    },
+    {
+      "id": "case_sensitivity",
+      "titleKey": "concept_case_sensitivity_title",
+      "contentKey": "concept_case_sensitivity_content",
+      "codeExample": "✅ Correct: &lt;div class=\"container\"&gt;<br>❌ Avoid: &lt;div CLASS=\"container\"&gt;"
+    },
+    {
+      "id": "whitespace_in_attributes",
+      "titleKey": "concept_whitespace_in_attributes_title",
+      "contentKey": "concept_whitespace_in_attributes_content",
+      "codeExample": "✅ Good: &lt;img src=\"photo.jpg\" alt=\"Photo\"&gt;<br>❌ Bad: &lt;img src = \"photo.jpg\" alt= \"Photo\" &gt;"
+    },
+    {
+      "id": "attributes_outside_tags",
+      "titleKey": "concept_attributes_outside_tags_title",
+      "contentKey": "concept_attributes_outside_tags_content",
+      "codeExample": "✅ Correct: &lt;img src=\"photo.jpg\"&gt;<br>❌ Wrong: &lt;img&gt; src=\"photo.jpg\""
+    },
+    {
+      "id": "attributes_in_closing_tags",
+      "titleKey": "concept_attributes_in_closing_tags_title",
+      "contentKey": "concept_attributes_in_closing_tags_content",
+      "codeExample": "✅ Correct: &lt;div class=\"box\"&gt;Content&lt;/div&gt;<br>❌ Wrong: &lt;div&gt;Content&lt;/div class=\"box\"&gt;"
+    },
+    {
+      "id": "custom_attributes",
+      "titleKey": "concept_custom_attributes_title",
+      "contentKey": "concept_custom_attributes_content",
+      "codeExample": "✅ Recommended: &lt;div data-user-id=\"123\"&gt;<br>⚠️ Discouraged: &lt;div custom-attr=\"value\"&gt;"
+    }
+  ],
+  "quiz": [
+    {
+      "id": "what_are_attributes",
+      "questionKey": "quiz_what_are_attributes_question",
+      "correctKey": "quiz_what_are_attributes_correct",
+      "incorrectKey": "quiz_what_are_attributes_incorrect"
+    },
+    {
+      "id": "attribute_syntax",
+      "questionKey": "quiz_attribute_syntax_question",
+      "correctKey": "quiz_attribute_syntax_correct",
+      "incorrectKey": "quiz_attribute_syntax_incorrect",
+      "correctCodeBlock": "&lt;a href=\"https://example.com\"&gt;<br>&nbsp;&nbsp;Link text<br>&lt;/a&gt;",
+      "incorrectCodeBlock": "&lt;a (href=https://example.com)&gt;<br>&nbsp;&nbsp;Link text<br>&lt;/a&gt;"
+    },
+    {
+      "id": "attribute_placement",
+      "questionKey": "quiz_attribute_placement_question",
+      "correctKey": "quiz_attribute_placement_correct",
+      "incorrectKey": "quiz_attribute_placement_incorrect",
+      "correctCode": "&lt;img src=\"photo.jpg\"&gt;",
+      "incorrectCode": "&lt;/img src=\"photo.jpg\"&gt;"
+    },
+    {
+      "id": "quotes_required",
+      "questionKey": "quiz_quotes_required_question",
+      "correctKey": "quiz_quotes_required_correct",
+      "incorrectKey": "quiz_quotes_required_incorrect"
+    },
+    {
+      "id": "boolean_attributes",
+      "questionKey": "quiz_boolean_attributes_question",
+      "correctKey": "quiz_boolean_attributes_correct",
+      "incorrectKey": "quiz_boolean_attributes_incorrect",
+      "correctCode": "&lt;input required&gt;",
+      "incorrectCode": "&lt;input required=\"true\"&gt;"
+    },
+    {
+      "id": "multiple_attributes_syntax",
+      "questionKey": "quiz_multiple_attributes_syntax_question",
+      "correctKey": "quiz_multiple_attributes_syntax_correct",
+      "incorrectKey": "quiz_multiple_attributes_syntax_incorrect",
+      "correctCodeBlock": "&lt;input type=\"text\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=\"username\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;",
+      "incorrectCodeBlock": "&lt;input type=\"text\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=\"username\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;"
+    },
+    {
+      "id": "attribute_values",
+      "questionKey": "quiz_attribute_values_question",
+      "correctKey": "quiz_attribute_values_correct",
+      "incorrectKey": "quiz_attribute_values_incorrect"
+    },
+    {
+      "id": "global_attributes",
+      "questionKey": "quiz_global_attributes_question",
+      "correctKey": "quiz_global_attributes_correct",
+      "incorrectKey": "quiz_global_attributes_incorrect"
+    },
+    {
+      "id": "attribute_order",
+      "questionKey": "quiz_attribute_order_question",
+      "correctKey": "quiz_attribute_order_correct",
+      "incorrectKey": "quiz_attribute_order_incorrect"
+    },
+    {
+      "id": "case_sensitivity",
+      "questionKey": "quiz_case_sensitivity_question",
+      "correctKey": "quiz_case_sensitivity_correct",
+      "incorrectKey": "quiz_case_sensitivity_incorrect"
+    },
+    {
+      "id": "whitespace_rules",
+      "questionKey": "quiz_whitespace_rules_question",
+      "correctKey": "quiz_whitespace_rules_correct",
+      "incorrectKey": "quiz_whitespace_rules_incorrect",
+      "correctCodeBlock": "&lt;div class=\"container\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=\"main\"&gt;",
+      "incorrectCodeBlock": "&lt;div class = \"container\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id = \"main\" &gt;"
+    },
+    {
+      "id": "empty_attributes",
+      "questionKey": "quiz_empty_attributes_question",
+      "correctKey": "quiz_empty_attributes_correct",
+      "incorrectKey": "quiz_empty_attributes_incorrect"
+    },
+    {
+      "id": "attribute_inheritance",
+      "questionKey": "quiz_attribute_inheritance_question",
+      "correctKey": "quiz_attribute_inheritance_correct",
+      "incorrectKey": "quiz_attribute_inheritance_incorrect"
+    },
+    {
+      "id": "attributes_outside_tags",
+      "questionKey": "quiz_attributes_outside_tags_question",
+      "correctKey": "quiz_attributes_outside_tags_correct",
+      "incorrectKey": "quiz_attributes_outside_tags_incorrect"
+    },
+    {
+      "id": "attributes_in_closing_tags",
+      "questionKey": "quiz_attributes_in_closing_tags_question",
+      "correctKey": "quiz_attributes_in_closing_tags_correct",
+      "incorrectKey": "quiz_attributes_in_closing_tags_incorrect"
+    },
+    {
+      "id": "custom_attributes",
+      "questionKey": "quiz_custom_attributes_question",
+      "correctKey": "quiz_custom_attributes_correct",
+      "incorrectKey": "quiz_custom_attributes_incorrect"
+    }
+  ]
+}

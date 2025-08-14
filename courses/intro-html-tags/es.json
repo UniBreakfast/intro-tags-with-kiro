@@ -88,15 +88,14 @@
   "quiz_multiple_attributes_correct": "- los atributos se separan con espacios.",
   "quiz_multiple_attributes_incorrect": "- los atributos se separan con comas.",
   
-  "quiz_line_break_question": "¿Cuál etiqueta crea correctamente un salto de línea?",
-  "quiz_line_break_correct": "- una etiqueta vacía que crea un salto de línea sin contenido.",
-  "quiz_line_break_incorrect": "- los saltos de línea requieren etiquetas de apertura y cierre.",
-  
   "concept_tags_inside_tags_title": "Las etiquetas no pueden estar dentro de otras etiquetas",
   "concept_tags_inside_tags_content": "Las etiquetas HTML no pueden colocarse dentro de otras etiquetas. Las etiquetas solo pueden anidarse entre otras etiquetas, no dentro de los corchetes angulares de la etiqueta.|Esta es una regla fundamental: el contenido de la etiqueta va entre las etiquetas de apertura y cierre, nunca dentro de los corchetes de la etiqueta.",
   
   "concept_closing_tag_attributes_title": "Las etiquetas de cierre no pueden tener atributos",
   "concept_closing_tag_attributes_content": "Las etiquetas de cierre deben contener solo el nombre de la etiqueta con una barra diagonal. No pueden tener atributos o información adicional.|Los atributos solo están permitidos en etiquetas de apertura, nunca en etiquetas de cierre.",
+  
+  "concept_html_comments_title": "Comentarios HTML",
+  "concept_html_comments_content": "Los comentarios HTML son notas en tu código que no se muestran en la página web. Usan una sintaxis especial similar a etiquetas que comienza con &lt;!-- y termina con --&gt;.|Los comentarios son útiles para dejar notas para ti mismo u otros desarrolladores, y para ocultar temporalmente código sin eliminarlo.",
   
   "quiz_tags_inside_tags_question": "¿Cuál ejemplo muestra la colocación correcta de etiquetas?",
   "quiz_tags_inside_tags_correct": "- las etiquetas están correctamente anidadas entre sí, no dentro de los corchetes de la etiqueta.",
@@ -104,5 +103,19 @@
   
   "quiz_closing_tag_attributes_question": "¿Cuál sintaxis de etiqueta de cierre es correcta?",
   "quiz_closing_tag_attributes_correct": "- la etiqueta de cierre contiene solo el nombre de la etiqueta con barra diagonal.",
-  "quiz_closing_tag_attributes_incorrect": "- incorrectamente intentando agregar atributos a una etiqueta de cierre."
+  "quiz_closing_tag_attributes_incorrect": "- incorrectamente intentando agregar atributos a una etiqueta de cierre.",
+  
+  "concept_tag_case_insensitivity_title": "Insensibilidad a Mayúsculas en Nombres de Etiquetas",
+  "concept_tag_case_insensitivity_content": "Los nombres de etiquetas HTML no distinguen entre mayúsculas y minúsculas, lo que significa que &lt;div&gt; y &lt;DIV&gt; funcionan igual. Sin embargo, las minúsculas son la convención estándar.|Usar nombres de etiquetas en minúsculas hace que tu HTML sea más legible y sigue las mejores prácticas modernas.",
+  
+  "concept_custom_tags_title": "Etiquetas Personalizadas con Guiones",
+  "concept_custom_tags_content": "Las etiquetas HTML personalizadas son válidas si contienen al menos un guión en su nombre. Sin embargo, su uso generalmente se desaconseja a menos que se sigan los estándares web.|Las etiquetas personalizadas deben usarse con moderación y solo al construir componentes web o seguir marcos específicos.",
+  
+  "quiz_tag_case_insensitivity_question": "¿Son sensibles a mayúsculas los nombres de etiquetas HTML?",
+  "quiz_tag_case_insensitivity_correct": "No, pero las minúsculas son la convención recomendada.",
+  "quiz_tag_case_insensitivity_incorrect": "Sí, deben estar exactamente en minúsculas o no funcionarán.",
+  
+  "quiz_custom_tags_question": "¿Qué formato de etiqueta personalizada es válido?",
+  "quiz_custom_tags_correct": "- las etiquetas personalizadas deben contener al menos un guión.",
+  "quiz_custom_tags_incorrect": "- las etiquetas personalizadas sin guiones no son HTML válido."
 }

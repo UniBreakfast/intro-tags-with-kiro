@@ -1,0 +1,107 @@
+{
+  "course_title": "Introduction to HTML Attributes",
+  "course_subtitle": "Master the fundamentals of HTML attributes step by step",
+  
+  "concept_what_are_attributes_title": "What are HTML Attributes?",
+  "concept_what_are_attributes_content": "HTML attributes provide additional information about HTML elements. They are written inside opening tags or void tags and modify the element's behavior or appearance.|Attributes consist of a name and a value, and they help make HTML elements more specific and functional.",
+  
+  "concept_attribute_syntax_title": "Attribute Syntax",
+  "concept_attribute_syntax_content": "Attributes follow a specific syntax: name=\"value\". The attribute name comes first, followed by an equals sign, then the value in quotes.|This consistent syntax makes HTML predictable and easy to read for both browsers and developers.",
+  
+  "concept_attribute_values_title": "Attribute Values",
+  "concept_attribute_values_content": "Attribute values can be text, numbers, URLs, or special keywords. Some attributes require specific values, while others accept any text.|Understanding what values an attribute expects is crucial for writing valid HTML.",
+  
+  "concept_quotes_in_attributes_title": "Quotes in Attribute Values",
+  "concept_quotes_in_attributes_content": "Attribute values should be enclosed in quotes. You can use either double quotes (\") or single quotes ('), but be consistent.|Quotes are especially important when values contain spaces or special characters.",
+  
+  "concept_multiple_attributes_title": "Multiple Attributes",
+  "concept_multiple_attributes_content": "Elements can have multiple attributes separated by spaces. Each attribute is independent and adds its own functionality to the element.|The order of attributes usually doesn't matter, but good organization improves code readability.",
+  
+  "concept_boolean_attributes_title": "Boolean Attributes",
+  "concept_boolean_attributes_content": "Some attributes are boolean - they're either present or absent. When present, they're \"true\"; when absent, they're \"false\".|Boolean attributes don't need values - just writing the attribute name is enough to activate them.",
+  
+  "concept_global_attributes_title": "Global Attributes",
+  "concept_global_attributes_content": "Global attributes can be used on any HTML element. Common examples include id, class, and title.|These attributes provide universal functionality that works across all HTML elements.",
+  
+  "concept_attribute_order_title": "Attribute Order",
+  "concept_attribute_order_content": "The order of attributes in a tag doesn't affect functionality, but following conventions improves code readability.|Many developers prefer to put the most important attributes first, like id and class.",
+  
+  "concept_case_sensitivity_title": "Case Sensitivity",
+  "concept_case_sensitivity_content": "HTML attribute names are case-insensitive, but it's best practice to use lowercase for consistency.|Attribute values may be case-sensitive depending on the specific attribute and its purpose.",
+  
+  "concept_whitespace_in_attributes_title": "Whitespace in Attributes",
+  "concept_whitespace_in_attributes_content": "Avoid extra spaces around the equals sign in attributes. Keep the syntax clean: attribute=\"value\".|Proper spacing makes your HTML more readable and follows standard formatting conventions.",
+  
+  "quiz_what_are_attributes_question": "What is the primary purpose of HTML attributes?",
+  "quiz_what_are_attributes_correct": "To provide additional information and modify element behavior.",
+  "quiz_what_are_attributes_incorrect": "To replace the need for HTML tags entirely.",
+  
+  "quiz_attribute_syntax_question": "Which shows the correct attribute syntax?",
+  "quiz_attribute_syntax_correct": "- uses proper name=\"value\" format with quotes.",
+  "quiz_attribute_syntax_incorrect": "- uses incorrect parentheses instead of quotes.",
+  
+  "quiz_attribute_placement_question": "Where should attributes be placed?",
+  "quiz_attribute_placement_correct": "- attributes go in opening tags or void tags only.",
+  "quiz_attribute_placement_incorrect": "- attributes cannot go in closing tags.",
+  
+  "quiz_quotes_required_question": "When are quotes required around attribute values?",
+  "quiz_quotes_required_correct": "Quotes are always recommended for consistency and safety.",
+  "quiz_quotes_required_incorrect": "Quotes are never needed in HTML attributes.",
+  
+  "quiz_boolean_attributes_question": "How do you write a boolean attribute?",
+  "quiz_boolean_attributes_correct": "- just the attribute name without a value.",
+  "quiz_boolean_attributes_incorrect": "- boolean attributes don't need explicit true/false values.",
+  
+  "quiz_multiple_attributes_syntax_question": "How are multiple attributes separated?",
+  "quiz_multiple_attributes_syntax_correct": "- attributes are separated by spaces.",
+  "quiz_multiple_attributes_syntax_incorrect": "- commas are not used to separate attributes.",
+  
+  "quiz_attribute_values_question": "What types of values can attributes have?",
+  "quiz_attribute_values_correct": "Text, numbers, URLs, keywords - depending on the attribute.",
+  "quiz_attribute_values_incorrect": "Only numbers and mathematical expressions.",
+  
+  "quiz_global_attributes_question": "What makes an attribute \"global\"?",
+  "quiz_global_attributes_correct": "It can be used on any HTML element.",
+  "quiz_global_attributes_incorrect": "It only works on specific, predefined elements.",
+  
+  "quiz_attribute_order_question": "Does the order of attributes matter?",
+  "quiz_attribute_order_correct": "No, attribute order doesn't affect functionality.",
+  "quiz_attribute_order_incorrect": "Yes, attributes must be in alphabetical order.",
+  
+  "quiz_case_sensitivity_question": "Are HTML attribute names case-sensitive?",
+  "quiz_case_sensitivity_correct": "No, but lowercase is the recommended convention.",
+  "quiz_case_sensitivity_incorrect": "Yes, they must match exactly or they won't work.",
+  
+  "quiz_whitespace_rules_question": "What's the correct spacing for attributes?",
+  "quiz_whitespace_rules_correct": "- no extra spaces around the equals sign.",
+  "quiz_whitespace_rules_incorrect": "- extra spaces make the HTML invalid.",
+  
+  "quiz_empty_attributes_question": "Can an attribute have an empty value?",
+  "quiz_empty_attributes_correct": "Yes, empty values are valid: attribute=\"\".",
+  "quiz_empty_attributes_incorrect": "No, all attributes must have meaningful content.",
+  
+  "quiz_attribute_inheritance_question": "Do child elements inherit parent attributes?",
+  "quiz_attribute_inheritance_correct": "No, each element has its own independent attributes.",
+  "quiz_attribute_inheritance_incorrect": "Yes, all attributes are automatically inherited.",
+  
+  "concept_attributes_outside_tags_title": "Attributes Must Be Inside Tags",
+  "concept_attributes_outside_tags_content": "Attributes must be written inside opening tag or void tag brackets. Any attribute-like text outside of tags is treated as regular text content.|Placing attributes outside tags will not work - they'll just be displayed as text on the webpage.",
+  
+  "concept_attributes_in_closing_tags_title": "No Attributes in Closing Tags",
+  "concept_attributes_in_closing_tags_content": "Attributes can only be placed in opening tags or void tags, never in closing tags. Closing tags should only contain the tag name with a forward slash.|Attempting to add attributes to closing tags will result in invalid HTML.",
+  
+  "concept_custom_attributes_title": "Custom Attributes and Data Attributes",
+  "concept_custom_attributes_content": "While custom attributes are technically valid in HTML, they're discouraged unless prefixed with 'data-'. Data attributes are the standard way to store custom information.|Using data- attributes ensures your HTML remains valid and follows web standards.",
+  
+  "quiz_attributes_outside_tags_question": "What happens to attributes written outside of tags?",
+  "quiz_attributes_outside_tags_correct": "They are treated as regular text content, not as attributes.",
+  "quiz_attributes_outside_tags_incorrect": "They still function as attributes even outside tags.",
+  
+  "quiz_attributes_in_closing_tags_question": "Can attributes be placed in closing tags?",
+  "quiz_attributes_in_closing_tags_correct": "No, attributes can only go in opening tags or void tags.",
+  "quiz_attributes_in_closing_tags_incorrect": "Yes, attributes work the same in both opening and closing tags.",
+  
+  "quiz_custom_attributes_question": "What's the recommended way to create custom attributes?",
+  "quiz_custom_attributes_correct": "Use the data- prefix for custom attributes (data-custom=\"value\").",
+  "quiz_custom_attributes_incorrect": "Any custom attribute name is equally valid and recommended."
+}

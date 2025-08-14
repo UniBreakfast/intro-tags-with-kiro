@@ -1,30 +1,70 @@
-class HTMLTagsApp {
-  constructor() {
+class ConceptQuizApp {
+  constructor(courseId = 'html-tags') {
+    this.courseId = courseId;
     this.currentCardIndex = 0;
     this.cards = [];
     this.conceptCards = [];
     this.quizQuestions = [];
+    this.courseData = null;
+    this.availableCourses = [];
     this.quizScore = 0;
     this.totalQuizQuestions = 0;
     this.autoAdvanceTimeout = null;
     this.answeredQuestions = new Set();
     this.currentLanguage = 'en';
-    this.translations = {};
+    this.uiTranslations = {};
+    this.courseTranslations = {};
     this.init();
   }
 
   async loadLanguage(lang) {
     try {
-      const response = await fetch(`lang/${lang}.json`);
-      this.translations = await response.json();
+      // Load UI translations
+      const uiResponse = await fetch(`lang/${lang}.json`);
+      if (uiResponse.ok) {
+        this.uiTranslations = await uiResponse.json();
+      } else {
+        console.warn(`UI translations not found for ${lang}, falling back to English`);
+        const fallbackResponse = await fetch(`lang/en.json`);
+        this.uiTranslations = await fallbackResponse.json();
+      }
+
+      // Load course translations
+      try {
+        const courseResponse = await fetch(`courses/${this.courseId}/${lang}.json`);
+        if (courseResponse.ok) {
+          this.courseTranslations = await courseResponse.json();
+        } else {
+          console.warn(`Course translations not found for ${lang}, falling back to English`);
+          const fallbackResponse = await fetch(`courses/${this.courseId}/en.json`);
+          this.courseTranslations = await fallbackResponse.json();
+        }
+      } catch (courseError) {
+        console.error(`Failed to load course translations for ${lang}:`, courseError);
+        // Try to load English as fallback
+        try {
+          const fallbackResponse = await fetch(`courses/${this.courseId}/en.json`);
+          this.courseTranslations = await fallbackResponse.json();
+        } catch (fallbackError) {
+          console.error('Failed to load fallback course translations:', fallbackError);
+          this.courseTranslations = {};
+        }
+      }
+
       this.currentLanguage = lang;
       this.updateAllTexts();
+
+      // Update course selector with new language
+      await this.populateCourseSelector();
 
       // If we have cards already, just update their content
       if (this.cards.length > 0) {
         this.updateCardContent();
+        this.updateCourseTitle();
       } else {
-        // First time loading, generate cards normally
+        // First time loading, load course data and generate cards
+        await this.loadCourseData();
+        this.updateCourseTitle();
         this.conceptCards = this.generateConceptCards();
         this.quizQuestions = this.generateQuizQuestions();
         this.generateCards();
@@ -36,8 +76,77 @@ class HTMLTagsApp {
     }
   }
 
+  async loadAvailableCourses() {
+    try {
+      // For now, we'll hardcode the available courses
+      // In the future, this could scan the courses directory
+      this.availableCourses = ['html-tags'];
+      await this.populateCourseSelector();
+    } catch (error) {
+      console.error('Failed to load available courses:', error);
+    }
+  }
+
+  async populateCourseSelector() {
+    if (!this.courseSelect) return;
+
+    this.courseSelect.innerHTML = '';
+
+    for (const courseId of this.availableCourses) {
+      try {
+        const response = await fetch(`courses/${courseId}/index.json`);
+        const courseNames = await response.json();
+
+        const option = document.createElement('option');
+        option.value = courseId;
+        option.textContent = courseNames[this.currentLanguage] || courseNames['en'] || courseId;
+        option.selected = courseId === this.courseId;
+
+        this.courseSelect.appendChild(option);
+      } catch (error) {
+        console.error(`Failed to load course names for ${courseId}:`, error);
+      }
+    }
+  }
+
+  async loadCourse(courseId) {
+    if (courseId === this.courseId) return;
+
+    this.courseId = courseId;
+    this.currentCardIndex = 0;
+    this.cards = [];
+    this.quizScore = 0;
+    this.answeredQuestions.clear();
+
+    // Reload the course with current language
+    await this.loadLanguage(this.currentLanguage);
+  }
+
+  async loadCourseData() {
+    try {
+      const response = await fetch(`courses/${this.courseId}/course.json`);
+      this.courseData = await response.json();
+    } catch (error) {
+      console.error('Failed to load course data:', error);
+    }
+  }
+
+  updateCourseTitle() {
+    const titleElement = document.getElementById('courseTitle');
+    const subtitleElement = document.getElementById('courseSubtitle');
+
+    if (titleElement && this.courseData && this.courseData.title) {
+      titleElement.textContent = this.getText(this.courseData.title);
+    }
+
+    if (subtitleElement && this.courseData && this.courseData.subtitle) {
+      subtitleElement.textContent = this.getText(this.courseData.subtitle);
+    }
+  }
+
   getText(key) {
-    return this.translations[key] || key;
+    // Try course translations first, then UI translations
+    return this.courseTranslations[key] || this.uiTranslations[key] || key;
   }
 
   updateAllTexts() {
@@ -122,65 +231,16 @@ class HTMLTagsApp {
   }
 
   generateConceptCards() {
-    const conceptData = [
-      {
-        titleKey: 'concept_what_is_tag_title',
-        contentKey: 'concept_what_is_tag_content',
-        codeExample: '&lt;p&gt;This is a paragraph&lt;/p&gt;'
-      },
-      {
-        titleKey: 'concept_opening_tags_title',
-        contentKey: 'concept_opening_tags_content',
-        codeExample: '&lt;h1&gt; &lt;p&gt; &lt;div&gt; &lt;span&gt;'
-      },
-      {
-        titleKey: 'concept_closing_tags_title',
-        contentKey: 'concept_closing_tags_content',
-        codeExample: '&lt;/h1&gt; &lt;/p&gt; &lt;/div&gt; &lt;/span&gt;'
-      },
-      {
-        titleKey: 'concept_paired_tags_title',
-        contentKey: 'concept_paired_tags_content',
-        codeExample: '&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;'
-      },
-      {
-        titleKey: 'concept_void_tags_title',
-        contentKey: 'concept_void_tags_content',
-        codeExample: '&lt;br&gt; &lt;img&gt; &lt;input&gt; &lt;hr&gt; &lt;meta&gt;'
-      },
-      {
-        titleKey: 'concept_simple_tags_title',
-        contentKey: 'concept_simple_tags_content',
-        codeExample: '&lt;h1&gt;Main Heading&lt;/h1&gt;<br>&lt;p&gt;Simple paragraph&lt;/p&gt;<br>&lt;br&gt;'
-      },
-      {
-        titleKey: 'concept_tags_with_attributes_title',
-        contentKey: 'concept_tags_with_attributes_content',
-        codeExample: '&lt;img src="photo.jpg" alt="A beautiful sunset"&gt;<br>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;'
-      },
-      {
-        titleKey: 'concept_tags_vs_elements_title',
-        contentKey: 'concept_tags_vs_elements_content',
-        codeExample: 'Tag: &lt;p&gt;Hello World&lt;/p&gt;<br>Element: The actual paragraph displayed on the page'
-      },
-      {
-        titleKey: 'concept_tag_nesting_title',
-        contentKey: 'concept_tag_nesting_content',
-        codeExample: '&lt;div&gt;<br>&nbsp;&nbsp;&lt;h2&gt;Section Title&lt;/h2&gt;<br>&nbsp;&nbsp;&lt;p&gt;Some &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;<br>&lt;/div&gt;'
-      },
-      {
-        titleKey: 'concept_proper_nesting_title',
-        contentKey: 'concept_proper_nesting_content',
-        codeExample: '✅ Correct: &lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;<br>❌ Wrong: &lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;'
-      }
-    ];
+    if (!this.courseData || !this.courseData.concepts) {
+      return [];
+    }
 
-    return conceptData.map(concept => {
+    return this.courseData.concepts.map(concept => {
       const contentParts = this.getText(concept.contentKey).split('|');
       const content = `
         <p>${contentParts[0]}</p>
         <div class="code-example">${concept.codeExample}</div>
-        <p>${contentParts[1] ? contentParts[1].replace(/where an element starts|where an element ends|complete by themselves|default behavior and styling|name="value"|instructions|result|parent-child relationship|balanced parentheses/, '<span class="highlight">$&</span>') : ''}</p>
+        <p>${contentParts[1] || ''}</p>
       `;
 
       return {
@@ -192,102 +252,11 @@ class HTMLTagsApp {
   }
 
   generateQuizQuestions() {
-    const quizData = [
-      {
-        questionKey: 'quiz_html_tags_correct_question',
-        correctKey: 'quiz_html_tags_correct_correct',
-        incorrectKey: 'quiz_html_tags_correct_incorrect'
-      },
-      {
-        questionKey: 'quiz_closing_tag_question',
-        correctKey: 'quiz_closing_tag_correct',
-        incorrectKey: 'quiz_closing_tag_incorrect'
-      },
-      {
-        questionKey: 'quiz_void_tag_question',
-        correctKey: 'quiz_void_tag_correct',
-        incorrectKey: 'quiz_void_tag_incorrect',
-        correctCode: '&lt;img&gt;',
-        incorrectCode: '&lt;p&gt;'
-      },
-      {
-        questionKey: 'quiz_tags_vs_elements_question',
-        correctKey: 'quiz_tags_vs_elements_correct',
-        incorrectKey: 'quiz_tags_vs_elements_incorrect'
-      },
-      {
-        questionKey: 'quiz_nesting_question',
-        correctKey: 'quiz_nesting_correct',
-        incorrectKey: 'quiz_nesting_incorrect',
-        correctCodeBlock: '&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/strong&gt;<br>&lt;/p&gt;',
-        incorrectCodeBlock: '&lt;p&gt;<br>&nbsp;&nbsp;&lt;strong&gt;Bold&lt;/p&gt;<br>&lt;/strong&gt;'
-      },
-      {
-        questionKey: 'quiz_angle_brackets_question',
-        correctKey: 'quiz_angle_brackets_correct',
-        incorrectKey: 'quiz_angle_brackets_incorrect',
-        correctCode: '&lt; &gt;'
-      },
-      {
-        questionKey: 'quiz_paired_tags_question',
-        correctKey: 'quiz_paired_tags_correct',
-        incorrectKey: 'quiz_paired_tags_incorrect'
-      },
-      {
-        questionKey: 'quiz_missing_closing_question',
-        correctKey: 'quiz_missing_closing_correct',
-        incorrectKey: 'quiz_missing_closing_incorrect'
-      },
-      {
-        questionKey: 'quiz_attribute_syntax_question',
-        correctKey: 'quiz_attribute_syntax_correct',
-        incorrectKey: 'quiz_attribute_syntax_incorrect',
-        correctCodeBlock: '&lt;img src="photo.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="description"&gt;',
-        incorrectCodeBlock: '&lt;img (src=photo.jpg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(alt=description)&gt;'
-      },
-      {
-        questionKey: 'quiz_void_tags_special_question',
-        correctKey: 'quiz_void_tags_special_correct',
-        incorrectKey: 'quiz_void_tags_special_incorrect'
-      },
-      {
-        questionKey: 'quiz_tag_structure_question',
-        correctKey: 'quiz_tag_structure_correct',
-        incorrectKey: 'quiz_tag_structure_incorrect',
-        correctCodeBlock: '&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;/div&gt;',
-        incorrectCodeBlock: '&lt;div class="container"&gt;<br>&nbsp;&nbsp;Content<br>&lt;div&gt;'
-      },
-      {
-        questionKey: 'quiz_doctype_question',
-        correctKey: 'quiz_doctype_correct',
-        incorrectKey: 'quiz_doctype_incorrect',
-        correctCode: '&lt;!DOCTYPE html&gt;',
-        incorrectCode: '&lt;!DOCTYPE html&gt;'
-      },
-      {
-        questionKey: 'quiz_comments_question',
-        correctKey: 'quiz_comments_correct',
-        incorrectKey: 'quiz_comments_incorrect',
-        correctCodeBlock: '&lt;!-- This is a comment --&gt;',
-        incorrectCodeBlock: '&lt;comment&gt;<br>&nbsp;&nbsp;This is a comment<br>&lt;/comment&gt;'
-      },
-      {
-        questionKey: 'quiz_multiple_attributes_question',
-        correctKey: 'quiz_multiple_attributes_correct',
-        incorrectKey: 'quiz_multiple_attributes_incorrect',
-        correctCodeBlock: '&lt;input type="text"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;',
-        incorrectCodeBlock: '&lt;input type="text",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="username",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&gt;'
-      },
-      {
-        questionKey: 'quiz_line_break_question',
-        correctKey: 'quiz_line_break_correct',
-        incorrectKey: 'quiz_line_break_incorrect',
-        correctCode: '&lt;br&gt;',
-        incorrectCodeBlock: '&lt;break&gt;<br>&lt;/break&gt;'
-      }
-    ];
+    if (!this.courseData || !this.courseData.quiz) {
+      return [];
+    }
 
-    return quizData;
+    return this.courseData.quiz;
   }
 
   shuffleArray(array) {
@@ -353,12 +322,15 @@ class HTMLTagsApp {
     this.cardCounter = document.getElementById('cardCounter');
     this.progressFill = document.getElementById('progressFill');
     this.languageSelect = document.getElementById('languageSelect');
+    this.courseSelect = document.getElementById('courseSelect');
 
     this.prevBtn.addEventListener('click', () => this.previousCard());
     this.nextBtn.addEventListener('click', () => this.nextCard());
     this.languageSelect.addEventListener('change', (e) => this.loadLanguage(e.target.value));
+    this.courseSelect.addEventListener('change', (e) => this.loadCourse(e.target.value));
 
-    // Load default language
+    // Load available courses and default language
+    await this.loadAvailableCourses();
     await this.loadLanguage('en');
   }
 
@@ -549,4 +521,4 @@ class HTMLTagsApp {
 }
 
 // Initialize the app when the page loads
-const app = new HTMLTagsApp();
+const app = new ConceptQuizApp('html-tags');

@@ -1,0 +1,94 @@
+{
+  "course_title": "تعلم علامات HTML",
+  "course_subtitle": "أتقن أساسيات علامات HTML خطوة بخطوة",
+  
+  "concept_what_is_tag_title": "ما هي علامة HTML؟",
+  "concept_what_is_tag_content": "علامة HTML هي كلمة مفتاحية محاطة بأقواس زاوية تخبر المتصفح كيفية هيكلة وعرض المحتوى.|العلامات هي اللبنات الأساسية لمستندات HTML وتحدد هيكل ومعنى محتوى الويب.",
+  
+  "concept_opening_tags_title": "علامات الفتح",
+  "concept_opening_tags_content": "علامة الفتح تحدد بداية عنصر HTML. تتكون من اسم العلامة محاط بأقواس زاوية.|علامات الفتح تخبر المتصفح أين يبدأ العنصر.",
+  
+  "concept_closing_tags_title": "علامات الإغلاق",
+  "concept_closing_tags_content": "علامة الإغلاق تحدد نهاية عنصر HTML. هي مطابقة لعلامة الفتح لكنها تتضمن شرطة مائلة.|علامات الإغلاق تخبر المتصفح أين ينتهي العنصر.",
+  
+  "concept_paired_tags_title": "العلامات المزدوجة",
+  "concept_paired_tags_content": "معظم علامات HTML تأتي في أزواج - علامة فتح وعلامة إغلاق تعملان معاً لتغليف المحتوى.|المحتوى بين العلامات المزدوجة هو ما يتم تنسيقه أو هيكلته بواسطة العنصر.",
+  
+  "concept_void_tags_title": "العلامات الفارغة (ذاتية الإغلاق)",
+  "concept_void_tags_content": "بعض علامات HTML لا تحتاج إلى علامات إغلاق لأنها لا تحتوي على محتوى. تسمى هذه العلامات الفارغة أو ذاتية الإغلاق.|العلامات الفارغة تمثل عناصر مكتملة بذاتها.",
+  
+  "concept_simple_tags_title": "العلامات البسيطة (بدون خصائص)",
+  "concept_simple_tags_content": "العلامات البسيطة تحتوي فقط على اسم العلامة بدون معلومات إضافية أو خصائص.|هذه العلامات تستخدم سلوكها وتنسيقها الافتراضي.",
+  
+  "concept_tags_with_attributes_title": "العلامات مع الخصائص",
+  "concept_tags_with_attributes_content": "العلامات يمكن أن تتضمن خصائص توفر معلومات إضافية أو تعدل سلوك العنصر.|الخصائص تُكتب كأزواج اسم=\"قيمة\" داخل علامة الفتح.",
+  
+  "concept_tags_vs_elements_title": "العلامات مقابل العناصر",
+  "concept_tags_vs_elements_content": "العلامة هي الكود الذي تكتبه. العنصر هو ما ينشئه المتصفح من تلك العلامة في وقت التشغيل.|فكر في العلامات كتعليمات وفي العناصر كالنتيجة.",
+  
+  "concept_tag_nesting_title": "تداخل العلامات",
+  "concept_tag_nesting_content": "علامات HTML يمكن أن تتداخل داخل علامات أخرى لإنشاء هياكل معقدة وتسلسلات هرمية.|العلامات المتداخلة تنشئ علاقة والد-طفل في هيكل المستند.",
+  
+  "concept_proper_nesting_title": "قواعد التداخل الصحيح",
+  "concept_proper_nesting_content": "العلامات يجب أن تتداخل بشكل صحيح - لا يمكن أن تتداخل. آخر علامة مفتوحة يجب أن تكون أول علامة مغلقة.|فكر في الأمر مثل الأقواس المتوازنة في الرياضيات.",
+  
+  "quiz_html_tags_correct_question": "أي عبارة حول علامات HTML صحيحة؟",
+  "quiz_html_tags_correct_correct": "علامات HTML هي كلمات مفتاحية محاطة بأقواس زاوية تهيكل المحتوى.",
+  "quiz_html_tags_correct_incorrect": "علامات HTML تُستخدم فقط للتنسيق وليس لها غرض هيكلي.",
+  
+  "quiz_closing_tag_question": "ما الذي يجعل علامة الإغلاق مختلفة عن علامة الفتح؟",
+  "quiz_closing_tag_correct": "علامة الإغلاق تتضمن شرطة مائلة (/) قبل اسم العلامة.",
+  "quiz_closing_tag_incorrect": "علامة الإغلاق تستخدم أقواس مربعة بدلاً من أقواس زاوية.",
+  
+  "quiz_void_tag_question": "أي من هذه علامة فارغة (ذاتية الإغلاق)؟",
+  "quiz_void_tag_correct": "- لا تحتاج إلى علامة إغلاق لأنها لا تحتوي على محتوى.",
+  "quiz_void_tag_incorrect": "- تحتاج دائماً إلى علامة إغلاق لتغليف المحتوى النصي.",
+  
+  "quiz_tags_vs_elements_question": "ما الفرق بين العلامات والعناصر؟",
+  "quiz_tags_vs_elements_correct": "العلامات هي الكود الذي تكتبه؛ العناصر هي ما ينشئه المتصفح في وقت التشغيل.",
+  "quiz_tags_vs_elements_incorrect": "العلامات والعناصر هي نفس الشيء تماماً بأسماء مختلفة.",
+  
+  "quiz_nesting_question": "أي مثال تداخل صحيح؟",
+  "quiz_nesting_correct": "- متداخل بشكل صحيح بدون تداخل.",
+  "quiz_nesting_incorrect": "- العلامات تتداخل بشكل خاطئ.",
+  
+  "quiz_angle_brackets_question": "ماذا تشير الأقواس الزاوية في HTML؟",
+  "quiz_angle_brackets_correct": "تحدد بداية ونهاية علامات HTML.",
+  "quiz_angle_brackets_incorrect": "الأقواس الزاوية تُستخدم فقط لإنشاء تعليقات في كود HTML.",
+  
+  "quiz_paired_tags_question": "أي عبارة حول العلامات المزدوجة صحيحة؟",
+  "quiz_paired_tags_correct": "العلامات المزدوجة تعمل معاً لتغليف وتنسيق المحتوى بينها.",
+  "quiz_paired_tags_incorrect": "العلامات المزدوجة يجب أن تكون متطابقة دائماً بدون أي اختلافات.",
+  
+  "quiz_missing_closing_question": "ماذا يحدث إذا نسيت علامة إغلاق؟",
+  "quiz_missing_closing_correct": "المتصفح قد لا يعرض المحتوى بشكل صحيح أو قد يغلق العلامة تلقائياً.",
+  "quiz_missing_closing_incorrect": "لا يحدث شيء - علامات الإغلاق اختيارية في HTML الحديث.",
+  
+  "quiz_attribute_syntax_question": "أي مثال لصيغة خاصية صحيحة؟",
+  "quiz_attribute_syntax_correct": "- الخصائص تستخدم تنسيق اسم=\"قيمة\".",
+  "quiz_attribute_syntax_incorrect": "- الخصائص تستخدم تنسيق الأقواس.",
+  
+  "quiz_void_tags_special_question": "ما الذي يجعل العلامات الفارغة مميزة؟",
+  "quiz_void_tags_special_correct": "العلامات الفارغة مكتملة بذاتها ولا تحتوي على محتوى آخر.",
+  "quiz_void_tags_special_incorrect": "العلامات الفارغة مهجورة ولا يجب استخدامها في HTML الحديث.",
+  
+  "quiz_tag_structure_question": "أي هيكل علامة HTML صالح؟",
+  "quiz_tag_structure_correct": "- فتح وإغلاق صحيح مع خاصية.",
+  "quiz_tag_structure_incorrect": "- شرطة مائلة مفقودة في علامة الإغلاق.",
+  
+  "quiz_doctype_question": "ما الغرض من إعلان DOCTYPE؟",
+  "quiz_doctype_correct": "يخبر المتصفح أي إصدار HTML يستخدم.",
+  "quiz_doctype_incorrect": "يُستخدم لإضافة تعليقات إلى مستندات HTML.",
+  
+  "quiz_comments_question": "أي عبارة حول تعليقات HTML صحيحة؟",
+  "quiz_comments_correct": "- التعليقات لا تُعرض على صفحة الويب.",
+  "quiz_comments_incorrect": "- التعليقات تستخدم صيغة العلامات العادية.",
+  
+  "quiz_multiple_attributes_question": "ماذا يحدث مع خصائص متعددة في علامة؟",
+  "quiz_multiple_attributes_correct": "- الخصائص مفصولة بمسافات.",
+  "quiz_multiple_attributes_incorrect": "- الخصائص مفصولة بفواصل.",
+  
+  "quiz_line_break_question": "أي علامة تنشئ كسر سطر بشكل صحيح؟",
+  "quiz_line_break_correct": "- علامة فارغة تنشئ كسر سطر بدون محتوى.",
+  "quiz_line_break_incorrect": "- كسر السطر يتطلب علامات فتح وإغلاق."
+}

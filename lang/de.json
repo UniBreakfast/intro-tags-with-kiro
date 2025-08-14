@@ -1,104 +1,14 @@
 {
-  "app_title": "HTML-Tags Lern-App",
-  "app_subtitle": "Meistern Sie die Grundlagen von HTML-Tags Schritt für Schritt",
+  "app_title": "Konzept-Quiz-App",
+  "app_subtitle": "Meistern Sie Konzepte Schritt für Schritt",
   "previous": "Zurück",
   "next": "Weiter",
   "try_again": "Erneut versuchen",
   "quiz_complete": "Quiz abgeschlossen!",
-  "excellent_message": "Ausgezeichnet! Sie haben HTML-Tags gemeistert!",
-  "great_message": "Großartige Arbeit! Sie haben ein solides Verständnis von HTML-Tags.",
+  "excellent_message": "Ausgezeichnet! Sie haben diesen Kurs gemeistert!",
+  "great_message": "Großartige Arbeit! Sie haben ein gutes Verständnis.",
   "good_message": "Gute Bemühung! Wiederholen Sie die Konzepte und versuchen Sie es erneut zur Verbesserung.",
   "keep_learning_message": "Weiter lernen! Wiederholen Sie die Konzeptkarten und versuchen Sie das Quiz erneut.",
   "correct": "Richtig",
-  "incorrect": "Falsch",
-  
-  "concept_what_is_tag_title": "Was ist ein HTML-Tag?",
-  "concept_what_is_tag_content": "Ein HTML-Tag ist ein Schlüsselwort in spitzen Klammern, das dem Browser mitteilt, wie Inhalte strukturiert und angezeigt werden sollen.|Tags sind die Bausteine von HTML-Dokumenten und definieren die Struktur und Bedeutung von Web-Inhalten.",
-  
-  "concept_opening_tags_title": "Öffnende Tags",
-  "concept_opening_tags_content": "Ein öffnendes Tag markiert den Beginn eines HTML-Elements. Es besteht aus dem Tag-Namen in spitzen Klammern.|Öffnende Tags teilen dem Browser mit, wo ein Element beginnt.",
-  
-  "concept_closing_tags_title": "Schließende Tags",
-  "concept_closing_tags_content": "Ein schließendes Tag markiert das Ende eines HTML-Elements. Es ist identisch mit dem öffnenden Tag, enthält aber einen Schrägstrich.|Schließende Tags teilen dem Browser mit, wo ein Element endet.",
-  
-  "concept_paired_tags_title": "Gepaarte Tags",
-  "concept_paired_tags_content": "Die meisten HTML-Tags kommen in Paaren - ein öffnendes Tag und ein schließendes Tag, die zusammenarbeiten, um Inhalte zu umschließen.|Der Inhalt zwischen gepaarten Tags ist das, was vom Element formatiert oder strukturiert wird.",
-  
-  "concept_void_tags_title": "Leere Tags (Selbstschließend)",
-  "concept_void_tags_content": "Einige HTML-Tags benötigen keine schließenden Tags, da sie keinen Inhalt enthalten. Diese werden leere oder selbstschließende Tags genannt.|Leere Tags repräsentieren Elemente, die für sich allein vollständig sind.",
-  
-  "concept_simple_tags_title": "Einfache Tags (Ohne Attribute)",
-  "concept_simple_tags_content": "Einfache Tags enthalten nur den Tag-Namen ohne zusätzliche Informationen oder Attribute.|Diese Tags verwenden ihr Standardverhalten und -styling.",
-  
-  "concept_tags_with_attributes_title": "Tags mit Attributen",
-  "concept_tags_with_attributes_content": "Tags können Attribute enthalten, die zusätzliche Informationen liefern oder das Verhalten des Elements ändern.|Attribute werden als Name=\"Wert\"-Paare innerhalb des öffnenden Tags geschrieben.",
-  
-  "concept_tags_vs_elements_title": "Tags vs. Elemente",
-  "concept_tags_vs_elements_content": "Ein Tag ist der Code, den Sie schreiben. Ein Element ist das, was der Browser zur Laufzeit aus diesem Tag erstellt.|Denken Sie an Tags als Anweisungen und an Elemente als das Ergebnis.",
-  
-  "concept_tag_nesting_title": "Tag-Verschachtelung",
-  "concept_tag_nesting_content": "HTML-Tags können in andere Tags verschachtelt werden, um komplexe Strukturen und Hierarchien zu erstellen.|Verschachtelte Tags erstellen eine Eltern-Kind-Beziehung in der Dokumentstruktur.",
-  
-  "concept_proper_nesting_title": "Regeln für ordnungsgemäße Verschachtelung",
-  "concept_proper_nesting_content": "Tags müssen ordnungsgemäß verschachtelt sein - sie können sich nicht überlappen. Das zuletzt geöffnete Tag muss als erstes geschlossen werden.|Denken Sie daran wie an ausgeglichene Klammern in der Mathematik.",
-  
-  "quiz_html_tags_correct_question": "Welche Aussage über HTML-Tags ist richtig?",
-  "quiz_html_tags_correct_correct": "HTML-Tags sind Schlüsselwörter in spitzen Klammern, die Inhalte strukturieren.",
-  "quiz_html_tags_correct_incorrect": "HTML-Tags werden nur für das Styling verwendet und haben keinen strukturellen Zweck.",
-  
-  "quiz_closing_tag_question": "Was unterscheidet ein schließendes Tag von einem öffnenden Tag?",
-  "quiz_closing_tag_correct": "Ein schließendes Tag enthält einen Schrägstrich (/) vor dem Tag-Namen.",
-  "quiz_closing_tag_incorrect": "Ein schließendes Tag verwendet eckige Klammern anstelle von spitzen Klammern.",
-  
-  "quiz_void_tag_question": "Welches dieser Tags ist ein leeres (selbstschließendes) Tag?",
-  "quiz_void_tag_correct": "- es benötigt kein schließendes Tag, da es keinen Inhalt enthält.",
-  "quiz_void_tag_incorrect": "- benötigt immer ein schließendes Tag, um Textinhalt zu umschließen.",
-  
-  "quiz_tags_vs_elements_question": "Was ist der Unterschied zwischen Tags und Elementen?",
-  "quiz_tags_vs_elements_correct": "Tags sind der Code, den Sie schreiben; Elemente sind das, was der Browser zur Laufzeit erstellt.",
-  "quiz_tags_vs_elements_incorrect": "Tags und Elemente sind genau dasselbe mit unterschiedlichen Namen.",
-  
-  "quiz_nesting_question": "Welches Verschachtelungsbeispiel ist richtig?",
-  "quiz_nesting_correct": "- ordnungsgemäß verschachtelt ohne Überlappung.",
-  "quiz_nesting_incorrect": "- Tags überlappen sich falsch.",
-  
-  "quiz_angle_brackets_question": "Was zeigen spitze Klammern in HTML an?",
-  "quiz_angle_brackets_correct": "markieren den Anfang und das Ende von HTML-Tags.",
-  "quiz_angle_brackets_incorrect": "Spitze Klammern werden nur verwendet, um Kommentare im HTML-Code zu erstellen.",
-  
-  "quiz_paired_tags_question": "Welche Aussage über gepaarte Tags ist wahr?",
-  "quiz_paired_tags_correct": "Gepaarte Tags arbeiten zusammen, um Inhalte zwischen ihnen zu umschließen und zu formatieren.",
-  "quiz_paired_tags_incorrect": "Gepaarte Tags müssen immer identisch sein ohne jegliche Unterschiede.",
-  
-  "quiz_missing_closing_question": "Was passiert, wenn Sie ein schließendes Tag vergessen?",
-  "quiz_missing_closing_correct": "Der Browser zeigt möglicherweise Inhalte falsch an oder schließt das Tag automatisch.",
-  "quiz_missing_closing_incorrect": "Nichts passiert - schließende Tags sind in modernem HTML optional.",
-  
-  "quiz_attribute_syntax_question": "Welches ist ein Beispiel für ordnungsgemäße Attributsyntax?",
-  "quiz_attribute_syntax_correct": "- Attribute verwenden das Format Name=\"Wert\".",
-  "quiz_attribute_syntax_incorrect": "- Attribute verwenden das Klammer-Format.",
-  
-  "quiz_void_tags_special_question": "Was macht leere Tags besonders?",
-  "quiz_void_tags_special_correct": "Leere Tags sind für sich allein vollständig und enthalten keinen anderen Inhalt.",
-  "quiz_void_tags_special_incorrect": "Leere Tags sind veraltet und sollten in modernem HTML nicht verwendet werden.",
-  
-  "quiz_tag_structure_question": "Welche HTML-Tag-Struktur ist gültig?",
-  "quiz_tag_structure_correct": "- ordnungsgemäßes Öffnen und Schließen mit Attribut.",
-  "quiz_tag_structure_incorrect": "- fehlender Schrägstrich im schließenden Tag.",
-  
-  "quiz_doctype_question": "Was ist der Zweck der DOCTYPE-Deklaration?",
-  "quiz_doctype_correct": "teilt dem Browser mit, welche HTML-Version verwendet werden soll.",
-  "quiz_doctype_incorrect": "wird verwendet, um Kommentare zu HTML-Dokumenten hinzuzufügen.",
-  
-  "quiz_comments_question": "Welche Aussage über HTML-Kommentare ist richtig?",
-  "quiz_comments_correct": "- Kommentare werden nicht auf der Webseite angezeigt.",
-  "quiz_comments_incorrect": "- Kommentare verwenden die reguläre Tag-Syntax.",
-  
-  "quiz_multiple_attributes_question": "Was passiert mit mehreren Attributen in einem Tag?",
-  "quiz_multiple_attributes_correct": "- Attribute werden durch Leerzeichen getrennt.",
-  "quiz_multiple_attributes_incorrect": "- Attribute werden durch Kommas getrennt.",
-  
-  "quiz_line_break_question": "Welches Tag erstellt korrekt einen Zeilenumbruch?",
-  "quiz_line_break_correct": "- ein leeres Tag, das einen Zeilenumbruch ohne Inhalt erstellt.",
-  "quiz_line_break_incorrect": "- Zeilenumbrüche erfordern öffnende und schließende Tags."
+  "incorrect": "Falsch"
 }

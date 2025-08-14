@@ -1,0 +1,94 @@
+{
+  "course_title": "Nauka Tagów HTML",
+  "course_subtitle": "Opanuj podstawy tagów HTML krok po kroku",
+  
+  "concept_what_is_tag_title": "Czym jest tag HTML?",
+  "concept_what_is_tag_content": "Tag HTML to słowo kluczowe ujęte w nawiasy kątowe, które mówi przeglądarce, jak strukturyzować i wyświetlać treść.|Tagi są elementami składowymi dokumentów HTML i definiują strukturę oraz znaczenie treści internetowych.",
+  
+  "concept_opening_tags_title": "Tagi otwierające",
+  "concept_opening_tags_content": "Tag otwierający oznacza początek elementu HTML. Składa się z nazwy tagu ujętej w nawiasy kątowe.|Tagi otwierające informują przeglądarkę, gdzie zaczyna się element.",
+  
+  "concept_closing_tags_title": "Tagi zamykające",
+  "concept_closing_tags_content": "Tag zamykający oznacza koniec elementu HTML. Jest identyczny z tagiem otwierającym, ale zawiera ukośnik.|Tagi zamykające informują przeglądarkę, gdzie kończy się element.",
+  
+  "concept_paired_tags_title": "Tagi sparowane",
+  "concept_paired_tags_content": "Większość tagów HTML występuje w parach - tag otwierający i tag zamykający, które współpracują, aby otoczyć treść.|Treść między sparowanymi tagami to to, co jest formatowane lub strukturyzowane przez element.",
+  
+  "concept_void_tags_title": "Tagi puste (Samozamykające)",
+  "concept_void_tags_content": "Niektóre tagi HTML nie potrzebują tagów zamykających, ponieważ nie zawierają treści. Nazywane są tagami pustymi lub samozamykającymi.|Tagi puste reprezentują elementy, które są kompletne same w sobie.",
+  
+  "concept_simple_tags_title": "Tagi proste (Bez atrybutów)",
+  "concept_simple_tags_content": "Tagi proste zawierają tylko nazwę tagu bez dodatkowych informacji lub atrybutów.|Te tagi używają swojego domyślnego zachowania i stylizacji.",
+  
+  "concept_tags_with_attributes_title": "Tagi z atrybutami",
+  "concept_tags_with_attributes_content": "Tagi mogą zawierać atrybuty, które dostarczają dodatkowych informacji lub modyfikują zachowanie elementu.|Atrybuty są zapisywane jako pary nazwa=\"wartość\" wewnątrz tagu otwierającego.",
+  
+  "concept_tags_vs_elements_title": "Tagi vs Elementy",
+  "concept_tags_vs_elements_content": "Tag to kod, który piszesz. Element to to, co przeglądarka tworzy z tego tagu w czasie wykonania.|Myśl o tagach jako o instrukcjach, a o elementach jako o wyniku.",
+  
+  "concept_tag_nesting_title": "Zagnieżdżanie tagów",
+  "concept_tag_nesting_content": "Tagi HTML mogą być zagnieżdżone wewnątrz innych tagów, aby tworzyć złożone struktury i hierarchie.|Zagnieżdżone tagi tworzą relację rodzic-dziecko w strukturze dokumentu.",
+  
+  "concept_proper_nesting_title": "Zasady prawidłowego zagnieżdżania",
+  "concept_proper_nesting_content": "Tagi muszą być prawidłowo zagnieżdżone - nie mogą się nakładać. Ostatni otwarty tag musi być pierwszy zamknięty.|Pomyśl o tym jak o zrównoważonych nawiasach w matematyce.",
+  
+  "quiz_html_tags_correct_question": "Które stwierdzenie o tagach HTML jest poprawne?",
+  "quiz_html_tags_correct_correct": "Tagi HTML to słowa kluczowe ujęte w nawiasy kątowe, które strukturyzują treść.",
+  "quiz_html_tags_correct_incorrect": "Tagi HTML są używane tylko do stylizacji i nie mają celu strukturalnego.",
+  
+  "quiz_closing_tag_question": "Co odróżnia tag zamykający od tagu otwierającego?",
+  "quiz_closing_tag_correct": "Tag zamykający zawiera ukośnik (/) przed nazwą tagu.",
+  "quiz_closing_tag_incorrect": "Tag zamykający używa nawiasów kwadratowych zamiast nawiasów kątowych.",
+  
+  "quiz_void_tag_question": "Który z tych tagów jest pusty (samozamykający)?",
+  "quiz_void_tag_correct": "- nie potrzebuje tagu zamykającego, ponieważ nie zawiera treści.",
+  "quiz_void_tag_incorrect": "- zawsze potrzebuje tagu zamykającego, aby otoczyć treść tekstową.",
+  
+  "quiz_tags_vs_elements_question": "Jaka jest różnica między tagami a elementami?",
+  "quiz_tags_vs_elements_correct": "Tagi to kod, który piszesz; elementy to to, co przeglądarka tworzy w czasie wykonania.",
+  "quiz_tags_vs_elements_incorrect": "Tagi i elementy to dokładnie to samo z różnymi nazwami.",
+  
+  "quiz_nesting_question": "Który przykład zagnieżdżania jest poprawny?",
+  "quiz_nesting_correct": "- prawidłowo zagnieżdżony bez nakładania.",
+  "quiz_nesting_incorrect": "- tagi nakładają się nieprawidłowo.",
+  
+  "quiz_angle_brackets_question": "Co oznaczają nawiasy kątowe w HTML?",
+  "quiz_angle_brackets_correct": "oznaczają początek i koniec tagów HTML.",
+  "quiz_angle_brackets_incorrect": "Nawiasy kątowe są używane tylko do tworzenia komentarzy w kodzie HTML.",
+  
+  "quiz_paired_tags_question": "Które stwierdzenie o sparowanych tagach jest prawdziwe?",
+  "quiz_paired_tags_correct": "Sparowane tagi współpracują, aby otoczyć i sformatować treść między nimi.",
+  "quiz_paired_tags_incorrect": "Sparowane tagi muszą zawsze być identyczne bez żadnych różnic.",
+  
+  "quiz_missing_closing_question": "Co się dzieje, gdy zapomnisz tagu zamykającego?",
+  "quiz_missing_closing_correct": "Przeglądarka może nie wyświetlać treści poprawnie lub może automatycznie zamknąć tag.",
+  "quiz_missing_closing_incorrect": "Nic się nie dzieje - tagi zamykające są opcjonalne w nowoczesnym HTML.",
+  
+  "quiz_attribute_syntax_question": "Który jest przykładem prawidłowej składni atrybutu?",
+  "quiz_attribute_syntax_correct": "- atrybuty używają formatu nazwa=\"wartość\".",
+  "quiz_attribute_syntax_incorrect": "- atrybuty używają formatu z nawiasami.",
+  
+  "quiz_void_tags_special_question": "Co czyni tagi puste wyjątkowymi?",
+  "quiz_void_tags_special_correct": "Tagi puste są kompletne same w sobie i nie zawierają innej treści.",
+  "quiz_void_tags_special_incorrect": "Tagi puste są przestarzałe i nie powinny być używane w nowoczesnym HTML.",
+  
+  "quiz_tag_structure_question": "Która struktura tagu HTML jest prawidłowa?",
+  "quiz_tag_structure_correct": "- prawidłowe otwieranie i zamykanie z atrybutem.",
+  "quiz_tag_structure_incorrect": "- brakuje ukośnika w tagu zamykającym.",
+  
+  "quiz_doctype_question": "Jaki jest cel deklaracji DOCTYPE?",
+  "quiz_doctype_correct": "informuje przeglądarkę, której wersji HTML użyć.",
+  "quiz_doctype_incorrect": "jest używana do dodawania komentarzy do dokumentów HTML.",
+  
+  "quiz_comments_question": "Które stwierdzenie o komentarzach HTML jest poprawne?",
+  "quiz_comments_correct": "- komentarze nie są wyświetlane na stronie internetowej.",
+  "quiz_comments_incorrect": "- komentarze używają regularnej składni tagów.",
+  
+  "quiz_multiple_attributes_question": "Co się dzieje z wieloma atrybutami w tagu?",
+  "quiz_multiple_attributes_correct": "- atrybuty są oddzielone spacjami.",
+  "quiz_multiple_attributes_incorrect": "- atrybuty są oddzielone przecinkami.",
+  
+  "quiz_line_break_question": "Który tag poprawnie tworzy łamanie linii?",
+  "quiz_line_break_correct": "- pusty tag, który tworzy łamanie linii bez treści.",
+  "quiz_line_break_incorrect": "- łamania linii wymagają tagów otwierających i zamykających."
+}

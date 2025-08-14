@@ -1,104 +1,14 @@
 {
-  "app_title": "Aplicación de Aprendizaje de Etiquetas HTML",
-  "app_subtitle": "Domina los fundamentos de las etiquetas HTML paso a paso",
+  "app_title": "Aplicación de Quiz de Conceptos",
+  "app_subtitle": "Domina conceptos paso a paso",
   "previous": "Anterior",
   "next": "Siguiente",
   "try_again": "Intentar de nuevo",
   "quiz_complete": "¡Quiz completado!",
-  "excellent_message": "¡Excelente! ¡Has dominado las etiquetas HTML!",
-  "great_message": "¡Gran trabajo! Tienes una comprensión sólida de las etiquetas HTML.",
+  "excellent_message": "¡Excelente! ¡Has dominado este curso!",
+  "great_message": "¡Gran trabajo! Tienes una comprensión sólida.",
   "good_message": "¡Buen esfuerzo! Repasa los conceptos e inténtalo de nuevo para mejorar.",
   "keep_learning_message": "¡Sigue aprendiendo! Repasa las tarjetas de conceptos e intenta el quiz de nuevo.",
   "correct": "Correcto",
-  "incorrect": "Incorrecto",
-  
-  "concept_what_is_tag_title": "¿Qué es una etiqueta HTML?",
-  "concept_what_is_tag_content": "Una etiqueta HTML es una palabra clave encerrada en corchetes angulares que le dice al navegador cómo estructurar y mostrar el contenido.|Las etiquetas son los bloques de construcción de los documentos HTML y definen la estructura y el significado del contenido web.",
-  
-  "concept_opening_tags_title": "Etiquetas de apertura",
-  "concept_opening_tags_content": "Una etiqueta de apertura marca el comienzo de un elemento HTML. Consiste en el nombre de la etiqueta encerrado en corchetes angulares.|Las etiquetas de apertura le dicen al navegador dónde comienza un elemento.",
-  
-  "concept_closing_tags_title": "Etiquetas de cierre",
-  "concept_closing_tags_content": "Una etiqueta de cierre marca el final de un elemento HTML. Es idéntica a la etiqueta de apertura pero incluye una barra diagonal.|Las etiquetas de cierre le dicen al navegador dónde termina un elemento.",
-  
-  "concept_paired_tags_title": "Etiquetas emparejadas",
-  "concept_paired_tags_content": "La mayoría de las etiquetas HTML vienen en pares: una etiqueta de apertura y una etiqueta de cierre que trabajan juntas para envolver el contenido.|El contenido entre etiquetas emparejadas es lo que se formatea o estructura por el elemento.",
-  
-  "concept_void_tags_title": "Etiquetas vacías (Auto-cerradas)",
-  "concept_void_tags_content": "Algunas etiquetas HTML no necesitan etiquetas de cierre porque no contienen contenido. Estas se llaman etiquetas vacías o auto-cerradas.|Las etiquetas vacías representan elementos que están completos por sí mismos.",
-  
-  "concept_simple_tags_title": "Etiquetas simples (Sin atributos)",
-  "concept_simple_tags_content": "Las etiquetas simples contienen solo el nombre de la etiqueta sin información adicional o atributos.|Estas etiquetas usan su comportamiento y estilo predeterminado.",
-  
-  "concept_tags_with_attributes_title": "Etiquetas con atributos",
-  "concept_tags_with_attributes_content": "Las etiquetas pueden incluir atributos que proporcionan información adicional o modifican el comportamiento del elemento.|Los atributos se escriben como pares nombre=\"valor\" dentro de la etiqueta de apertura.",
-  
-  "concept_tags_vs_elements_title": "Etiquetas vs Elementos",
-  "concept_tags_vs_elements_content": "Una etiqueta es el código que escribes. Un elemento es lo que el navegador crea a partir de esa etiqueta en tiempo de ejecución.|Piensa en las etiquetas como instrucciones y en los elementos como el resultado.",
-  
-  "concept_tag_nesting_title": "Anidación de etiquetas",
-  "concept_tag_nesting_content": "Las etiquetas HTML pueden anidarse dentro de otras etiquetas para crear estructuras complejas y jerarquías.|Las etiquetas anidadas crean una relación padre-hijo en la estructura del documento.",
-  
-  "concept_proper_nesting_title": "Reglas de anidación adecuada",
-  "concept_proper_nesting_content": "Las etiquetas deben estar correctamente anidadas - no pueden superponerse. La última etiqueta abierta debe ser la primera en cerrarse.|Piénsalo como paréntesis balanceados en matemáticas.",
-  
-  "quiz_html_tags_correct_question": "¿Cuál afirmación sobre las etiquetas HTML es correcta?",
-  "quiz_html_tags_correct_correct": "Las etiquetas HTML son palabras clave encerradas en corchetes angulares que estructuran el contenido.",
-  "quiz_html_tags_correct_incorrect": "Las etiquetas HTML solo se usan para estilo y no tienen propósito estructural.",
-  
-  "quiz_closing_tag_question": "¿Qué hace diferente una etiqueta de cierre de una etiqueta de apertura?",
-  "quiz_closing_tag_correct": "Una etiqueta de cierre incluye una barra diagonal (/) antes del nombre de la etiqueta.",
-  "quiz_closing_tag_incorrect": "Una etiqueta de cierre usa corchetes cuadrados en lugar de corchetes angulares.",
-  
-  "quiz_void_tag_question": "¿Cuál de estas es una etiqueta vacía (auto-cerrada)?",
-  "quiz_void_tag_correct": "- no necesita una etiqueta de cierre porque no contiene contenido.",
-  "quiz_void_tag_incorrect": "- siempre necesita una etiqueta de cierre para envolver contenido de texto.",
-  
-  "quiz_tags_vs_elements_question": "¿Cuál es la diferencia entre etiquetas y elementos?",
-  "quiz_tags_vs_elements_correct": "Las etiquetas son el código que escribes; los elementos son lo que el navegador crea en tiempo de ejecución.",
-  "quiz_tags_vs_elements_incorrect": "Las etiquetas y elementos son exactamente lo mismo con nombres diferentes.",
-  
-  "quiz_nesting_question": "¿Cuál ejemplo de anidación es correcto?",
-  "quiz_nesting_correct": "- correctamente anidado sin superposición.",
-  "quiz_nesting_incorrect": "- las etiquetas se superponen incorrectamente.",
-  
-  "quiz_angle_brackets_question": "¿Qué indican los corchetes angulares en HTML?",
-  "quiz_angle_brackets_correct": "marcan el comienzo y el final de las etiquetas HTML.",
-  "quiz_angle_brackets_incorrect": "Los corchetes angulares se usan solo para crear comentarios en el código HTML.",
-  
-  "quiz_paired_tags_question": "¿Cuál afirmación sobre las etiquetas emparejadas es verdadera?",
-  "quiz_paired_tags_correct": "Las etiquetas emparejadas trabajan juntas para envolver y formatear el contenido entre ellas.",
-  "quiz_paired_tags_incorrect": "Las etiquetas emparejadas siempre deben ser idénticas sin ninguna diferencia.",
-  
-  "quiz_missing_closing_question": "¿Qué pasa si olvidas una etiqueta de cierre?",
-  "quiz_missing_closing_correct": "El navegador puede no mostrar el contenido correctamente o puede auto-cerrar la etiqueta.",
-  "quiz_missing_closing_incorrect": "No pasa nada - las etiquetas de cierre son opcionales en HTML moderno.",
-  
-  "quiz_attribute_syntax_question": "¿Cuál es un ejemplo de sintaxis de atributo adecuada?",
-  "quiz_attribute_syntax_correct": "- los atributos usan el formato nombre=\"valor\".",
-  "quiz_attribute_syntax_incorrect": "- los atributos usan el formato de paréntesis.",
-  
-  "quiz_void_tags_special_question": "¿Qué hace especiales a las etiquetas vacías?",
-  "quiz_void_tags_special_correct": "Las etiquetas vacías están completas por sí mismas y no contienen otro contenido.",
-  "quiz_void_tags_special_incorrect": "Las etiquetas vacías están obsoletas y no deberían usarse en HTML moderno.",
-  
-  "quiz_tag_structure_question": "¿Cuál estructura de etiqueta HTML es válida?",
-  "quiz_tag_structure_correct": "- apertura y cierre adecuados con atributo.",
-  "quiz_tag_structure_incorrect": "- falta la barra diagonal en la etiqueta de cierre.",
-  
-  "quiz_doctype_question": "¿Cuál es el propósito de la declaración DOCTYPE?",
-  "quiz_doctype_correct": "le dice al navegador qué versión de HTML usar.",
-  "quiz_doctype_incorrect": "se usa para agregar comentarios a los documentos HTML.",
-  
-  "quiz_comments_question": "¿Cuál afirmación sobre los comentarios HTML es correcta?",
-  "quiz_comments_correct": "- los comentarios no se muestran en la página web.",
-  "quiz_comments_incorrect": "- los comentarios usan la sintaxis regular de etiquetas.",
-  
-  "quiz_multiple_attributes_question": "¿Qué pasa con múltiples atributos en una etiqueta?",
-  "quiz_multiple_attributes_correct": "- los atributos se separan con espacios.",
-  "quiz_multiple_attributes_incorrect": "- los atributos se separan con comas.",
-  
-  "quiz_line_break_question": "¿Cuál etiqueta crea correctamente un salto de línea?",
-  "quiz_line_break_correct": "- una etiqueta vacía que crea un salto de línea sin contenido.",
-  "quiz_line_break_incorrect": "- los saltos de línea requieren etiquetas de apertura y cierre."
+  "incorrect": "Incorrecto"
 }

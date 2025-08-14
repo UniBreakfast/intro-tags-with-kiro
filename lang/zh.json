@@ -1,104 +1,14 @@
 {
-  "app_title": "HTML标签学习应用",
-  "app_subtitle": "逐步掌握HTML标签的基础知识",
+  "app_title": "概念测验应用",
+  "app_subtitle": "逐步掌握概念",
   "previous": "上一个",
   "next": "下一个",
   "try_again": "重试",
   "quiz_complete": "测验完成！",
-  "excellent_message": "太棒了！您已经掌握了HTML标签！",
-  "great_message": "做得很好！您对HTML标签有了扎实的理解。",
+  "excellent_message": "太棒了！您已经掌握了这门课程！",
+  "great_message": "做得很好！您有了扎实的理解。",
   "good_message": "不错的尝试！复习一下概念，再试一次以提高。",
   "keep_learning_message": "继续学习！复习概念卡片，再试一次测验。",
   "correct": "正确",
-  "incorrect": "错误",
-  
-  "concept_what_is_tag_title": "什么是HTML标签？",
-  "concept_what_is_tag_content": "HTML标签是用尖括号括起来的关键字，告诉浏览器如何构建和显示内容。|标签是HTML文档的构建块，定义了网页内容的结构和含义。",
-  
-  "concept_opening_tags_title": "开始标签",
-  "concept_opening_tags_content": "开始标签标记HTML元素的开始。它由用尖括号括起来的标签名组成。|开始标签告诉浏览器元素从哪里开始。",
-  
-  "concept_closing_tags_title": "结束标签",
-  "concept_closing_tags_content": "结束标签标记HTML元素的结束。它与开始标签相同，但包含一个斜杠。|结束标签告诉浏览器元素在哪里结束。",
-  
-  "concept_paired_tags_title": "配对标签",
-  "concept_paired_tags_content": "大多数HTML标签成对出现——一个开始标签和一个结束标签，它们一起工作来包装内容。|配对标签之间的内容是被元素格式化或结构化的内容。",
-  
-  "concept_void_tags_title": "空标签（自闭合）",
-  "concept_void_tags_content": "一些HTML标签不需要结束标签，因为它们不包含内容。这些被称为空标签或自闭合标签。|空标签代表本身就完整的元素。",
-  
-  "concept_simple_tags_title": "简单标签（无属性）",
-  "concept_simple_tags_content": "简单标签只包含标签名，没有额外的信息或属性。|这些标签使用它们的默认行为和样式。",
-  
-  "concept_tags_with_attributes_title": "带属性的标签",
-  "concept_tags_with_attributes_content": "标签可以包含属性，提供额外信息或修改元素的行为。|属性在开始标签内以名称=\"值\"对的形式编写。",
-  
-  "concept_tags_vs_elements_title": "标签与元素",
-  "concept_tags_vs_elements_content": "标签是您编写的代码。元素是浏览器在运行时从该标签创建的内容。|将标签视为指令，将元素视为结果。",
-  
-  "concept_tag_nesting_title": "标签嵌套",
-  "concept_tag_nesting_content": "HTML标签可以嵌套在其他标签内，以创建复杂的结构和层次。|嵌套标签在文档结构中创建父子关系。",
-  
-  "concept_proper_nesting_title": "正确嵌套规则",
-  "concept_proper_nesting_content": "标签必须正确嵌套——它们不能重叠。最后打开的标签必须是第一个关闭的。|把它想象成数学中的平衡括号。",
-  
-  "quiz_html_tags_correct_question": "关于HTML标签的哪个陈述是正确的？",
-  "quiz_html_tags_correct_correct": "HTML标签是用尖括号括起来的关键字，用于构建内容。",
-  "quiz_html_tags_correct_incorrect": "HTML标签只用于样式，没有结构目的。",
-  
-  "quiz_closing_tag_question": "结束标签与开始标签有什么不同？",
-  "quiz_closing_tag_correct": "结束标签在标签名前包含一个斜杠（/）。",
-  "quiz_closing_tag_incorrect": "结束标签使用方括号而不是尖括号。",
-  
-  "quiz_void_tag_question": "这些标签中哪个是空标签（自闭合）？",
-  "quiz_void_tag_correct": "- 它不需要结束标签，因为它不包含内容。",
-  "quiz_void_tag_incorrect": "- 它总是需要结束标签来包装文本内容。",
-  
-  "quiz_tags_vs_elements_question": "标签和元素有什么区别？",
-  "quiz_tags_vs_elements_correct": "标签是您编写的代码；元素是浏览器在运行时创建的内容。",
-  "quiz_tags_vs_elements_incorrect": "标签和元素是完全相同的东西，只是名称不同。",
-  
-  "quiz_nesting_question": "哪个嵌套示例是正确的？",
-  "quiz_nesting_correct": "- 正确嵌套，没有重叠。",
-  "quiz_nesting_incorrect": "- 标签重叠不正确。",
-  
-  "quiz_angle_brackets_question": "HTML中的尖括号表示什么？",
-  "quiz_angle_brackets_correct": "标记HTML标签的开始和结束。",
-  "quiz_angle_brackets_incorrect": "尖括号仅用于在HTML代码中创建注释。",
-  
-  "quiz_paired_tags_question": "关于配对标签的哪个陈述是正确的？",
-  "quiz_paired_tags_correct": "配对标签一起工作，包装和格式化它们之间的内容。",
-  "quiz_paired_tags_incorrect": "配对标签必须始终相同，没有任何差异。",
-  
-  "quiz_missing_closing_question": "如果您忘记了结束标签会发生什么？",
-  "quiz_missing_closing_correct": "浏览器可能无法正确显示内容或可能自动关闭标签。",
-  "quiz_missing_closing_incorrect": "什么都不会发生——在现代HTML中结束标签是可选的。",
-  
-  "quiz_attribute_syntax_question": "哪个是正确属性语法的示例？",
-  "quiz_attribute_syntax_correct": "- 属性使用名称=\"值\"格式。",
-  "quiz_attribute_syntax_incorrect": "- 属性使用括号格式。",
-  
-  "quiz_void_tags_special_question": "什么使空标签特殊？",
-  "quiz_void_tags_special_correct": "空标签本身就是完整的，不包含其他内容。",
-  "quiz_void_tags_special_incorrect": "空标签已过时，不应在现代HTML中使用。",
-  
-  "quiz_tag_structure_question": "哪个HTML标签结构是有效的？",
-  "quiz_tag_structure_correct": "- 带属性的正确开始和结束。",
-  "quiz_tag_structure_incorrect": "- 结束标签中缺少斜杠。",
-  
-  "quiz_doctype_question": "DOCTYPE声明的目的是什么？",
-  "quiz_doctype_correct": "告诉浏览器使用哪个HTML版本。",
-  "quiz_doctype_incorrect": "用于向HTML文档添加注释。",
-  
-  "quiz_comments_question": "关于HTML注释的哪个陈述是正确的？",
-  "quiz_comments_correct": "- 注释不在网页上显示。",
-  "quiz_comments_incorrect": "- 注释使用常规标签语法。",
-  
-  "quiz_multiple_attributes_question": "标签中的多个属性会发生什么？",
-  "quiz_multiple_attributes_correct": "- 属性用空格分隔。",
-  "quiz_multiple_attributes_incorrect": "- 属性用逗号分隔。",
-  
-  "quiz_line_break_question": "哪个标签正确创建换行？",
-  "quiz_line_break_correct": "- 一个空标签，创建没有内容的换行。",
-  "quiz_line_break_incorrect": "- 换行需要开始和结束标签。"
+  "incorrect": "错误"
 }

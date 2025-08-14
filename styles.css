@@ -21,6 +21,34 @@ header {
   text-align: center;
   margin-bottom: 30px;
   color: white;
+  position: relative;
+}
+
+.course-selector {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.course-selector select {
+  background: white;
+  color: #333;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.course-selector select:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .language-selector {
@@ -28,6 +56,11 @@ header {
   top: 20px;
   right: 20px;
   z-index: 1000;
+}
+
+.header-content {
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .language-selector select {
@@ -317,6 +350,17 @@ code,
   .navigation {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .course-selector {
+    top: 15px;
+    left: 15px;
+  }
+
+  .course-selector select {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    min-width: 150px;
   }
 
   .language-selector {

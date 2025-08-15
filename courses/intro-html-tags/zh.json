@@ -88,10 +88,6 @@
   "quiz_multiple_attributes_correct": "- 属性用空格分隔。",
   "quiz_multiple_attributes_incorrect": "- 属性用逗号分隔。",
   
-  "quiz_line_break_question": "哪个标签正确创建换行？",
-  "quiz_line_break_correct": "- 一个空标签，创建没有内容的换行。",
-  "quiz_line_break_incorrect": "- 换行需要开始和结束标签。",
-  
   "concept_tags_inside_tags_title": "标签不能在其他标签内部",
   "concept_tags_inside_tags_content": "HTML标签不能放置在其他标签内部。标签只能嵌套在其他标签之间，不能在标签的尖括号内部。|这是一个基本规则：标签内容位于开始和结束标签之间，绝不在标签括号内部。",
   
@@ -104,5 +100,22 @@
   
   "quiz_closing_tag_attributes_question": "哪个结束标签语法是正确的？",
   "quiz_closing_tag_attributes_correct": "- 结束标签只包含带斜杠的标签名。",
-  "quiz_closing_tag_attributes_incorrect": "- 错误地试图向结束标签添加属性。"
+  "quiz_closing_tag_attributes_incorrect": "- 错误地试图向结束标签添加属性。",
+  
+  "concept_html_comments_title": "HTML注释",
+  "concept_html_comments_content": "HTML注释是代码中的注解，不会在网页上显示。它们使用特殊的类似标签的语法，以&lt;!--开始，以--&gt;结束。|注释对于为自己或其他开发者留下注解很有用，也可以用来临时隐藏代码而不删除它。",
+  
+  "concept_tag_case_insensitivity_title": "标签名大小写不敏感",
+  "concept_tag_case_insensitivity_content": "HTML标签名不区分大小写，这意味着&lt;div&gt;和&lt;DIV&gt;工作方式相同。但是，小写是标准约定。|使用小写标签名使您的HTML更易读，并遵循现代最佳实践。",
+  
+  "concept_custom_tags_title": "带连字符的自定义标签",
+  "concept_custom_tags_content": "如果自定义HTML标签的名称中包含至少一个连字符，则它们是有效的。但是，除非遵循网络标准，否则通常不建议使用它们。|自定义标签应该谨慎使用，只有在构建网络组件或遵循特定框架时才使用。",
+  
+  "quiz_tag_case_insensitivity_question": "HTML标签名区分大小写吗？",
+  "quiz_tag_case_insensitivity_correct": "不，但小写是推荐的约定。",
+  "quiz_tag_case_insensitivity_incorrect": "是的，它们必须完全是小写，否则不会工作。",
+  
+  "quiz_custom_tags_question": "哪种自定义标签格式是有效的？",
+  "quiz_custom_tags_correct": "- 自定义标签必须包含至少一个连字符。",
+  "quiz_custom_tags_incorrect": "- 没有连字符的自定义标签不是有效的HTML。"
 }

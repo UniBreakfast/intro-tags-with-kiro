@@ -1,112 +1,112 @@
 {
   "course_title": "Wprowadzenie do Atrybutów HTML",
   "course_subtitle": "Opanuj podstawy atrybutów HTML krok po kroku",
-  
-  "concept_what_are_attributes_title": "Czym są Atrybuty HTML?",
+
+  "concept_what_are_attributes_title": "Czym są atrybuty HTML?",
   "concept_what_are_attributes_content": "Atrybuty HTML dostarczają dodatkowych informacji o elementach HTML. Są zapisywane wewnątrz tagów otwierających lub tagów pustych i modyfikują zachowanie lub wygląd elementu.|Atrybuty składają się z nazwy i wartości i pomagają uczynić elementy HTML bardziej specyficznymi i funkcjonalnymi.",
-  
-  "concept_attribute_syntax_title": "Składnia Atrybutów",
+
+  "concept_attribute_syntax_title": "Składnia atrybutów",
   "concept_attribute_syntax_content": "Atrybuty podążają za określoną składnią: nazwa=\"wartość\". Najpierw idzie nazwa atrybutu, następnie znak równości, potem wartość w cudzysłowach.|Ta spójna składnia czyni HTML przewidywalnym i łatwym do odczytania zarówno dla przeglądarek, jak i programistów.",
-  
-  "concept_attribute_values_title": "Wartości Atrybutów",
-  "concept_attribute_values_content": "Wartości atrybutów mogą być tekstem, liczbami, URL-ami lub specjalnymi słowami kluczowymi. Niektóre atrybuty wymagają określonych wartości, inne akceptują dowolny tekst.|Zrozumienie jakich wartości oczekuje atrybut jest kluczowe dla pisania poprawnego HTML.",
-  
-  "concept_quotes_in_attributes_title": "Cudzysłowy w Wartościach Atrybutów",
-  "concept_quotes_in_attributes_content": "Wartości atrybutów powinny być ujęte w cudzysłowy. Możesz używać zarówno podwójnych (\") jak i pojedynczych (') cudzysłowów, ale bądź konsekwentny.|Cudzysłowy są szczególnie ważne, gdy wartości zawierają spacje lub znaki specjalne.",
-  
-  "concept_multiple_attributes_title": "Wielokrotne Atrybuty",
+
+  "concept_attribute_values_title": "Wartości atrybutów",
+  "concept_attribute_values_content": "Wartości atrybutów mogą być tekstem, liczbami, adresami URL lub specjalnymi słowami kluczowymi. Niektóre atrybuty wymagają określonych wartości, inne akceptują dowolny tekst.|Zrozumienie jakich wartości oczekuje atrybut jest kluczowe dla pisania poprawnego HTML.",
+
+  "concept_quotes_in_attributes_title": "Cudzysłowy w wartościach atrybutów",
+  "concept_quotes_in_attributes_content": "Wartości atrybutów powinny być ujęte w cudzysłowy. Możesz używać zarówno podwójnych (\"), jak i pojedynczych (') cudzysłowów, ale bądź konsekwentny.|Cudzysłowy są szczególnie ważne, gdy wartości zawierają spacje lub znaki specjalne.",
+
+  "concept_multiple_attributes_title": "Wiele atrybutów",
   "concept_multiple_attributes_content": "Elementy mogą mieć wiele atrybutów oddzielonych spacjami. Każdy atrybut jest niezależny i dodaje swoją funkcjonalność do elementu.|Kolejność atrybutów zwykle nie ma znaczenia, ale dobra organizacja poprawia czytelność kodu.",
-  
-  "concept_boolean_attributes_title": "Atrybuty Logiczne",
+
+  "concept_boolean_attributes_title": "Atrybuty logiczne",
   "concept_boolean_attributes_content": "Niektóre atrybuty są logiczne - są obecne lub nieobecne. Gdy są obecne, są \"prawdziwe\"; gdy nieobecne, są \"fałszywe\".|Atrybuty logiczne nie potrzebują wartości - wystarczy napisać nazwę atrybutu, aby je aktywować.",
-  
-  "concept_global_attributes_title": "Atrybuty Globalne",
+
+  "concept_global_attributes_title": "Atrybuty globalne",
   "concept_global_attributes_content": "Atrybuty globalne mogą być używane z dowolnym elementem HTML. Typowe przykłady to id, class i title.|Te atrybuty zapewniają uniwersalną funkcjonalność, która działa ze wszystkimi elementami HTML.",
-  
-  "concept_attribute_order_title": "Kolejność Atrybutów",
+
+  "concept_attribute_order_title": "Kolejność atrybutów",
   "concept_attribute_order_content": "Kolejność atrybutów w tagu nie wpływa na funkcjonalność, ale przestrzeganie konwencji poprawia czytelność kodu.|Wielu programistów woli umieszczać najważniejsze atrybuty jako pierwsze, takie jak id i class.",
-  
-  "concept_case_sensitivity_title": "Wrażliwość na Wielkość Liter",
+
+  "concept_case_sensitivity_title": "Wrażliwość na wielkość liter",
   "concept_case_sensitivity_content": "Nazwy atrybutów HTML nie są wrażliwe na wielkość liter, ale najlepszą praktyką jest używanie małych liter dla spójności.|Wartości atrybutów mogą być wrażliwe na wielkość liter w zależności od konkretnego atrybutu i jego przeznaczenia.",
+
+  "concept_whitespace_in_attributes_title": "Białe znaki w atrybutach",
+  "concept_whitespace_in_attributes_content": "Unikaj dodatkowych spacji wokół znaku równości w atrybutach. Utrzymuj składnię czystą: atrybut=\"wartość\".|Właściwe odstępy czynią twój HTML bardziej czytelnym i zgodnym ze standardowymi konwencjami formatowania.",
   
-  "concept_whitespace_in_attributes_title": "Białe Znaki w Atrybutach",
-  "concept_whitespace_in_attributes_content": "Unikaj dodatkowych spacji wokół znaku równości w atrybutach. Utrzymuj składnię czystą: atrybut=\"wartość\".|Właściwe odstępy czynią twój HTML bardziej czytelnym i podążają za standardowymi konwencjami formatowania.",
-  
-  "concept_attributes_outside_tags_title": "Atrybuty Muszą Być Wewnątrz Tagów",
+  "concept_attributes_outside_tags_title": "Atrybuty muszą być wewnątrz tagów",
   "concept_attributes_outside_tags_content": "Atrybuty muszą być zapisane wewnątrz nawiasów kątowych tagów otwierających lub tagów pustych. Jakikolwiek tekst podobny do atrybutu poza tagami jest traktowany jako zwykła zawartość tekstowa.|Umieszczanie atrybutów poza tagami nie będzie działać - będą po prostu wyświetlane jako tekst na stronie internetowej.",
-  
-  "concept_attributes_in_closing_tags_title": "Brak Atrybutów w Tagach Zamykających",
+
+  "concept_attributes_in_closing_tags_title": "Brak atrybutów w tagach zamykających",
   "concept_attributes_in_closing_tags_content": "Atrybuty mogą być umieszczane tylko w tagach otwierających lub tagach pustych, nigdy w tagach zamykających. Tagi zamykające powinny zawierać tylko nazwę tagu z ukośnikiem.|Próba dodania atrybutów do tagów zamykających spowoduje niepoprawny HTML.",
-  
-  "concept_custom_attributes_title": "Atrybuty Niestandardowe i Atrybuty Data",
-  "concept_custom_attributes_content": "Chociaż atrybuty niestandardowe są technicznie poprawne w HTML, ich użycie jest odradzane, chyba że mają prefiks 'data-'. Atrybuty data to standardowy sposób przechowywania niestandardowych informacji.|Używanie atrybutów data- zapewnia, że twój HTML pozostaje poprawny i podąża za standardami internetowymi.",
-  
-  "concept_naming_conventions_title": "Konwencje Nazewnictwa dla Wartości Atrybutów",
-  "concept_naming_conventions_content": "Dla wartości atrybutów takich jak nazwy klas i ID, kebab-case (słowa oddzielone myślnikami) jest preferowaną konwencją w HTML. Chociaż camelCase i snake_case również działają, kebab-case jest najczęstszy.|Używanie spójnych konwencji nazewnictwa czyni twój HTML bardziej czytelnym i podąża za ustalonymi praktykami rozwoju stron internetowych.",
-  
+
+  "concept_custom_attributes_title": "Atrybuty niestandardowe i atrybuty data",
+  "concept_custom_attributes_content": "Chociaż atrybuty niestandardowe są technicznie poprawne w HTML, ich użycie jest odradzane, chyba że mają prefiks 'data-'. Atrybuty data to standardowy sposób przechowywania niestandardowych informacji.|Używanie atrybutów data- zapewnia, że twój HTML pozostaje poprawny i zgodny ze standardami internetowymi.",
+
+  "concept_naming_conventions_title": "Konwencje nazewnictwa dla wartości atrybutów",
+  "concept_naming_conventions_content": "Dla wartości atrybutów takich jak nazwy klas i ID, kebab-case (słowa oddzielone myślnikami) jest preferowaną konwencją w HTML. Chociaż camelCase i snake_case również działają, kebab-case jest najczęstszy.|Używanie spójnych konwencji nazewnictwa czyni twój HTML bardziej czytelnym i zgodnym z ustalonymi praktykami rozwoju stron internetowych.",
+
   "quiz_what_are_attributes_question": "Jaki jest główny cel atrybutów HTML?",
   "quiz_what_are_attributes_correct": "Dostarczanie dodatkowych informacji i modyfikowanie zachowania elementów.",
   "quiz_what_are_attributes_incorrect": "Całkowite zastąpienie potrzeby tagów HTML.",
-  
+
   "quiz_attribute_syntax_question": "Które pokazuje poprawną składnię atrybutu?",
   "quiz_attribute_syntax_correct": "- używa poprawnego formatu nazwa=\"wartość\" z cudzysłowami.",
   "quiz_attribute_syntax_incorrect": "- używa niepoprawnych nawiasów zamiast cudzysłowów.",
-  
+
   "quiz_attribute_placement_question": "Gdzie powinny być umieszczane atrybuty?",
   "quiz_attribute_placement_correct": "- atrybuty idą tylko w tagach otwierających lub tagach pustych.",
   "quiz_attribute_placement_incorrect": "- atrybuty nie mogą iść w tagach zamykających.",
-  
+
   "quiz_quotes_required_question": "Kiedy wymagane są cudzysłowy wokół wartości atrybutów?",
   "quiz_quotes_required_correct": "Cudzysłowy są zawsze zalecane dla spójności i bezpieczeństwa.",
   "quiz_quotes_required_incorrect": "Cudzysłowy nigdy nie są potrzebne w atrybutach HTML.",
-  
+
   "quiz_boolean_attributes_question": "Jak napisać atrybut logiczny?",
   "quiz_boolean_attributes_correct": "- tylko nazwa atrybutu bez wartości.",
   "quiz_boolean_attributes_incorrect": "- atrybuty logiczne nie potrzebują jawnych wartości true/false.",
-  
-  "quiz_multiple_attributes_syntax_question": "Jak oddzielane są wielokrotne atrybuty?",
+
+  "quiz_multiple_attributes_syntax_question": "Jak oddzielane są wiele atrybutów?",
   "quiz_multiple_attributes_syntax_correct": "- atrybuty są oddzielane spacjami.",
   "quiz_multiple_attributes_syntax_incorrect": "- przecinki nie są używane do oddzielania atrybutów.",
-  
+
   "quiz_attribute_values_question": "Jakie typy wartości mogą mieć atrybuty?",
-  "quiz_attribute_values_correct": "Tekst, liczby, URL-e, słowa kluczowe - w zależności od atrybutu.",
+  "quiz_attribute_values_correct": "Tekst, liczby, adresy URL, słowa kluczowe - w zależności od atrybutu.",
   "quiz_attribute_values_incorrect": "Tylko liczby i wyrażenia matematyczne.",
-  
+
   "quiz_global_attributes_question": "Co czyni atrybut \"globalnym\"?",
   "quiz_global_attributes_correct": "Może być używany z dowolnym elementem HTML.",
   "quiz_global_attributes_incorrect": "Działa tylko z określonymi, predefiniowanymi elementami.",
-  
+
   "quiz_attribute_order_question": "Czy kolejność atrybutów ma znaczenie?",
   "quiz_attribute_order_correct": "Nie, kolejność atrybutów nie wpływa na funkcjonalność.",
-  "quiz_attribute_order_incorrect": "Tak, atrybuty muszą być w kolejności alfabetycznej.",
-  
+  "quiz_attribute_order_incorrect": "Tak, atrybuty muszą być w porządku alfabetycznym.",
+
   "quiz_case_sensitivity_question": "Czy nazwy atrybutów HTML są wrażliwe na wielkość liter?",
   "quiz_case_sensitivity_correct": "Nie, ale małe litery to zalecana konwencja.",
   "quiz_case_sensitivity_incorrect": "Tak, muszą dokładnie pasować lub nie będą działać.",
-  
-  "quiz_whitespace_rules_question": "Jakie są poprawne odstępy dla atrybutów?",
+
+  "quiz_whitespace_rules_question": "Jakie jest poprawne odstępy dla atrybutów?",
   "quiz_whitespace_rules_correct": "- brak dodatkowych spacji wokół znaku równości.",
   "quiz_whitespace_rules_incorrect": "- dodatkowe spacje czynią HTML niepoprawnym.",
-  
+
   "quiz_empty_attributes_question": "Czy atrybut może mieć pustą wartość?",
   "quiz_empty_attributes_correct": "Tak, puste wartości są poprawne: atrybut=\"\".",
   "quiz_empty_attributes_incorrect": "Nie, wszystkie atrybuty muszą mieć znaczącą zawartość.",
-  
+
   "quiz_attribute_inheritance_question": "Czy elementy potomne dziedziczą atrybuty rodziców?",
   "quiz_attribute_inheritance_correct": "Nie, każdy element ma swoje własne niezależne atrybuty.",
   "quiz_attribute_inheritance_incorrect": "Tak, wszystkie atrybuty są automatycznie dziedziczone.",
-  
+
   "quiz_attributes_outside_tags_question": "Co dzieje się z atrybutami napisanymi poza tagami?",
   "quiz_attributes_outside_tags_correct": "Są traktowane jako zwykła zawartość tekstowa, nie jako atrybuty.",
   "quiz_attributes_outside_tags_incorrect": "Nadal funkcjonują jako atrybuty nawet poza tagami.",
-  
+
   "quiz_attributes_in_closing_tags_question": "Czy atrybuty mogą być umieszczane w tagach zamykających?",
   "quiz_attributes_in_closing_tags_correct": "Nie, atrybuty mogą iść tylko w tagach otwierających lub tagach pustych.",
   "quiz_attributes_in_closing_tags_incorrect": "Tak, atrybuty działają tak samo w tagach otwierających i zamykających.",
-  
-  "quiz_custom_attributes_question": "Jaki jest zalecany sposób tworzenia atrybutów niestandardowych?",
-  "quiz_custom_attributes_correct": "Używaj prefiksu data- dla atrybutów niestandardowych (data-custom=\"wartość\").",
-  "quiz_custom_attributes_incorrect": "Dowolna nazwa atrybutu niestandardowego jest równie poprawna i zalecana.",
+
+  "quiz_custom_attributes_question": "Jaki jest zalecany sposób tworzenia niestandardowych atrybutów?",
+  "quiz_custom_attributes_correct": "Używaj prefiksu data- dla niestandardowych atrybutów (data-custom=\"wartość\").",
+  "quiz_custom_attributes_incorrect": "Dowolna nazwa niestandardowego atrybutu jest równie poprawna i zalecana.",
   
   "quiz_naming_conventions_question": "Która konwencja nazewnictwa jest preferowana dla wartości atrybutów HTML?",
   "quiz_naming_conventions_correct": "- kebab-case jest preferowaną konwencją dla HTML.",

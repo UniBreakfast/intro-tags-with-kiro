@@ -88,10 +88,6 @@
   "quiz_multiple_attributes_correct": "- gli attributi sono separati da spazi.",
   "quiz_multiple_attributes_incorrect": "- gli attributi sono separati da virgole.",
   
-  "quiz_line_break_question": "Quale tag crea correttamente un'interruzione di riga?",
-  "quiz_line_break_correct": "- un tag vuoto che crea un'interruzione di riga senza contenuto.",
-  "quiz_line_break_incorrect": "- le interruzioni di riga richiedono tag di apertura e chiusura.",
-  
   "concept_tags_inside_tags_title": "I tag non possono essere all'interno di altri tag",
   "concept_tags_inside_tags_content": "I tag HTML non possono essere posizionati all'interno di altri tag. I tag possono essere annidati solo tra altri tag, non all'interno delle parentesi angolari del tag.|Questa è una regola fondamentale: il contenuto del tag va tra i tag di apertura e chiusura, mai all'interno delle parentesi del tag.",
   
@@ -104,5 +100,22 @@
   
   "quiz_closing_tag_attributes_question": "Quale sintassi del tag di chiusura è corretta?",
   "quiz_closing_tag_attributes_correct": "- il tag di chiusura contiene solo il nome del tag con barra obliqua.",
-  "quiz_closing_tag_attributes_incorrect": "- tentativo scorretto di aggiungere attributi a un tag di chiusura."
+  "quiz_closing_tag_attributes_incorrect": "- tentativo scorretto di aggiungere attributi a un tag di chiusura.",
+  
+  "concept_html_comments_title": "Commenti HTML",
+  "concept_html_comments_content": "I commenti HTML sono note nel tuo codice che non vengono visualizzate sulla pagina web. Usano una sintassi speciale simile ai tag che inizia con &lt;!-- e finisce con --&gt;.|I commenti sono utili per lasciare note per te stesso o altri sviluppatori, e per nascondere temporaneamente il codice senza eliminarlo.",
+  
+  "concept_tag_case_insensitivity_title": "Insensibilità alle Maiuscole dei Nomi dei Tag",
+  "concept_tag_case_insensitivity_content": "I nomi dei tag HTML non sono sensibili alle maiuscole, il che significa che &lt;div&gt; e &lt;DIV&gt; funzionano allo stesso modo. Tuttavia, le minuscole sono la convenzione standard.|Usare nomi di tag in minuscolo rende il tuo HTML più leggibile e segue le migliori pratiche moderne.",
+  
+  "concept_custom_tags_title": "Tag Personalizzati con Trattini",
+  "concept_custom_tags_content": "I tag HTML personalizzati sono validi se contengono almeno un trattino nel loro nome. Tuttavia, il loro uso è generalmente sconsigliato a meno che non seguano gli standard web.|I tag personalizzati dovrebbero essere usati con parsimonia e solo quando si costruiscono componenti web o si seguono framework specifici.",
+  
+  "quiz_tag_case_insensitivity_question": "I nomi dei tag HTML sono sensibili alle maiuscole?",
+  "quiz_tag_case_insensitivity_correct": "No, ma le minuscole sono la convenzione raccomandata.",
+  "quiz_tag_case_insensitivity_incorrect": "Sì, devono essere esattamente in minuscolo o non funzioneranno.",
+  
+  "quiz_custom_tags_question": "Quale formato di tag personalizzato è valido?",
+  "quiz_custom_tags_correct": "- i tag personalizzati devono contenere almeno un trattino.",
+  "quiz_custom_tags_incorrect": "- i tag personalizzati senza trattini non sono HTML valido."
 }

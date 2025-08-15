@@ -88,10 +88,6 @@
   "quiz_multiple_attributes_correct": "- Attribute werden durch Leerzeichen getrennt.",
   "quiz_multiple_attributes_incorrect": "- Attribute werden durch Kommas getrennt.",
   
-  "quiz_line_break_question": "Welches Tag erstellt korrekt einen Zeilenumbruch?",
-  "quiz_line_break_correct": "- ein leeres Tag, das einen Zeilenumbruch ohne Inhalt erstellt.",
-  "quiz_line_break_incorrect": "- Zeilenumbrüche erfordern öffnende und schließende Tags.",
-  
   "concept_tags_inside_tags_title": "Tags können nicht innerhalb anderer Tags stehen",
   "concept_tags_inside_tags_content": "HTML-Tags können nicht innerhalb anderer Tags platziert werden. Tags können nur zwischen anderen Tags verschachtelt werden, nicht innerhalb der Tag-Klammern.|Dies ist eine grundlegende Regel: Tag-Inhalt gehört zwischen öffnende und schließende Tags, niemals innerhalb der Tag-Klammern.",
   
@@ -104,5 +100,22 @@
   
   "quiz_closing_tag_attributes_question": "Welche schließende Tag-Syntax ist korrekt?",
   "quiz_closing_tag_attributes_correct": "- schließendes Tag enthält nur den Tag-Namen mit Schrägstrich.",
-  "quiz_closing_tag_attributes_incorrect": "- fälschlicherweise versucht, Attribute zu einem schließenden Tag hinzuzufügen."
+  "quiz_closing_tag_attributes_incorrect": "- fälschlicherweise versucht, Attribute zu einem schließenden Tag hinzuzufügen.",
+  
+  "concept_html_comments_title": "HTML-Kommentare",
+  "concept_html_comments_content": "HTML-Kommentare sind Notizen in Ihrem Code, die nicht auf der Webseite angezeigt werden. Sie verwenden eine spezielle tag-ähnliche Syntax, die mit &lt;!-- beginnt und mit --&gt; endet.|Kommentare sind nützlich, um Notizen für sich selbst oder andere Entwickler zu hinterlassen und um Code vorübergehend zu verstecken, ohne ihn zu löschen.",
+  
+  "concept_tag_case_insensitivity_title": "Tag-Namen Groß-/Kleinschreibung-Unempfindlichkeit",
+  "concept_tag_case_insensitivity_content": "HTML-Tag-Namen sind nicht case-sensitiv, das bedeutet &lt;div&gt; und &lt;DIV&gt; funktionieren gleich. Jedoch sind Kleinbuchstaben die Standard-Konvention.|Die Verwendung von Tag-Namen in Kleinbuchstaben macht Ihr HTML lesbarer und folgt modernen Best Practices.",
+  
+  "concept_custom_tags_title": "Benutzerdefinierte Tags mit Bindestrichen",
+  "concept_custom_tags_content": "Benutzerdefinierte HTML-Tags sind gültig, wenn sie mindestens einen Bindestrich in ihrem Namen enthalten. Jedoch wird ihre Verwendung generell nicht empfohlen, es sei denn, sie folgen Web-Standards.|Benutzerdefinierte Tags sollten sparsam verwendet werden und nur beim Erstellen von Web-Komponenten oder beim Befolgen spezifischer Frameworks.",
+  
+  "quiz_tag_case_insensitivity_question": "Sind HTML-Tag-Namen case-sensitiv?",
+  "quiz_tag_case_insensitivity_correct": "Nein, aber Kleinbuchstaben sind die empfohlene Konvention.",
+  "quiz_tag_case_insensitivity_incorrect": "Ja, sie müssen genau in Kleinbuchstaben sein oder funktionieren nicht.",
+  
+  "quiz_custom_tags_question": "Welches benutzerdefinierte Tag-Format ist gültig?",
+  "quiz_custom_tags_correct": "- benutzerdefinierte Tags müssen mindestens einen Bindestrich enthalten.",
+  "quiz_custom_tags_incorrect": "- benutzerdefinierte Tags ohne Bindestriche sind kein gültiges HTML."
 }

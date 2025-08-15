@@ -1,0 +1,114 @@
+{
+  "course_title": "مقدمة في خصائص HTML",
+  "course_subtitle": "أتقن أساسيات خصائص HTML خطوة بخطوة",
+  
+  "concept_what_are_attributes_title": "ما هي خصائص HTML؟",
+  "concept_what_are_attributes_content": "خصائص HTML توفر معلومات إضافية حول عناصر HTML. يتم كتابتها داخل علامات الفتح أو العلامات الفارغة وتعدل سلوك أو مظهر العنصر.|الخصائص تتكون من اسم وقيمة، وتساعد في جعل عناصر HTML أكثر تحديداً ووظيفية.",
+  
+  "concept_attribute_syntax_title": "صيغة الخصائص",
+  "concept_attribute_syntax_content": "الخصائص تتبع صيغة محددة: name=\"value\". أولاً يأتي اسم الخاصية، يليه علامة المساواة، ثم القيمة بين علامات الاقتباس.|هذه الصيغة المتسقة تجعل HTML قابلاً للتنبؤ وسهل القراءة للمتصفحات والمطورين.",
+  
+  "concept_attribute_values_title": "قيم الخصائص",
+  "concept_attribute_values_content": "قيم الخصائص يمكن أن تكون نصوص، أرقام، عناوين URL أو كلمات مفتاحية خاصة. بعض الخصائص تتطلب قيم محددة، بينما أخرى تقبل أي نص.|فهم ما تتوقعه الخاصية من قيم أمر بالغ الأهمية لكتابة HTML صحيح.",
+  
+  "concept_quotes_in_attributes_title": "علامات الاقتباس في قيم الخصائص",
+  "concept_quotes_in_attributes_content": "قيم الخصائص يجب أن تكون محاطة بعلامات اقتباس. يمكنك استخدام علامات اقتباس مزدوجة (\") أو مفردة (')، لكن كن متسقاً.|علامات الاقتباس مهمة بشكل خاص عندما تحتوي القيم على مسافات أو أحرف خاصة.",
+  
+  "concept_multiple_attributes_title": "خصائص متعددة",
+  "concept_multiple_attributes_content": "العناصر يمكن أن تحتوي على خصائص متعددة مفصولة بمسافات. كل خاصية مستقلة وتضيف وظيفتها الخاصة للعنصر.|ترتيب الخصائص عادة لا يهم، لكن التنظيم الجيد يحسن قابلية قراءة الكود.",
+  
+  "concept_boolean_attributes_title": "الخصائص المنطقية",
+  "concept_boolean_attributes_content": "بعض الخصائص منطقية - إما موجودة أو غير موجودة. عندما تكون موجودة، فهي \"صحيحة\"؛ عندما تكون غير موجودة، فهي \"خاطئة\".|الخصائص المنطقية لا تحتاج قيم - كتابة اسم الخاصية فقط كافٍ لتفعيلها.",
+  
+  "concept_global_attributes_title": "الخصائص العامة",
+  "concept_global_attributes_content": "الخصائص العامة يمكن استخدامها مع أي عنصر HTML. أمثلة شائعة تشمل id و class و title.|هذه الخصائص توفر وظائف عامة تعمل مع جميع عناصر HTML.",
+  
+  "concept_attribute_order_title": "ترتيب الخصائص",
+  "concept_attribute_order_content": "ترتيب الخصائص في العلامة لا يؤثر على الوظيفة، لكن اتباع الاتفاقيات يحسن قابلية قراءة الكود.|كثير من المطورين يفضلون وضع أهم الخصائص أولاً، مثل id و class.",
+  
+  "concept_case_sensitivity_title": "الحساسية لحالة الأحرف",
+  "concept_case_sensitivity_content": "أسماء خصائص HTML غير حساسة لحالة الأحرف، لكن أفضل ممارسة هي استخدام الأحرف الصغيرة للاتساق.|قيم الخصائص قد تكون حساسة لحالة الأحرف حسب الخاصية المحددة وغرضها.",
+  
+  "concept_whitespace_in_attributes_title": "المسافات البيضاء في الخصائص",
+  "concept_whitespace_in_attributes_content": "تجنب المسافات الإضافية حول علامة المساواة في الخصائص. حافظ على الصيغة نظيفة: attribute=\"value\".|التباعد المناسب يجعل HTML أكثر قابلية للقراءة ويتبع اتفاقيات التنسيق المعيارية.",
+  
+  "concept_attributes_outside_tags_title": "الخصائص يجب أن تكون داخل العلامات",
+  "concept_attributes_outside_tags_content": "الخصائص يجب أن تُكتب داخل أقواس علامات الفتح أو العلامات الفارغة. أي نص شبيه بالخاصية خارج العلامات يُعامل كمحتوى نصي عادي.|وضع الخصائص خارج العلامات لن يعمل - ستظهر فقط كنص على صفحة الويب.",
+  
+  "concept_attributes_in_closing_tags_title": "لا خصائص في علامات الإغلاق",
+  "concept_attributes_in_closing_tags_content": "الخصائص يمكن وضعها فقط في علامات الفتح أو العلامات الفارغة، أبداً في علامات الإغلاق. علامات الإغلاق يجب أن تحتوي فقط على اسم العلامة مع شرطة مائلة.|محاولة إضافة خصائص لعلامات الإغلاق ستؤدي إلى HTML غير صحيح.",
+  
+  "concept_custom_attributes_title": "الخصائص المخصصة وخصائص البيانات",
+  "concept_custom_attributes_content": "رغم أن الخصائص المخصصة صحيحة تقنياً في HTML، استخدامها غير مستحسن إلا إذا كانت تحمل البادئة 'data-'. خصائص البيانات هي الطريقة المعيارية لتخزين معلومات مخصصة.|استخدام خصائص data- يضمن بقاء HTML صحيحاً ومتبعاً لمعايير الويب.",
+  
+  "concept_naming_conventions_title": "اتفاقيات تسمية قيم الخصائص",
+  "concept_naming_conventions_content": "لقيم الخصائص مثل أسماء الفئات والمعرفات، kebab-case (كلمات مفصولة بشرطات) هي الاتفاقية المفضلة في HTML. رغم أن camelCase و snake_case يعملان أيضاً، kebab-case الأكثر شيوعاً.|استخدام اتفاقيات تسمية متسقة يجعل HTML أكثر قابلية للقراءة ويتبع ممارسات تطوير الويب المعتمدة.",
+  
+  "quiz_what_are_attributes_question": "ما هو الغرض الأساسي من خصائص HTML؟",
+  "quiz_what_are_attributes_correct": "توفير معلومات إضافية وتعديل سلوك العناصر.",
+  "quiz_what_are_attributes_incorrect": "استبدال الحاجة لعلامات HTML بالكامل.",
+  
+  "quiz_attribute_syntax_question": "أيهما يظهر صيغة الخاصية الصحيحة؟",
+  "quiz_attribute_syntax_correct": "- يستخدم تنسيق name=\"value\" الصحيح مع علامات الاقتباس.",
+  "quiz_attribute_syntax_incorrect": "- يستخدم أقواس خاطئة بدلاً من علامات الاقتباس.",
+  
+  "quiz_attribute_placement_question": "أين يجب وضع الخصائص؟",
+  "quiz_attribute_placement_correct": "- الخصائص تذهب فقط في علامات الفتح أو العلامات الفارغة.",
+  "quiz_attribute_placement_incorrect": "- الخصائص لا يمكن أن تذهب في علامات الإغلاق.",
+  
+  "quiz_quotes_required_question": "متى تكون علامات الاقتباس مطلوبة حول قيم الخصائص؟",
+  "quiz_quotes_required_correct": "علامات الاقتباس مستحسنة دائماً للاتساق والأمان.",
+  "quiz_quotes_required_incorrect": "علامات الاقتباس غير مطلوبة أبداً في خصائص HTML.",
+  
+  "quiz_boolean_attributes_question": "كيف تكتب خاصية منطقية؟",
+  "quiz_boolean_attributes_correct": "- اسم الخاصية فقط بدون قيمة.",
+  "quiz_boolean_attributes_incorrect": "- الخصائص المنطقية لا تحتاج قيم صريحة true/false.",
+  
+  "quiz_multiple_attributes_syntax_question": "كيف تُفصل الخصائص المتعددة؟",
+  "quiz_multiple_attributes_syntax_correct": "- الخصائص تُفصل بمسافات.",
+  "quiz_multiple_attributes_syntax_incorrect": "- الفواصل لا تُستخدم لفصل الخصائص.",
+  
+  "quiz_attribute_values_question": "ما أنواع القيم التي يمكن أن تحتويها الخصائص؟",
+  "quiz_attribute_values_correct": "نص، أرقام، عناوين URL، كلمات مفتاحية - حسب الخاصية.",
+  "quiz_attribute_values_incorrect": "أرقام وتعبيرات رياضية فقط.",
+  
+  "quiz_global_attributes_question": "ما الذي يجعل الخاصية \"عامة\"؟",
+  "quiz_global_attributes_correct": "يمكن استخدامها مع أي عنصر HTML.",
+  "quiz_global_attributes_incorrect": "تعمل فقط مع عناصر محددة مسبقاً.",
+  
+  "quiz_attribute_order_question": "هل ترتيب الخصائص مهم؟",
+  "quiz_attribute_order_correct": "لا، ترتيب الخصائص لا يؤثر على الوظيفة.",
+  "quiz_attribute_order_incorrect": "نعم، الخصائص يجب أن تكون بترتيب أبجدي.",
+  
+  "quiz_case_sensitivity_question": "هل أسماء خصائص HTML حساسة لحالة الأحرف؟",
+  "quiz_case_sensitivity_correct": "لا، لكن الأحرف الصغيرة هي الاتفاقية المستحسنة.",
+  "quiz_case_sensitivity_incorrect": "نعم، يجب أن تتطابق تماماً أو لن تعمل.",
+  
+  "quiz_whitespace_rules_question": "ما هو التباعد الصحيح للخصائص؟",
+  "quiz_whitespace_rules_correct": "- لا مسافات إضافية حول علامة المساواة.",
+  "quiz_whitespace_rules_incorrect": "- المسافات الإضافية تجعل HTML غير صحيح.",
+  
+  "quiz_empty_attributes_question": "هل يمكن للخاصية أن تحتوي على قيمة فارغة؟",
+  "quiz_empty_attributes_correct": "نعم، القيم الفارغة صحيحة: attribute=\"\".",
+  "quiz_empty_attributes_incorrect": "لا، جميع الخصائص يجب أن تحتوي على محتوى ذي معنى.",
+  
+  "quiz_attribute_inheritance_question": "هل العناصر الفرعية ترث خصائص الوالدين؟",
+  "quiz_attribute_inheritance_correct": "لا، كل عنصر له خصائصه المستقلة.",
+  "quiz_attribute_inheritance_incorrect": "نعم، جميع الخصائص تُورث تلقائياً.",
+  
+  "quiz_attributes_outside_tags_question": "ماذا يحدث للخصائص المكتوبة خارج العلامات؟",
+  "quiz_attributes_outside_tags_correct": "تُعامل كمحتوى نصي عادي، وليس كخصائص.",
+  "quiz_attributes_outside_tags_incorrect": "ما زالت تعمل كخصائص حتى خارج العلامات.",
+  
+  "quiz_attributes_in_closing_tags_question": "هل يمكن وضع الخصائص في علامات الإغلاق؟",
+  "quiz_attributes_in_closing_tags_correct": "لا، الخصائص يمكن أن تذهب فقط في علامات الفتح أو العلامات الفارغة.",
+  "quiz_attributes_in_closing_tags_incorrect": "نعم، الخصائص تعمل بنفس الطريقة في علامات الفتح والإغلاق.",
+  
+  "quiz_custom_attributes_question": "ما هي الطريقة المستحسنة لإنشاء خصائص مخصصة؟",
+  "quiz_custom_attributes_correct": "استخدم البادئة data- للخصائص المخصصة (data-custom=\"value\").",
+  "quiz_custom_attributes_incorrect": "أي اسم خاصية مخصصة صحيح ومستحسن بنفس الدرجة.",
+  
+  "quiz_naming_conventions_question": "أي اتفاقية تسمية مفضلة لقيم خصائص HTML؟",
+  "quiz_naming_conventions_correct": "- kebab-case هي الاتفاقية المفضلة لـ HTML.",
+  "quiz_naming_conventions_incorrect": "- رغم أن camelCase يعمل، kebab-case مفضل في HTML."
+}

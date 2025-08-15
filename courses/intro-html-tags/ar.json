@@ -104,5 +104,22 @@
   
   "quiz_closing_tag_attributes_question": "أي صيغة علامة إغلاق صحيحة؟",
   "quiz_closing_tag_attributes_correct": "- علامة الإغلاق تحتوي فقط على اسم العلامة مع شرطة مائلة.",
-  "quiz_closing_tag_attributes_incorrect": "- محاولة خاطئة لإضافة خصائص إلى علامة إغلاق."
+  "quiz_closing_tag_attributes_incorrect": "- محاولة خاطئة لإضافة خصائص إلى علامة إغلاق.",
+  
+  "concept_html_comments_title": "تعليقات HTML",
+  "concept_html_comments_content": "تعليقات HTML هي ملاحظات في كودك لا تُعرض على صفحة الويب. تستخدم صيغة خاصة شبيهة بالعلامات تبدأ بـ &lt;!-- وتنتهي بـ --&gt;.|التعليقات مفيدة لترك ملاحظات لنفسك أو للمطورين الآخرين، ولإخفاء الكود مؤقتاً دون حذفه.",
+  
+  "concept_tag_case_insensitivity_title": "عدم الحساسية لحالة الأحرف في أسماء العلامات",
+  "concept_tag_case_insensitivity_content": "أسماء علامات HTML غير حساسة لحالة الأحرف، مما يعني أن &lt;div&gt; و &lt;DIV&gt; يعملان بنفس الطريقة. ومع ذلك، الأحرف الصغيرة هي الاتفاقية المعيارية.|استخدام أسماء العلامات بأحرف صغيرة يجعل HTML أكثر قابلية للقراءة ويتبع أفضل الممارسات الحديثة.",
+  
+  "concept_custom_tags_title": "العلامات المخصصة مع الشرطات",
+  "concept_custom_tags_content": "علامات HTML المخصصة صالحة إذا كانت تحتوي على شرطة واحدة على الأقل في اسمها. ومع ذلك، استخدامها عموماً غير مستحسن إلا إذا كان يتبع معايير الويب.|يجب استخدام العلامات المخصصة بحذر وفقط عند بناء مكونات الويب أو اتباع إطارات عمل محددة.",
+  
+  "quiz_tag_case_insensitivity_question": "هل أسماء علامات HTML حساسة لحالة الأحرف؟",
+  "quiz_tag_case_insensitivity_correct": "لا، لكن الأحرف الصغيرة هي الاتفاقية المستحسنة.",
+  "quiz_tag_case_insensitivity_incorrect": "نعم، يجب أن تكون بأحرف صغيرة تماماً أو لن تعمل.",
+  
+  "quiz_custom_tags_question": "أي تنسيق علامة مخصصة صالح؟",
+  "quiz_custom_tags_correct": "- العلامات المخصصة يجب أن تحتوي على شرطة واحدة على الأقل.",
+  "quiz_custom_tags_incorrect": "- العلامات المخصصة بدون شرطات ليست HTML صالح."
 }

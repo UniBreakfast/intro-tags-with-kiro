@@ -1,0 +1,114 @@
+{
+  "course_title": "HTML属性入门",
+  "course_subtitle": "逐步掌握HTML属性的基础知识",
+  
+  "concept_what_are_attributes_title": "什么是HTML属性？",
+  "concept_what_are_attributes_content": "HTML属性为HTML元素提供额外信息。它们写在开始标签或空标签内，修改元素的行为或外观。|属性由名称和值组成，帮助使HTML元素更具体和功能性。",
+  
+  "concept_attribute_syntax_title": "属性语法",
+  "concept_attribute_syntax_content": "属性遵循特定语法：name=\"value\"。首先是属性名，然后是等号，接着是引号中的值。|这种一致的语法使HTML对浏览器和开发者来说都是可预测和易读的。",
+  
+  "concept_attribute_values_title": "属性值",
+  "concept_attribute_values_content": "属性值可以是文本、数字、URL或特殊关键字。一些属性需要特定值，而其他属性接受任何文本。|理解属性期望什么值对编写有效的HTML至关重要。",
+  
+  "concept_quotes_in_attributes_title": "属性值中的引号",
+  "concept_quotes_in_attributes_content": "属性值应该用引号括起来。你可以使用双引号（\"）或单引号（'），但要保持一致。|当值包含空格或特殊字符时，引号特别重要。",
+  
+  "concept_multiple_attributes_title": "多个属性",
+  "concept_multiple_attributes_content": "元素可以有多个用空格分隔的属性。每个属性都是独立的，为元素添加自己的功能。|属性的顺序通常不重要，但良好的组织可以提高代码可读性。",
+  
+  "concept_boolean_attributes_title": "布尔属性",
+  "concept_boolean_attributes_content": "一些属性是布尔型的——它们要么存在要么不存在。当存在时，它们是\"真\"；当不存在时，它们是\"假\"。|布尔属性不需要值——只需写属性名就足以激活它们。",
+  
+  "concept_global_attributes_title": "全局属性",
+  "concept_global_attributes_content": "全局属性可以用于任何HTML元素。常见例子包括id、class和title。|这些属性提供适用于所有HTML元素的通用功能。",
+  
+  "concept_attribute_order_title": "属性顺序",
+  "concept_attribute_order_content": "标签中属性的顺序不影响功能，但遵循约定可以提高代码可读性。|许多开发者喜欢把最重要的属性放在前面，如id和class。",
+  
+  "concept_case_sensitivity_title": "大小写敏感性",
+  "concept_case_sensitivity_content": "HTML属性名不区分大小写，但最佳实践是使用小写以保持一致性。|属性值可能区分大小写，这取决于特定属性及其用途。",
+  
+  "concept_whitespace_in_attributes_title": "属性中的空白",
+  "concept_whitespace_in_attributes_content": "避免在属性的等号周围添加额外空格。保持语法整洁：attribute=\"value\"。|适当的间距使你的HTML更可读，并遵循标准格式约定。",
+  
+  "concept_attributes_outside_tags_title": "属性必须在标签内",
+  "concept_attributes_outside_tags_content": "属性必须写在开始标签或空标签的尖括号内。标签外任何类似属性的文本都被视为常规文本内容。|将属性放在标签外不会起作用——它们只会在网页上显示为文本。",
+  
+  "concept_attributes_in_closing_tags_title": "结束标签中不能有属性",
+  "concept_attributes_in_closing_tags_content": "属性只能放在开始标签或空标签中，绝不能放在结束标签中。结束标签应该只包含带斜杠的标签名。|尝试向结束标签添加属性会导致无效的HTML。",
+  
+  "concept_custom_attributes_title": "自定义属性和数据属性",
+  "concept_custom_attributes_content": "虽然自定义属性在HTML中技术上是有效的，但不建议使用，除非它们有'data-'前缀。数据属性是存储自定义信息的标准方式。|使用data-属性确保你的HTML保持有效并遵循网络标准。",
+  
+  "concept_naming_conventions_title": "属性值命名约定",
+  "concept_naming_conventions_content": "对于类名和ID等属性值，kebab-case（用连字符分隔的单词）是HTML中的首选约定。虽然camelCase和snake_case也可以工作，但kebab-case最常见。|使用一致的命名约定使你的HTML更可读，并遵循既定的网络开发实践。",
+  
+  "quiz_what_are_attributes_question": "HTML属性的主要目的是什么？",
+  "quiz_what_are_attributes_correct": "提供额外信息并修改元素行为。",
+  "quiz_what_are_attributes_incorrect": "完全替代HTML标签的需要。",
+  
+  "quiz_attribute_syntax_question": "哪个显示了正确的属性语法？",
+  "quiz_attribute_syntax_correct": "- 使用正确的name=\"value\"格式和引号。",
+  "quiz_attribute_syntax_incorrect": "- 使用错误的括号而不是引号。",
+  
+  "quiz_attribute_placement_question": "属性应该放在哪里？",
+  "quiz_attribute_placement_correct": "- 属性只能放在开始标签或空标签中。",
+  "quiz_attribute_placement_incorrect": "- 属性不能放在结束标签中。",
+  
+  "quiz_quotes_required_question": "什么时候需要在属性值周围加引号？",
+  "quiz_quotes_required_correct": "为了一致性和安全性，总是建议使用引号。",
+  "quiz_quotes_required_incorrect": "HTML属性中从不需要引号。",
+  
+  "quiz_boolean_attributes_question": "如何写布尔属性？",
+  "quiz_boolean_attributes_correct": "- 只写属性名，不写值。",
+  "quiz_boolean_attributes_incorrect": "- 布尔属性不需要显式的true/false值。",
+  
+  "quiz_multiple_attributes_syntax_question": "多个属性如何分隔？",
+  "quiz_multiple_attributes_syntax_correct": "- 属性用空格分隔。",
+  "quiz_multiple_attributes_syntax_incorrect": "- 不使用逗号分隔属性。",
+  
+  "quiz_attribute_values_question": "属性可以有什么类型的值？",
+  "quiz_attribute_values_correct": "文本、数字、URL、关键字——取决于属性。",
+  "quiz_attribute_values_incorrect": "只有数字和数学表达式。",
+  
+  "quiz_global_attributes_question": "什么使属性成为\"全局\"的？",
+  "quiz_global_attributes_correct": "它可以用于任何HTML元素。",
+  "quiz_global_attributes_incorrect": "它只适用于特定的预定义元素。",
+  
+  "quiz_attribute_order_question": "属性顺序重要吗？",
+  "quiz_attribute_order_correct": "不，属性顺序不影响功能。",
+  "quiz_attribute_order_incorrect": "是的，属性必须按字母顺序排列。",
+  
+  "quiz_case_sensitivity_question": "HTML属性名区分大小写吗？",
+  "quiz_case_sensitivity_correct": "不，但小写是推荐的约定。",
+  "quiz_case_sensitivity_incorrect": "是的，它们必须完全匹配否则不会工作。",
+  
+  "quiz_whitespace_rules_question": "属性的正确间距是什么？",
+  "quiz_whitespace_rules_correct": "- 等号周围没有额外空格。",
+  "quiz_whitespace_rules_incorrect": "- 额外空格使HTML无效。",
+  
+  "quiz_empty_attributes_question": "属性可以有空值吗？",
+  "quiz_empty_attributes_correct": "是的，空值是有效的：attribute=\"\"。",
+  "quiz_empty_attributes_incorrect": "不，所有属性都必须有有意义的内容。",
+  
+  "quiz_attribute_inheritance_question": "子元素会继承父元素的属性吗？",
+  "quiz_attribute_inheritance_correct": "不，每个元素都有自己独立的属性。",
+  "quiz_attribute_inheritance_incorrect": "是的，所有属性都会自动继承。",
+  
+  "quiz_attributes_outside_tags_question": "写在标签外的属性会发生什么？",
+  "quiz_attributes_outside_tags_correct": "它们被视为常规文本内容，而不是属性。",
+  "quiz_attributes_outside_tags_incorrect": "即使在标签外，它们仍然作为属性起作用。",
+  
+  "quiz_attributes_in_closing_tags_question": "属性可以放在结束标签中吗？",
+  "quiz_attributes_in_closing_tags_correct": "不，属性只能放在开始标签或空标签中。",
+  "quiz_attributes_in_closing_tags_incorrect": "是的，属性在开始和结束标签中工作相同。",
+  
+  "quiz_custom_attributes_question": "创建自定义属性的推荐方式是什么？",
+  "quiz_custom_attributes_correct": "为自定义属性使用data-前缀（data-custom=\"value\"）。",
+  "quiz_custom_attributes_incorrect": "任何自定义属性名都同样有效和推荐。",
+  
+  "quiz_naming_conventions_question": "HTML属性值首选哪种命名约定？",
+  "quiz_naming_conventions_correct": "- kebab-case是HTML的首选约定。",
+  "quiz_naming_conventions_incorrect": "- 虽然camelCase可以工作，但在HTML中首选kebab-case。"
+}

@@ -110,10 +110,20 @@ header p {
 
 .progress-fill {
   height: 100%;
-  background: #4CAF50;
+  background: repeating-linear-gradient(
+    to right, 
+    #4CAF50 0, 
+    #4CAF50 calc(100% / var(--total-segments) - 3px), 
+    #6b70d6 calc(100% / var(--total-segments) - 3px), 
+    #6b70d6 calc(100% / var(--total-segments))
+  );
   border-radius: 4px;
   transition: width 0.3s ease;
   width: 0%;
+}
+
+main:not(:has(.finish-dialog)).progress-fill {
+  translate: calc(-100% / var(--total-segments));
 }
 
 .card-container {
@@ -122,6 +132,7 @@ header p {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  transition: height 0.3s ease-in-out;
 }
 
 .card {
@@ -157,7 +168,7 @@ header p {
 }
 
 .code-example {
-  background: #2d3748;
+  background: #3f4b60;
   border: 1px solid #4a5568;
   border-radius: 8px;
   padding: 15px;
@@ -179,13 +190,13 @@ header p {
 /* Inline code styling for both concept and quiz cards */
 code,
 .inline-code {
-  background: #2d3748;
+  background: #3f4b60;
   color: #e2e8f0;
   padding: 4px 8px;
   border-radius: 6px;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
   line-height: 1.2;
   white-space: nowrap;
@@ -218,7 +229,7 @@ code,
 
 .quiz-option .code-example {
   margin: 10px 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   padding: 10px;
 }
 
@@ -335,45 +346,99 @@ code,
 
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
+    padding: 10px;
+  }
+
+  header {
+    margin-bottom: 20px;
+    margin-top: 55px; /* Add top margin to prevent overlap with selectors */
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    margin-bottom: 10px;
+    min-height: 300px; /* Reduce min-height for mobile */
   }
 
   .card {
-    padding: 20px;
+    padding: 10px;
   }
 
   .quiz-card {
     grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .quiz-option {
+    padding: 5px;
+    min-height: 100px;
   }
 
   .navigation {
-    flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 
   .course-selector {
-    top: 15px;
-    left: 15px;
+    top: 5px;
+    left: 5px;
   }
 
   .course-selector select {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    min-width: 150px;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    min-width: 140px;
   }
 
   .language-selector {
-    top: 15px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
   }
 
   .language-selector select {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    min-width: 110px;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    min-width: 100px;
+  }
+
+  .finish-dialog {
+    padding: 25px;
+  }
+
+  .finish-dialog h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .finish-dialog .score {
+    font-size: 2.5rem;
+    margin: 15px 0;
+  }
+
+  .finish-dialog .message {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .restart-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
   }
 }

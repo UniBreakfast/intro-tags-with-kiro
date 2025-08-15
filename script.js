@@ -71,7 +71,7 @@ class ConceptQuizApp {
         this.showCard(0);
         this.updateUI();
       }
-      
+
       // Show the body once everything is loaded
       document.body.removeAttribute('hidden');
     } catch (error) {
@@ -341,13 +341,13 @@ class ConceptQuizApp {
 
     // Load available courses first
     await this.loadAvailableCourses();
-    
+
     // If no courseId was provided, select a random one
     if (!this.courseId && this.availableCourses.length > 0) {
       const randomIndex = Math.floor(Math.random() * this.availableCourses.length);
       this.courseId = this.availableCourses[randomIndex];
     }
-    
+
     // Load default language
     await this.loadLanguage('en');
   }
@@ -361,6 +361,9 @@ class ConceptQuizApp {
     } else if (card.type === 'quiz') {
       this.showQuizCard(card);
     }
+
+    // Adjust container height to prevent layout jumping
+    this.adjustContainerHeight();
   }
 
   showConceptCard(card) {
@@ -385,7 +388,7 @@ class ConceptQuizApp {
         `).join('');
 
     cardElement.innerHTML = `
-            <div style="grid-column: 1 / -1; margin-bottom: 20px;">
+            <div style="grid-column: 1 / -1">
                 <h2>${card.question}</h2>
             </div>
             ${optionsHTML}
@@ -468,6 +471,24 @@ class ConceptQuizApp {
     this.prevBtn.style.display = 'none';
     this.nextBtn.style.display = 'none';
     this.cardCounter.style.display = 'none';
+
+    // Adjust container height for finish dialog
+    this.adjustContainerHeight();
+  }
+
+  adjustContainerHeight() {
+    // Wait for content to render, then adjust height
+    setTimeout(() => {
+      const container = this.cardContainer;
+      const content = container.firstElementChild;
+
+      if (content) {
+        // Get the actual height of the content
+        const contentHeight = content.offsetHeight;
+        // Set container height to match content height
+        container.style.height = `${Math.max(contentHeight, 400)}px`;
+      }
+    }, 10);
   }
 
   restart() {
@@ -536,7 +557,9 @@ class ConceptQuizApp {
     this.cardCounter.textContent = `${this.currentCardIndex + 1} / ${this.cards.length}`;
 
     const progress = ((this.currentCardIndex + 1) / this.cards.length) * 100;
+    
     this.progressFill.style.width = `${progress}%`;
+    document.documentElement.style.setProperty('--total-segments', this.currentCardIndex + 1);
   }
 }
 

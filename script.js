@@ -71,6 +71,9 @@ class ConceptQuizApp {
         this.showCard(0);
         this.updateUI();
       }
+      
+      // Show the body once everything is loaded
+      document.body.removeAttribute('hidden');
     } catch (error) {
       console.error('Failed to load language:', error);
     }

@@ -8,51 +8,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <div class="container">
-    <header>
-      <div class="course-selector">
-        <select id="courseSelect">
-          <!-- Courses will be populated dynamically -->
-        </select>
-      </div>
-      <div class="language-selector">
-        <select id="languageSelect">
-          <option value="en">English</option>
-          <option value="de">Deutsch</option>
-          <option value="es">Español</option>
-          <option value="pl">Polski</option>
-          <option value="it">Italiano</option>
-          <option value="zh">中文</option>
-          <option value="ar">العربية</option>
-          <option value="ru">Русский</option>
-          <option value="uk">Українська</option>
-        </select>
-      </div>
-      <div class="header-content">
-        <h1 id="courseTitle">Concept Quiz App</h1>
-        <p id="courseSubtitle">Master concepts step by step</p>
-      </div>
-    </header>
+<body hidden></body>
+<div class="container">
+  <header>
+    <div class="course-selector">
+      <select id="courseSelect">
+        <!-- Courses will be populated dynamically -->
+      </select>
+    </div>
+    <div class="language-selector">
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="pl">Polski</option>
+        <option value="it">Italiano</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+        <option value="uk">Українська</option>
+      </select>
+    </div>
+    <div class="header-content">
+      <h1 id="courseTitle">Concept Quiz App</h1>
+      <p id="courseSubtitle">Master concepts step by step</p>
+    </div>
+  </header>
 
-    <main>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
+  <main>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
 
-      <div class="card-container" id="cardContainer">
-        <!-- Cards will be dynamically inserted here -->
-      </div>
+    <div class="card-container" id="cardContainer">
+      <!-- Cards will be dynamically inserted here -->
+    </div>
 
-      <div class="navigation">
-        <button id="prevBtn" class="nav-btn" disabled data-text="previous">Previous</button>
-        <span class="card-counter" id="cardCounter">1 / 1</span>
-        <button id="nextBtn" class="nav-btn" data-text="next">Next</button>
-      </div>
-    </main>
-  </div>
+    <div class="navigation">
+      <button id="prevBtn" class="nav-btn" disabled data-text="previous">Previous</button>
+      <span class="card-counter" id="cardCounter">1 / 1</span>
+      <button id="nextBtn" class="nav-btn" data-text="next">Next</button>
+    </div>
+  </main>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

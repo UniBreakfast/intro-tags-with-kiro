@@ -1,0 +1,121 @@
+{
+  "course_title": "HTMLタグ入門",
+  "course_subtitle": "HTMLタグの基礎を段階的にマスターしよう",
+  
+  "concept_what_is_tag_title": "HTMLタグとは何か？",
+  "concept_what_is_tag_content": "HTMLタグは角括弧で囲まれたキーワードで、ブラウザにコンテンツの構造と表示方法を指示します。|タグはHTML文書の構成要素であり、ウェブコンテンツの構造と意味を定義します。",
+  
+  "concept_opening_tags_title": "開始タグ",
+  "concept_opening_tags_content": "開始タグはHTML要素の始まりを示します。角括弧で囲まれたタグ名で構成されます。|開始タグはブラウザに要素がどこから始まるかを伝えます。",
+  
+  "concept_closing_tags_title": "終了タグ",
+  "concept_closing_tags_content": "終了タグはHTML要素の終わりを示します。開始タグと同じですが、スラッシュが含まれます。|終了タグはブラウザに要素がどこで終わるかを伝えます。",
+  
+  "concept_paired_tags_title": "ペアタグ",
+  "concept_paired_tags_content": "ほとんどのHTMLタグはペアで使用されます - 開始タグと終了タグが連携してコンテンツを囲みます。|ペアタグの間のコンテンツが要素によってフォーマットまたは構造化されます。",
+  
+  "concept_void_tags_title": "空要素タグ（自己完結型）",
+  "concept_void_tags_content": "一部のHTMLタグはコンテンツを含まないため、終了タグが不要です。これらは空要素タグまたは自己完結型タグと呼ばれます。|空要素タグは単体で完結する要素を表します。",
+  
+  "concept_simple_tags_title": "シンプルタグ（属性なし）",
+  "concept_simple_tags_content": "シンプルタグは追加情報や属性なしで、タグ名のみを含みます。|これらのタグはデフォルトの動作とスタイルを使用します。",
+  
+  "concept_tags_with_attributes_title": "属性付きタグ",
+  "concept_tags_with_attributes_content": "タグには追加情報を提供したり要素の動作を変更する属性を含めることができます。|属性は開始タグ内で名前=\"値\"のペアとして記述されます。",
+  
+  "concept_tags_vs_elements_title": "タグ vs 要素",
+  "concept_tags_vs_elements_content": "タグはあなたが書くコードです。要素はブラウザが実行時にそのタグから作成するものです。|タグを指示、要素を結果と考えてください。",
+  
+  "concept_tag_nesting_title": "タグのネスト",
+  "concept_tag_nesting_content": "HTMLタグは他のタグの内部にネストして、複雑な構造と階層を作成できます。|ネストされたタグは文書構造内で親子関係を作成します。",
+  
+  "concept_proper_nesting_title": "適切なネストルール",
+  "concept_proper_nesting_content": "タグは適切にネストされる必要があります - 重複してはいけません。最後に開いたタグが最初に閉じられる必要があります。|数学の括弧のバランスのように考えてください。",
+  
+  "concept_tags_inside_tags_title": "タグは他のタグの内部に配置できません",
+  "concept_tags_inside_tags_content": "HTMLタグは他のタグの内部に配置することはできません。タグは他のタグの間にのみネストでき、タグの角括弧内部には配置できません。|これは基本的なルールです：タグのコンテンツは開始タグと終了タグの間に配置し、タグの角括弧内部には決して配置しません。",
+  
+  "concept_closing_tag_attributes_title": "終了タグは属性を持てません",
+  "concept_closing_tag_attributes_content": "終了タグはスラッシュ付きのタグ名のみを含む必要があります。属性や追加情報を持つことはできません。|属性は開始タグでのみ許可され、終了タグでは決して許可されません。",
+  
+  "concept_html_comments_title": "HTMLコメント",
+  "concept_html_comments_content": "HTMLコメントはコード内のメモで、ウェブページには表示されません。&lt;!--で始まり--&gt;で終わる特別なタグのような構文を使用します。|コメントは自分や他の開発者のためのメモを残したり、削除せずに一時的にコードを隠すのに便利です。",
+  
+  "concept_tag_case_insensitivity_title": "タグ名の大文字小文字の区別なし",
+  "concept_tag_case_insensitivity_content": "HTMLタグ名は大文字小文字を区別しません。つまり&lt;div&gt;と&lt;DIV&gt;は同じように動作します。ただし、小文字が標準的な慣例です。|小文字のタグ名を使用することでHTMLがより読みやすくなり、現代のベストプラクティスに従います。",
+  
+  "concept_custom_tags_title": "ハイフン付きカスタムタグ",
+  "concept_custom_tags_content": "カスタムHTMLタグは名前に少なくとも1つのハイフンが含まれていれば有効です。ただし、ウェブ標準に従わない限り、その使用は一般的に推奨されません。|カスタムタグは控えめに使用し、ウェブコンポーネントを構築する場合や特定のフレームワークに従う場合にのみ使用すべきです。",
+  
+  "quiz_html_tags_correct_question": "HTMLタグについて正しい記述はどれですか？",
+  "quiz_html_tags_correct_correct": "HTMLタグは角括弧で囲まれたキーワードで、コンテンツを構造化します。",
+  "quiz_html_tags_correct_incorrect": "HTMLタグはスタイリングのためだけに使用され、構造的な目的はありません。",
+  
+  "quiz_closing_tag_question": "終了タグを開始タグと区別するものは何ですか？",
+  "quiz_closing_tag_correct": "終了タグはタグ名の前にスラッシュ（/）を含みます。",
+  "quiz_closing_tag_incorrect": "終了タグは角括弧の代わりに角括弧を使用します。",
+  
+  "quiz_void_tag_question": "これらのうち空要素（自己完結型）タグはどれですか？",
+  "quiz_void_tag_correct": "- コンテンツを含まないため終了タグが不要です。",
+  "quiz_void_tag_incorrect": "- テキストコンテンツを囲むために常に終了タグが必要です。",
+  
+  "quiz_tags_vs_elements_question": "タグと要素の違いは何ですか？",
+  "quiz_tags_vs_elements_correct": "タグはあなたが書くコード；要素はブラウザが実行時に作成するものです。",
+  "quiz_tags_vs_elements_incorrect": "タグと要素は異なる名前を持つ全く同じものです。",
+  
+  "quiz_nesting_question": "正しいネストの例はどれですか？",
+  "quiz_nesting_correct": "- 重複なしで適切にネストされています。",
+  "quiz_nesting_incorrect": "- タグが不適切に重複しています。",
+  
+  "quiz_angle_brackets_question": "HTMLで角括弧は何を示しますか？",
+  "quiz_angle_brackets_correct": "HTMLタグの開始と終了を示します。",
+  "quiz_angle_brackets_incorrect": "角括弧はHTMLコード内でコメントを作成するためだけに使用されます。",
+  
+  "quiz_paired_tags_question": "ペアタグについて正しい記述はどれですか？",
+  "quiz_paired_tags_correct": "ペアタグは連携してその間のコンテンツを囲み、フォーマットします。",
+  "quiz_paired_tags_incorrect": "ペアタグは常に違いなく同一である必要があります。",
+  
+  "quiz_missing_closing_question": "終了タグを忘れるとどうなりますか？",
+  "quiz_missing_closing_correct": "ブラウザがコンテンツを正しく表示しないか、自動的にタグを閉じる可能性があります。",
+  "quiz_missing_closing_incorrect": "何も起こりません - 現代のHTMLでは終了タグはオプションです。",
+  
+  "quiz_attribute_syntax_question": "適切な属性構文の例はどれですか？",
+  "quiz_attribute_syntax_correct": "- 属性は名前=\"値\"形式を使用します。",
+  "quiz_attribute_syntax_incorrect": "- 属性は括弧形式を使用します。",
+  
+  "quiz_void_tags_special_question": "空要素タグの特別な点は何ですか？",
+  "quiz_void_tags_special_correct": "空要素タグは単体で完結し、他のコンテンツを含みません。",
+  "quiz_void_tags_special_incorrect": "空要素タグは非推奨で、現代のHTMLでは使用すべきではありません。",
+  
+  "quiz_tag_structure_question": "有効なHTMLタグ構造はどれですか？",
+  "quiz_tag_structure_correct": "- 属性付きの適切な開始と終了。",
+  "quiz_tag_structure_incorrect": "- 終了タグにスラッシュが不足しています。",
+  
+  "quiz_doctype_question": "DOCTYPE宣言の目的は何ですか？",
+  "quiz_doctype_correct": "ブラウザにどのHTMLバージョンを使用するかを伝えます。",
+  "quiz_doctype_incorrect": "HTML文書にコメントを追加するために使用されます。",
+  
+  "quiz_comments_question": "HTMLコメントについて正しい記述はどれですか？",
+  "quiz_comments_correct": "- コメントはウェブページに表示されません。",
+  "quiz_comments_incorrect": "- コメントは通常のタグ構文を使用します。",
+  
+  "quiz_multiple_attributes_question": "タグ内の複数の属性はどうなりますか？",
+  "quiz_multiple_attributes_correct": "- 属性はスペースで区切られます。",
+  "quiz_multiple_attributes_incorrect": "- 属性はカンマで区切られます。",
+  
+  "quiz_tags_inside_tags_question": "正しいタグ配置を示す例はどれですか？",
+  "quiz_tags_inside_tags_correct": "- タグは互いの間に適切にネストされ、タグの角括弧内部にはありません。",
+  "quiz_tags_inside_tags_incorrect": "- 他のタグの角括弧内部にタグを配置しようとしています。",
+  
+  "quiz_closing_tag_attributes_question": "正しい終了タグ構文はどれですか？",
+  "quiz_closing_tag_attributes_correct": "- 終了タグはスラッシュ付きのタグ名のみを含みます。",
+  "quiz_closing_tag_attributes_incorrect": "- 終了タグに属性を追加しようとする不適切な試み。",
+  
+  "quiz_tag_case_insensitivity_question": "HTMLタグ名は大文字小文字を区別しますか？",
+  "quiz_tag_case_insensitivity_correct": "いいえ、ただし小文字が推奨される慣例です。",
+  "quiz_tag_case_insensitivity_incorrect": "はい、正確に小文字でなければ動作しません。",
+  
+  "quiz_custom_tags_question": "有効なカスタムタグ形式はどれですか？",
+  "quiz_custom_tags_correct": "- カスタムタグは少なくとも1つのハイフンを含む必要があります。",
+  "quiz_custom_tags_incorrect": "- ハイフンなしのカスタムタグは有効なHTMLではありません。"
+}

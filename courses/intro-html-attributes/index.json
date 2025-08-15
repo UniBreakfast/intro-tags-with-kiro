@@ -1,11 +1,13 @@
 {
   "en": "Introduction to HTML Attributes",
-  "ru": "Введение в HTML атрибуты",
-  "uk": "Вступ до HTML атрибутів",
-  "es": "Introducción a los Atributos HTML",
+  "fr": "Introduction aux Attributs HTML",
   "de": "Einführung in HTML-Attribute",
-  "it": "Introduzione agli Attributi HTML",
+  "es": "Introducción a los Atributos HTML",
   "pl": "Wprowadzenie do Atrybutów HTML",
+  "it": "Introduzione agli Attributi HTML",
+  "ja": "HTML属性入門",
   "zh": "HTML属性入门",
-  "ar": "مقدمة في خصائص HTML"
+  "ar": "مقدمة في خصائص HTML",
+  "ru": "Введение в HTML атрибуты",
+  "uk": "Вступ до HTML атрибутів"
 }

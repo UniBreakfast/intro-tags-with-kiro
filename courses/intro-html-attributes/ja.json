@@ -1,0 +1,114 @@
+{
+  "course_title": "HTML属性入門",
+  "course_subtitle": "HTML属性の基礎を段階的にマスターしよう",
+  
+  "concept_what_are_attributes_title": "HTML属性とは何か？",
+  "concept_what_are_attributes_content": "HTML属性はHTML要素に関する追加情報を提供します。開始タグまたは空要素タグ内に記述され、要素の動作や外観を変更します。|属性は名前と値で構成され、HTML要素をより具体的で機能的にするのに役立ちます。",
+  
+  "concept_attribute_syntax_title": "属性の構文",
+  "concept_attribute_syntax_content": "属性は特定の構文に従います：名前=\"値\"。属性名が最初に来て、等号が続き、その後に引用符で囲まれた値が来ます。|この一貫した構文により、HTMLはブラウザと開発者の両方にとって予測可能で読みやすくなります。",
+  
+  "concept_attribute_values_title": "属性値",
+  "concept_attribute_values_content": "属性値はテキスト、数値、URL、または特別なキーワードにすることができます。一部の属性は特定の値を必要とし、他の属性は任意のテキストを受け入れます。|属性が期待する値を理解することは、有効なHTMLを書くために重要です。",
+  
+  "concept_quotes_in_attributes_title": "属性値の引用符",
+  "concept_quotes_in_attributes_content": "属性値は引用符で囲む必要があります。二重引用符（\"）または単一引用符（'）のいずれかを使用できますが、一貫性を保ってください。|値にスペースや特殊文字が含まれる場合、引用符は特に重要です。",
+  
+  "concept_multiple_attributes_title": "複数の属性",
+  "concept_multiple_attributes_content": "要素はスペースで区切られた複数の属性を持つことができます。各属性は独立しており、要素に独自の機能を追加します。|属性の順序は通常重要ではありませんが、良い組織化はコードの可読性を向上させます。",
+  
+  "concept_boolean_attributes_title": "ブール属性",
+  "concept_boolean_attributes_content": "一部の属性はブール型です - 存在するか存在しないかです。存在する場合は「真」、存在しない場合は「偽」です。|ブール属性は値を必要としません - 属性名を書くだけで有効化されます。",
+  
+  "concept_global_attributes_title": "グローバル属性",
+  "concept_global_attributes_content": "グローバル属性は任意のHTML要素で使用できます。一般的な例にはid、class、titleがあります。|これらの属性はすべてのHTML要素で動作する汎用的な機能を提供します。",
+  
+  "concept_attribute_order_title": "属性の順序",
+  "concept_attribute_order_content": "タグ内の属性の順序は機能に影響しませんが、慣例に従うことでコードの可読性が向上します。|多くの開発者はidやclassなど、最も重要な属性を最初に配置することを好みます。",
+  
+  "concept_case_sensitivity_title": "大文字小文字の区別",
+  "concept_case_sensitivity_content": "HTML属性名は大文字小文字を区別しませんが、一貫性のために小文字を使用することがベストプラクティスです。|属性値は特定の属性とその目的によって大文字小文字を区別する場合があります。",
+  
+  "concept_whitespace_in_attributes_title": "属性内の空白",
+  "concept_whitespace_in_attributes_content": "属性の等号の周りに余分なスペースを避けてください。構文をきれいに保ってください：属性=\"値\"。|適切なスペーシングはHTMLをより読みやすくし、標準的なフォーマット慣例に従います。",
+  
+  "concept_attributes_outside_tags_title": "属性はタグ内に配置する必要があります",
+  "concept_attributes_outside_tags_content": "属性は開始タグまたは空要素タグの角括弧内に記述する必要があります。タグ外の属性のようなテキストは通常のテキストコンテンツとして扱われます。|タグ外に属性を配置しても機能しません - ウェブページ上でテキストとして表示されるだけです。",
+  
+  "concept_attributes_in_closing_tags_title": "終了タグに属性は配置できません",
+  "concept_attributes_in_closing_tags_content": "属性は開始タグまたは空要素タグにのみ配置でき、終了タグには決して配置できません。終了タグはスラッシュ付きのタグ名のみを含む必要があります。|終了タグに属性を追加しようとすると無効なHTMLになります。",
+  
+  "concept_custom_attributes_title": "カスタム属性とdata属性",
+  "concept_custom_attributes_content": "カスタム属性は技術的にHTMLで有効ですが、'data-'プレフィックスが付いていない限り、その使用は推奨されません。data属性はカスタム情報を保存する標準的な方法です。|data-属性を使用することで、HTMLが有効であり続け、ウェブ標準に従うことが保証されます。",
+  
+  "concept_naming_conventions_title": "属性値の命名規則",
+  "concept_naming_conventions_content": "クラス名やIDなどの属性値には、kebab-case（ハイフンで区切られた単語）がHTMLで好ましい慣例です。camelCaseやsnake_caseも機能しますが、kebab-caseが最も一般的です。|一貫した命名規則を使用することで、HTMLがより読みやすくなり、確立されたウェブ開発実践に従います。",
+  
+  "quiz_what_are_attributes_question": "HTML属性の主な目的は何ですか？",
+  "quiz_what_are_attributes_correct": "追加情報を提供し、要素の動作を変更すること。",
+  "quiz_what_are_attributes_incorrect": "HTMLタグの必要性を完全に置き換えること。",
+  
+  "quiz_attribute_syntax_question": "正しい属性構文を示すのはどれですか？",
+  "quiz_attribute_syntax_correct": "- 引用符付きの適切な名前=\"値\"形式を使用しています。",
+  "quiz_attribute_syntax_incorrect": "- 引用符の代わりに不適切な括弧を使用しています。",
+  
+  "quiz_attribute_placement_question": "属性はどこに配置すべきですか？",
+  "quiz_attribute_placement_correct": "- 属性は開始タグまたは空要素タグにのみ配置します。",
+  "quiz_attribute_placement_incorrect": "- 属性は終了タグに配置できません。",
+  
+  "quiz_quotes_required_question": "属性値の周りに引用符が必要なのはいつですか？",
+  "quiz_quotes_required_correct": "一貫性と安全性のために引用符は常に推奨されます。",
+  "quiz_quotes_required_incorrect": "HTML属性では引用符は決して必要ありません。",
+  
+  "quiz_boolean_attributes_question": "ブール属性はどのように記述しますか？",
+  "quiz_boolean_attributes_correct": "- 値なしで属性名のみ。",
+  "quiz_boolean_attributes_incorrect": "- ブール属性は明示的なtrue/false値を必要としません。",
+  
+  "quiz_multiple_attributes_syntax_question": "複数の属性はどのように区切られますか？",
+  "quiz_multiple_attributes_syntax_correct": "- 属性はスペースで区切られます。",
+  "quiz_multiple_attributes_syntax_incorrect": "- 属性を区切るためにカンマは使用されません。",
+  
+  "quiz_attribute_values_question": "属性はどのような種類の値を持つことができますか？",
+  "quiz_attribute_values_correct": "テキスト、数値、URL、キーワード - 属性によって異なります。",
+  "quiz_attribute_values_incorrect": "数値と数学的表現のみ。",
+  
+  "quiz_global_attributes_question": "属性を「グローバル」にするものは何ですか？",
+  "quiz_global_attributes_correct": "任意のHTML要素で使用できること。",
+  "quiz_global_attributes_incorrect": "特定の事前定義された要素でのみ動作すること。",
+  
+  "quiz_attribute_order_question": "属性の順序は重要ですか？",
+  "quiz_attribute_order_correct": "いいえ、属性の順序は機能に影響しません。",
+  "quiz_attribute_order_incorrect": "はい、属性はアルファベット順である必要があります。",
+  
+  "quiz_case_sensitivity_question": "HTML属性名は大文字小文字を区別しますか？",
+  "quiz_case_sensitivity_correct": "いいえ、ただし小文字が推奨される慣例です。",
+  "quiz_case_sensitivity_incorrect": "はい、正確に一致しないと動作しません。",
+  
+  "quiz_whitespace_rules_question": "属性の正しいスペーシングは何ですか？",
+  "quiz_whitespace_rules_correct": "- 等号の周りに余分なスペースはありません。",
+  "quiz_whitespace_rules_incorrect": "- 余分なスペースはHTMLを無効にします。",
+  
+  "quiz_empty_attributes_question": "属性は空の値を持つことができますか？",
+  "quiz_empty_attributes_correct": "はい、空の値は有効です：属性=\"\"。",
+  "quiz_empty_attributes_incorrect": "いいえ、すべての属性は意味のあるコンテンツを持つ必要があります。",
+  
+  "quiz_attribute_inheritance_question": "子要素は親の属性を継承しますか？",
+  "quiz_attribute_inheritance_correct": "いいえ、各要素は独自の独立した属性を持ちます。",
+  "quiz_attribute_inheritance_incorrect": "はい、すべての属性は自動的に継承されます。",
+  
+  "quiz_attributes_outside_tags_question": "タグ外に記述された属性はどうなりますか？",
+  "quiz_attributes_outside_tags_correct": "属性としてではなく、通常のテキストコンテンツとして扱われます。",
+  "quiz_attributes_outside_tags_incorrect": "タグ外でも属性として機能します。",
+  
+  "quiz_attributes_in_closing_tags_question": "属性は終了タグに配置できますか？",
+  "quiz_attributes_in_closing_tags_correct": "いいえ、属性は開始タグまたは空要素タグにのみ配置できます。",
+  "quiz_attributes_in_closing_tags_incorrect": "はい、属性は開始タグと終了タグで同じように動作します。",
+  
+  "quiz_custom_attributes_question": "カスタム属性を作成する推奨方法は何ですか？",
+  "quiz_custom_attributes_correct": "カスタム属性にはdata-プレフィックスを使用します（data-custom=\"値\"）。",
+  "quiz_custom_attributes_incorrect": "任意のカスタム属性名が等しく有効で推奨されます。",
+  
+  "quiz_naming_conventions_question": "HTML属性値に好ましい命名規則はどれですか？",
+  "quiz_naming_conventions_correct": "- kebab-caseがHTMLの好ましい慣例です。",
+  "quiz_naming_conventions_incorrect": "- camelCaseも機能しますが、HTMLではkebab-caseが好ましいです。"
+}

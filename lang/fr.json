@@ -1,0 +1,14 @@
+{
+  "app_title": "Application Quiz Concepts",
+  "app_subtitle": "Maîtrisez les concepts étape par étape",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "try_again": "Réessayer",
+  "quiz_complete": "Quiz Terminé !",
+  "excellent_message": "Excellent ! Vous avez maîtrisé ce cours !",
+  "great_message": "Excellent travail ! Vous avez une bonne compréhension.",
+  "good_message": "Bon effort ! Révisez les concepts et réessayez pour vous améliorer.",
+  "keep_learning_message": "Continuez à apprendre ! Révisez les cartes de concepts et refaites le quiz.",
+  "correct": "Correct",
+  "incorrect": "Incorrect"
+}

@@ -1,0 +1,121 @@
+{
+  "course_title": "Introduction aux Balises HTML",
+  "course_subtitle": "Maîtrisez les fondamentaux des balises HTML étape par étape",
+  
+  "concept_what_is_tag_title": "Qu'est-ce qu'une balise HTML ?",
+  "concept_what_is_tag_content": "Une balise HTML est un mot-clé entouré de crochets angulaires qui indique au navigateur comment structurer et afficher le contenu.|Les balises sont les éléments de base des documents HTML et définissent la structure et la signification du contenu web.",
+  
+  "concept_opening_tags_title": "Balises ouvrantes",
+  "concept_opening_tags_content": "Une balise ouvrante marque le début d'un élément HTML. Elle consiste en le nom de la balise entouré de crochets angulaires.|Les balises ouvrantes indiquent au navigateur où commence un élément.",
+  
+  "concept_closing_tags_title": "Balises fermantes",
+  "concept_closing_tags_content": "Une balise fermante marque la fin d'un élément HTML. Elle est identique à la balise ouvrante mais inclut une barre oblique.|Les balises fermantes indiquent au navigateur où se termine un élément.",
+  
+  "concept_paired_tags_title": "Balises appariées",
+  "concept_paired_tags_content": "La plupart des balises HTML viennent par paires - une balise ouvrante et une balise fermante qui travaillent ensemble pour envelopper le contenu.|Le contenu entre les balises appariées est ce qui est formaté ou structuré par l'élément.",
+  
+  "concept_void_tags_title": "Balises vides (auto-fermantes)",
+  "concept_void_tags_content": "Certaines balises HTML n'ont pas besoin de balises fermantes car elles ne contiennent pas de contenu. Elles sont appelées balises vides ou auto-fermantes.|Les balises vides représentent des éléments qui sont complets par eux-mêmes.",
+  
+  "concept_simple_tags_title": "Balises simples (sans attributs)",
+  "concept_simple_tags_content": "Les balises simples contiennent seulement le nom de la balise sans informations supplémentaires ou attributs.|Ces balises utilisent leur comportement et style par défaut.",
+  
+  "concept_tags_with_attributes_title": "Balises avec attributs",
+  "concept_tags_with_attributes_content": "Les balises peuvent inclure des attributs qui fournissent des informations supplémentaires ou modifient le comportement de l'élément.|Les attributs sont écrits comme des paires nom=\"valeur\" à l'intérieur de la balise ouvrante.",
+  
+  "concept_tags_vs_elements_title": "Balises vs Éléments",
+  "concept_tags_vs_elements_content": "Une balise est le code que vous écrivez. Un élément est ce que le navigateur crée à partir de cette balise à l'exécution.|Pensez aux balises comme des instructions et aux éléments comme au résultat.",
+  
+  "concept_tag_nesting_title": "Imbrication des balises",
+  "concept_tag_nesting_content": "Les balises HTML peuvent être imbriquées à l'intérieur d'autres balises pour créer des structures complexes et des hiérarchies.|Les balises imbriquées créent une relation parent-enfant dans la structure du document.",
+  
+  "concept_proper_nesting_title": "Règles d'imbrication correcte",
+  "concept_proper_nesting_content": "Les balises doivent être correctement imbriquées - elles ne peuvent pas se chevaucher. La dernière balise ouverte doit être la première fermée.|Pensez-y comme aux parenthèses équilibrées en mathématiques.",
+  
+  "concept_tags_inside_tags_title": "Les balises ne peuvent pas être à l'intérieur d'autres balises",
+  "concept_tags_inside_tags_content": "Les balises HTML ne peuvent pas être placées à l'intérieur d'autres balises. Les balises ne peuvent être imbriquées qu'entre d'autres balises, pas à l'intérieur des crochets de la balise.|C'est une règle fondamentale : le contenu de la balise va entre les balises ouvrantes et fermantes, jamais à l'intérieur des crochets de la balise.",
+  
+  "concept_closing_tag_attributes_title": "Les balises fermantes ne peuvent pas avoir d'attributs",
+  "concept_closing_tag_attributes_content": "Les balises fermantes ne doivent contenir que le nom de la balise avec une barre oblique. Elles ne peuvent pas avoir d'attributs ou d'informations supplémentaires.|Les attributs ne sont autorisés que dans les balises ouvrantes, jamais dans les balises fermantes.",
+  
+  "concept_html_comments_title": "Commentaires HTML",
+  "concept_html_comments_content": "Les commentaires HTML sont des notes dans votre code qui ne sont pas affichées sur la page web. Ils utilisent une syntaxe spéciale similaire aux balises qui commence par &lt;!-- et se termine par --&gt;.|Les commentaires sont utiles pour laisser des notes pour vous-même ou d'autres développeurs, et pour cacher temporairement du code sans le supprimer.",
+  
+  "concept_tag_case_insensitivity_title": "Insensibilité à la casse des noms de balises",
+  "concept_tag_case_insensitivity_content": "Les noms de balises HTML ne sont pas sensibles à la casse, ce qui signifie que &lt;div&gt; et &lt;DIV&gt; fonctionnent de la même manière. Cependant, les minuscules sont la convention standard.|Utiliser des noms de balises en minuscules rend votre HTML plus lisible et suit les meilleures pratiques modernes.",
+  
+  "concept_custom_tags_title": "Balises personnalisées avec tirets",
+  "concept_custom_tags_content": "Les balises HTML personnalisées sont valides si elles contiennent au moins un tiret dans leur nom. Cependant, leur utilisation est généralement déconseillée sauf si elles suivent les standards web.|Les balises personnalisées doivent être utilisées avec parcimonie et seulement lors de la construction de composants web ou en suivant des frameworks spécifiques.",
+  
+  "quiz_html_tags_correct_question": "Quelle affirmation sur les balises HTML est correcte ?",
+  "quiz_html_tags_correct_correct": "Les balises HTML sont des mots-clés entourés de crochets angulaires qui structurent le contenu.",
+  "quiz_html_tags_correct_incorrect": "Les balises HTML ne sont utilisées que pour le style et n'ont pas de but structurel.",
+  
+  "quiz_closing_tag_question": "Qu'est-ce qui rend une balise fermante différente d'une balise ouvrante ?",
+  "quiz_closing_tag_correct": "Une balise fermante inclut une barre oblique (/) avant le nom de la balise.",
+  "quiz_closing_tag_incorrect": "Une balise fermante utilise des crochets carrés au lieu de crochets angulaires.",
+  
+  "quiz_void_tag_question": "Laquelle de ces balises est une balise vide (auto-fermante) ?",
+  "quiz_void_tag_correct": "- elle n'a pas besoin d'une balise fermante car elle ne contient pas de contenu.",
+  "quiz_void_tag_incorrect": "- elle a toujours besoin d'une balise fermante pour envelopper le contenu textuel.",
+  
+  "quiz_tags_vs_elements_question": "Quelle est la différence entre les balises et les éléments ?",
+  "quiz_tags_vs_elements_correct": "Les balises sont le code que vous écrivez ; les éléments sont ce que le navigateur crée à l'exécution.",
+  "quiz_tags_vs_elements_incorrect": "Les balises et les éléments sont exactement la même chose avec des noms différents.",
+  
+  "quiz_nesting_question": "Quel exemple d'imbrication est correct ?",
+  "quiz_nesting_correct": "- correctement imbriqué sans chevauchement.",
+  "quiz_nesting_incorrect": "- les balises se chevauchent incorrectement.",
+  
+  "quiz_angle_brackets_question": "Qu'indiquent les crochets angulaires en HTML ?",
+  "quiz_angle_brackets_correct": "marquent le début et la fin des balises HTML.",
+  "quiz_angle_brackets_incorrect": "Les crochets angulaires ne sont utilisés que pour créer des commentaires dans le code HTML.",
+  
+  "quiz_paired_tags_question": "Quelle affirmation sur les balises appariées est vraie ?",
+  "quiz_paired_tags_correct": "Les balises appariées travaillent ensemble pour envelopper et formater le contenu entre elles.",
+  "quiz_paired_tags_incorrect": "Les balises appariées doivent toujours être identiques sans aucune différence.",
+  
+  "quiz_missing_closing_question": "Que se passe-t-il si vous oubliez une balise fermante ?",
+  "quiz_missing_closing_correct": "Le navigateur peut ne pas afficher le contenu correctement ou peut fermer automatiquement la balise.",
+  "quiz_missing_closing_incorrect": "Rien ne se passe - les balises fermantes sont optionnelles en HTML moderne.",
+  
+  "quiz_attribute_syntax_question": "Quel est un exemple de syntaxe d'attribut correcte ?",
+  "quiz_attribute_syntax_correct": "- les attributs utilisent le format nom=\"valeur\".",
+  "quiz_attribute_syntax_incorrect": "- les attributs utilisent le format avec parenthèses.",
+  
+  "quiz_void_tags_special_question": "Qu'est-ce qui rend les balises vides spéciales ?",
+  "quiz_void_tags_special_correct": "Les balises vides sont complètes par elles-mêmes et ne contiennent pas d'autre contenu.",
+  "quiz_void_tags_special_incorrect": "Les balises vides sont dépréciées et ne devraient pas être utilisées en HTML moderne.",
+  
+  "quiz_tag_structure_question": "Quelle structure de balise HTML est valide ?",
+  "quiz_tag_structure_correct": "- ouverture et fermeture correctes avec attribut.",
+  "quiz_tag_structure_incorrect": "- barre oblique manquante dans la balise fermante.",
+  
+  "quiz_doctype_question": "Quel est le but de la déclaration DOCTYPE ?",
+  "quiz_doctype_correct": "indique au navigateur quelle version d'HTML utiliser.",
+  "quiz_doctype_incorrect": "est utilisée pour ajouter des commentaires aux documents HTML.",
+  
+  "quiz_comments_question": "Quelle affirmation sur les commentaires HTML est correcte ?",
+  "quiz_comments_correct": "- les commentaires ne sont pas affichés sur la page web.",
+  "quiz_comments_incorrect": "- les commentaires utilisent la syntaxe de balise régulière.",
+  
+  "quiz_multiple_attributes_question": "Que se passe-t-il avec plusieurs attributs dans une balise ?",
+  "quiz_multiple_attributes_correct": "- les attributs sont séparés par des espaces.",
+  "quiz_multiple_attributes_incorrect": "- les attributs sont séparés par des virgules.",
+  
+  "quiz_tags_inside_tags_question": "Quel exemple montre le placement correct des balises ?",
+  "quiz_tags_inside_tags_correct": "- les balises sont correctement imbriquées entre elles, pas à l'intérieur des crochets de balise.",
+  "quiz_tags_inside_tags_incorrect": "- tentative de placer une balise à l'intérieur des crochets d'une autre balise.",
+  
+  "quiz_closing_tag_attributes_question": "Quelle syntaxe de balise fermante est correcte ?",
+  "quiz_closing_tag_attributes_correct": "- la balise fermante contient seulement le nom de la balise avec barre oblique.",
+  "quiz_closing_tag_attributes_incorrect": "- tentative incorrecte d'ajouter des attributs à une balise fermante.",
+  
+  "quiz_tag_case_insensitivity_question": "Les noms de balises HTML sont-ils sensibles à la casse ?",
+  "quiz_tag_case_insensitivity_correct": "Non, mais les minuscules sont la convention recommandée.",
+  "quiz_tag_case_insensitivity_incorrect": "Oui, ils doivent être exactement en minuscules ou ils ne fonctionneront pas.",
+  
+  "quiz_custom_tags_question": "Quel format de balise personnalisée est valide ?",
+  "quiz_custom_tags_correct": "- les balises personnalisées doivent contenir au moins un tiret.",
+  "quiz_custom_tags_incorrect": "- les balises personnalisées sans tirets ne sont pas du HTML valide."
+}

@@ -1,0 +1,14 @@
+{
+  "app_title": "コンセプトクイズアプリ",
+  "app_subtitle": "コンセプトを段階的にマスターしよう",
+  "previous": "前へ",
+  "next": "次へ",
+  "try_again": "もう一度",
+  "quiz_complete": "クイズ完了！",
+  "excellent_message": "素晴らしい！このコースをマスターしました！",
+  "great_message": "よくできました！しっかりと理解できています。",
+  "good_message": "良い努力です！コンセプトを復習してもう一度挑戦してみてください。",
+  "keep_learning_message": "学習を続けましょう！コンセプトカードを復習してクイズに再挑戦してください。",
+  "correct": "正解",
+  "incorrect": "不正解"
+}
